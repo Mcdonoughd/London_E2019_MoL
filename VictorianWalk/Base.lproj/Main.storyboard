@@ -13,31 +13,26 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="London_Street" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQo-cj-xGk">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mbc-ai-o4s">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="785"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mbc-ai-o4s" secondAttribute="height" multiplier="1024:785" id="UYX-D5-td6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="WQo-cj-xGk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5hq-wP-K13"/>
-                            <constraint firstItem="WQo-cj-xGk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IpU-EC-SQe"/>
-                            <constraint firstItem="WQo-cj-xGk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qCF-Sk-fKe"/>
-                            <constraint firstItem="WQo-cj-xGk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zM7-Hc-lnc"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-64.453125" y="97.65625"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="London_Street" width="1024" height="728"/>
-    </resources>
 </document>
