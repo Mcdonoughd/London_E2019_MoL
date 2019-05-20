@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cgT-cE-00p">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tfo-BY-NDF">
+            <objects>
+                <viewController id="cgT-cE-00p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="60N-G1-joS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="London_Street" translatesAutoresizingMaskIntoConstraints="NO" id="KHQ-FZ-Uqw">
+                                <rect key="frame" x="525" y="82" width="397" height="426"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="397" id="Ehf-9P-Tfk"/>
+                                    <constraint firstAttribute="height" constant="426" id="NJC-a2-Ger"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL0-5T-0GW">
+                                <rect key="frame" x="57" y="190" width="400" height="388"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="995-be-voF"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="Esr-g6-VCL"/>
+                                    <constraint firstAttribute="width" constant="400" id="La4-8o-cHa"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdu-dh-GJk">
+                                <rect key="frame" x="625" y="604" width="197" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Continue"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPw-BN-z1h">
+                                <rect key="frame" x="139" y="82" width="237" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Pkh-0c-EcI"/>
+                                    <constraint firstAttribute="width" constant="237" id="noD-et-mmB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yL0-5T-0GW" firstAttribute="leading" secondItem="4iv-vb-8we" secondAttribute="leading" constant="57" id="27t-BJ-IRh"/>
+                            <constraint firstItem="yL0-5T-0GW" firstAttribute="top" secondItem="4iv-vb-8we" secondAttribute="top" constant="170" id="4O5-Uc-gZc"/>
+                            <constraint firstItem="KHQ-FZ-Uqw" firstAttribute="leading" secondItem="4iv-vb-8we" secondAttribute="leading" constant="525" id="50M-Z5-hAc"/>
+                            <constraint firstItem="4iv-vb-8we" firstAttribute="bottom" secondItem="KHQ-FZ-Uqw" secondAttribute="bottom" constant="260" id="GMA-cC-WcO"/>
+                            <constraint firstItem="4iv-vb-8we" firstAttribute="trailing" secondItem="KHQ-FZ-Uqw" secondAttribute="trailing" constant="102" id="MsR-OD-4TN"/>
+                            <constraint firstItem="yL0-5T-0GW" firstAttribute="top" secondItem="oPw-BN-z1h" secondAttribute="bottom" constant="55" id="OnR-oj-hfu"/>
+                            <constraint firstItem="KHQ-FZ-Uqw" firstAttribute="top" secondItem="4iv-vb-8we" secondAttribute="top" constant="62" id="Rzi-aP-7ES"/>
+                            <constraint firstItem="oPw-BN-z1h" firstAttribute="top" secondItem="4iv-vb-8we" secondAttribute="top" constant="62" id="awa-yc-NAb"/>
+                            <constraint firstItem="KHQ-FZ-Uqw" firstAttribute="leading" secondItem="oPw-BN-z1h" secondAttribute="trailing" constant="149" id="gpo-Q8-F8T"/>
+                            <constraint firstItem="oPw-BN-z1h" firstAttribute="leading" secondItem="4iv-vb-8we" secondAttribute="leading" constant="139" id="sgv-ui-XDv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4iv-vb-8we"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zLZ-nX-ocd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90.8203125" y="53.90625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="London_Street" width="512" height="364"/>
+    </resources>
+</document>

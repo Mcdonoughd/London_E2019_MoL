@@ -10,6 +10,92 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tut View Controller-->
+        <scene sceneID="vfS-Uc-Sew">
+            <objects>
+                <viewController id="51k-bE-CvS" customClass="TutViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a2s-qg-PFN">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="London_Street" translatesAutoresizingMaskIntoConstraints="NO" id="Ks1-3q-sEo">
+                                <rect key="frame" x="607" y="40" width="397" height="426"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="397" id="Zmb-H8-10y"/>
+                                    <constraint firstAttribute="height" constant="426" id="it0-ND-jZi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
+                                <rect key="frame" x="97" y="153" width="400" height="388"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="8lq-YQ-IMf"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="kdd-Jt-WTA"/>
+                                    <constraint firstAttribute="width" constant="400" id="mez-gj-OC2"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlh-bO-atx">
+                                <rect key="frame" x="179" y="542" width="666" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="9Ol-jg-VTc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="gpA-nO-A60" kind="show" id="ihq-QR-gMi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to Use" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ing-mc-bFq">
+                                <rect key="frame" x="152" y="20" width="237" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="bxW-XI-ISU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iPe-tG-ruP" firstAttribute="bottom" secondItem="xlh-bO-atx" secondAttribute="bottom" constant="160" id="0lW-9N-fcd"/>
+                            <constraint firstItem="ing-mc-bFq" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="152" id="5cC-Kj-QrR"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="20" id="78h-nj-5di"/>
+                            <constraint firstItem="iPe-tG-ruP" firstAttribute="bottom" secondItem="fJj-5e-LXX" secondAttribute="bottom" constant="227" id="9CA-N2-aCh"/>
+                            <constraint firstItem="iPe-tG-ruP" firstAttribute="trailing" secondItem="xlh-bO-atx" secondAttribute="trailing" constant="179" id="9yO-bM-hUV"/>
+                            <constraint firstItem="iPe-tG-ruP" firstAttribute="trailing" secondItem="Ks1-3q-sEo" secondAttribute="trailing" constant="20" id="H09-eh-tz7"/>
+                            <constraint firstItem="fJj-5e-LXX" firstAttribute="top" secondItem="ing-mc-bFq" secondAttribute="bottom" constant="80" id="RHG-37-FzH"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="trailing" constant="110" id="Y7v-IM-Hk7"/>
+                            <constraint firstItem="iPe-tG-ruP" firstAttribute="trailing" secondItem="xlh-bO-atx" secondAttribute="trailing" constant="179" id="fv4-DB-SR7"/>
+                            <constraint firstItem="fJj-5e-LXX" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="97" id="iOe-J4-snz"/>
+                            <constraint firstItem="xlh-bO-atx" firstAttribute="centerX" secondItem="a2s-qg-PFN" secondAttribute="centerX" id="je0-AO-Ln2"/>
+                            <constraint firstItem="xlh-bO-atx" firstAttribute="top" secondItem="Ks1-3q-sEo" secondAttribute="bottom" constant="76" id="lyx-7e-Z3h"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="ing-mc-bFq" secondAttribute="trailing" constant="218" id="zzP-wG-Cix"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iPe-tG-ruP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQ2-eQ-eCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="611" y="87"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="c6s-DE-HhI">
+            <objects>
+                <viewController id="gpA-nO-A60" customClass="MapViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fjL-Y7-XZK">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Jm7-03-I16"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eUQ-uU-g3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1338" y="98"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -66,6 +152,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="51k-bE-CvS" kind="show" id="yZq-Ld-LOg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
