@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BD794F82292D006004ACC83 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD794F72292D006004ACC83 /* SpriteKit.framework */; };
 		0BE120512291D39F0073EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE120502291D39F0073EBA3 /* AppDelegate.swift */; };
 		0BE120562291D39F0073EBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE120542291D39F0073EBA3 /* Main.storyboard */; };
 		0BE120582291D3A10073EBA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE120572291D3A10073EBA3 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BD794F72292D006004ACC83 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		0BE1204D2291D39F0073EBA3 /* VictorianWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictorianWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE120502291D39F0073EBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE120522291D39F0073EBA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD794F82292D006004ACC83 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BD794F62292D006004ACC83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BD794F72292D006004ACC83 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0BE120442291D39F0073EBA3 = {
 			isa = PBXGroup;
 			children = (
 				0BE1204F2291D39F0073EBA3 /* VictorianWalk */,
 				0BE1204E2291D39F0073EBA3 /* Products */,
+				0BD794F62292D006004ACC83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

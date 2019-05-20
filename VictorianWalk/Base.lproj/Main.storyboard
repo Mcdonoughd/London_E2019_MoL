@@ -101,10 +101,14 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="293-r2-gGO">
                                                 <rect key="frame" x="426" y="411" width="116" height="121"/>
                                                 <color key="backgroundColor" red="0.94373011589050293" green="0.94062405824661255" blue="0.10086340457201004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="PubButton" label="PubButton"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="4">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="PubButtonPressed:" destination="gpA-nO-A60" eventType="touchUpInside" id="Did-SL-RUE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,11 +117,15 @@
                                             <constraint firstAttribute="trailing" secondItem="y6J-xq-kKl" secondAttribute="trailing" id="44X-tx-zCd"/>
                                             <constraint firstAttribute="trailing" secondItem="y6J-xq-kKl" secondAttribute="trailing" id="5cI-8C-jRL"/>
                                             <constraint firstItem="y6J-xq-kKl" firstAttribute="top" secondItem="Dc2-8E-6S5" secondAttribute="top" id="7gr-Gl-6N6"/>
+                                            <constraint firstItem="y6J-xq-kKl" firstAttribute="top" secondItem="Dc2-8E-6S5" secondAttribute="top" id="ArU-qS-irz"/>
                                             <constraint firstItem="y6J-xq-kKl" firstAttribute="leading" secondItem="Dc2-8E-6S5" secondAttribute="leading" id="Etu-gf-KyY"/>
+                                            <constraint firstItem="y6J-xq-kKl" firstAttribute="leading" secondItem="Dc2-8E-6S5" secondAttribute="leading" id="JJ7-gT-k4A"/>
                                             <constraint firstItem="293-r2-gGO" firstAttribute="leading" secondItem="Dc2-8E-6S5" secondAttribute="leading" constant="426" id="Xmb-ql-d1I"/>
+                                            <constraint firstAttribute="bottom" secondItem="y6J-xq-kKl" secondAttribute="bottom" id="aVA-Tt-NIi"/>
                                             <constraint firstAttribute="trailing" secondItem="293-r2-gGO" secondAttribute="trailing" constant="132" id="lUt-Jd-dUa"/>
                                             <constraint firstItem="y6J-xq-kKl" firstAttribute="leading" secondItem="Dc2-8E-6S5" secondAttribute="leading" id="mOi-NH-YNP"/>
                                             <constraint firstAttribute="bottom" secondItem="293-r2-gGO" secondAttribute="bottom" constant="216" id="q1I-97-lJz"/>
+                                            <constraint firstAttribute="trailing" secondItem="y6J-xq-kKl" secondAttribute="trailing" id="wpr-9W-AwA"/>
                                             <constraint firstAttribute="bottom" secondItem="y6J-xq-kKl" secondAttribute="bottom" id="xsm-OC-lQK"/>
                                         </constraints>
                                     </view>
@@ -290,7 +298,7 @@
     <resources>
         <image name="London_Street" width="512" height="364"/>
         <image name="Museum_of_london_logo" width="108" height="84.5"/>
-        <image name="Victorian_Walk_Map" width="222.5" height="140"/>
+        <image name="Victorian_Walk_Map" width="209.5" height="140"/>
         <image name="WPI_logo" width="120" height="120"/>
     </resources>
 </document>
