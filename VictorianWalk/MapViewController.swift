@@ -11,7 +11,7 @@ import UIKit
 class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("I Loaded")
+        print("Map View Controller has Loaded")
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
