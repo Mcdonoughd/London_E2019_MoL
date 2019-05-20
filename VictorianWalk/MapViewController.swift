@@ -9,11 +9,20 @@
 import UIKit
 
 class MapViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("I Loaded")
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 160, y: 100, width: 50, height: 50)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.clipsToBounds = true
+        button.setImage(UIImage(named:"thumbsUp.png"), for: .normal)
+        button.addTarget(self, action: #selector(thumbsUpButtonPressed), for: .touchUpInside)
+        view.addSubview(button)
+    }
+    
+    @objc func thumbsUpButtonPressed() {
+        print("thumbs up button pressed")
     }
     
 
