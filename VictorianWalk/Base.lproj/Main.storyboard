@@ -155,7 +155,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Play a Game"/>
                                                 <connections>
-                                                    <segue destination="0aS-22-JNt" kind="show" id="Nae-ts-M3m"/>
+                                                    <segue destination="0aS-22-JNt" kind="show" id="94s-Tb-8w1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -194,23 +194,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubp-dQ-3rr">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
-                            </skView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MOe-3h-ocb" customClass="SKView">
+                                <rect key="frame" x="204" y="157" width="617" height="454"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gas-aE-65r" firstAttribute="trailing" secondItem="ubp-dQ-3rr" secondAttribute="trailing" id="NW3-zD-TUA"/>
-                            <constraint firstItem="ubp-dQ-3rr" firstAttribute="leading" secondItem="gas-aE-65r" secondAttribute="leading" id="PF5-Zw-7r7"/>
-                            <constraint firstItem="ubp-dQ-3rr" firstAttribute="top" secondItem="gas-aE-65r" secondAttribute="top" id="ZBa-cT-R9w"/>
-                            <constraint firstItem="gas-aE-65r" firstAttribute="bottom" secondItem="ubp-dQ-3rr" secondAttribute="bottom" id="Zfn-ut-bMC"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gas-aE-65r"/>
                     </view>
+                    <connections>
+                        <outlet property="PubActivity" destination="MOe-3h-ocb" id="Lmi-4f-Q6r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2k-ZI-oBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1950" y="99"/>
+            <point key="canvasLocation" x="2071" y="53"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
