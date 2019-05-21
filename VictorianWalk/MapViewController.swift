@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
     var Map = MapModel()
     
     //reference to the MainStoryBoards
-    let MyStoryBoard = UIStoryboard(name:"MainStoryBoard",bundle: nil)
+    let MyStoryBoard = UIStoryboard(name:"Main",bundle: nil)
     
     lazy var controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
     

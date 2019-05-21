@@ -13,7 +13,7 @@
         <!--Tut View Controller-->
         <scene sceneID="vfS-Uc-Sew">
             <objects>
-                <viewController storyboardIdentifier="TutView" id="51k-bE-CvS" customClass="TutViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="51k-bE-CvS" customClass="TutViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a2s-qg-PFN">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
         <!--Map View Controller-->
         <scene sceneID="c6s-DE-HhI">
             <objects>
-                <viewController storyboardIdentifier="MapView" id="gpA-nO-A60" customClass="MapViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gpA-nO-A60" customClass="MapViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fjL-Y7-XZK">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -514,7 +514,7 @@
         <!--Pub View Controller-->
         <scene sceneID="NUa-KR-Hem">
             <objects>
-                <viewController storyboardIdentifier="PubView" title="Pub View Controller" id="0aS-22-JNt" customClass="PubViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PubView" title="Pub View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0aS-22-JNt" customClass="PubViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S2i-LV-rgu" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -532,7 +532,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="HomeView" id="BYZ-38-t0r" customClass="ViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
