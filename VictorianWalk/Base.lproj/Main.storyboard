@@ -482,6 +482,8 @@
                         <viewLayoutGuide key="safeArea" id="Jm7-03-I16"/>
                     </view>
                     <connections>
+                        <outlet property="DesciptionLabel" destination="Pyb-ft-Wxu" id="7pS-cf-jAb"/>
+                        <outlet property="TitleLabel" destination="0jA-kX-ffM" id="sQo-AM-T30"/>
                         <outletCollection property="MapButtons" destination="293-r2-gGO" collectionClass="NSMutableArray" id="NV2-My-Vm4"/>
                         <outletCollection property="MapButtons" destination="fKZ-gK-T1K" collectionClass="NSMutableArray" id="Swe-Vc-uul"/>
                         <outletCollection property="MapButtons" destination="QkV-GR-gXf" collectionClass="NSMutableArray" id="sYh-Pl-8Ep"/>
