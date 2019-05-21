@@ -50,7 +50,10 @@ class MapViewController: UIViewController {
         print("Map View Controller has Loaded")
         
         for button in MapButtons{
-            button.isOpaque = true
+            //button.alpha = 0.01
+            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
+            button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), for: .normal)
+            
         }
         
         // TODO: Make buttonss opque

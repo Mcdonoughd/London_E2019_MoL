@@ -15,7 +15,7 @@ class MapModel{
         "1":Booth(desc:"",title:"Toy Shop"),
         "2":Booth(desc:"",title:""),
         "3":Booth(desc:"",title:""),
-        "4":Booth(desc:"",title:""),
+        "4":Booth(desc:"",title:"The Pub"),
         "5":Booth(desc:"",title:""),
 
         "6":Booth(desc:"",title:""),
