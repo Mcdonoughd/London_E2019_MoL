@@ -29,19 +29,29 @@ class MapViewController: UIViewController {
         UpdateViewfromModel(key: btnPressed)
     }
  
+    @IBOutlet weak var TitleLabel: UILabel!
+    
+    @IBOutlet weak var DesciptionLabel: UILabel!
+    
+    
     
     func UpdateViewfromModel(key: String){
         
         let button = Map.chooseBooth(at: key)
         print(button.title)
         
+        TitleLabel.text = button.title
+        DesciptionLabel.text = button.desc
         // TODO: Update UI
-       
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Map View Controller has Loaded")
+        
+        for button in MapButtons{
+            button.isOpaque = true
+        }
         
         // TODO: Make buttonss opque
     }
