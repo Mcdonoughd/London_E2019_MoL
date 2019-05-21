@@ -15,6 +15,8 @@
 		0BE3737F2292C64400623A89 /* PubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3737E2292C64400623A89 /* PubViewController.swift */; };
 		0BE38F11229234C700C95BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE120522291D39F0073EBA3 /* ViewController.swift */; };
 		0BE38F1522923CE800C95BDA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE38F1422923CE800C95BDA /* MapViewController.swift */; };
+		0BE6443D2292EC19008E521F /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE6443C2292EC19008E521F /* MapModel.swift */; };
+		0BE80B0C2292F45800B8F341 /* Booth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE80B0B2292F45800B8F341 /* Booth.swift */; };
 		0BF1B63422924736002627AB /* TutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF1B63322924736002627AB /* TutViewController.swift */; };
 		B300B2392292E39E009D37D1 /* PubGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B300B2382292E39E009D37D1 /* PubGameScene.swift */; };
 		B300B23B2292F7BA009D37D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B300B23A2292F7BA009D37D1 /* UIKit.framework */; };
@@ -31,6 +33,8 @@
 		0BE1205C2291D3A10073EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BE3737E2292C64400623A89 /* PubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubViewController.swift; sourceTree = "<group>"; };
 		0BE38F1422923CE800C95BDA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0BE6443C2292EC19008E521F /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		0BE80B0B2292F45800B8F341 /* Booth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booth.swift; sourceTree = "<group>"; };
 		0BF1B63322924736002627AB /* TutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutViewController.swift; sourceTree = "<group>"; };
 		B300B2382292E39E009D37D1 /* PubGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubGameScene.swift; sourceTree = "<group>"; };
 		B300B23A2292F7BA009D37D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -85,9 +89,11 @@
 				0BE120572291D3A10073EBA3 /* Assets.xcassets */,
 				0BE120592291D3A10073EBA3 /* LaunchScreen.storyboard */,
 				0BE1205C2291D3A10073EBA3 /* Info.plist */,
+				B3E065D42292DFCE003E4EE5 /* iconbigben.png */,
 				0BE38F1422923CE800C95BDA /* MapViewController.swift */,
 				0BE3737E2292C64400623A89 /* PubViewController.swift */,
-				B300B2382292E39E009D37D1 /* PubGameScene.swift */,
+				0BE6443C2292EC19008E521F /* MapModel.swift */,
+				0BE80B0B2292F45800B8F341 /* Booth.swift */,
 			);
 			path = VictorianWalk;
 			sourceTree = "<group>";
@@ -166,8 +172,9 @@
 				0BE38F11229234C700C95BDA /* ViewController.swift in Sources */,
 				0BE120512291D39F0073EBA3 /* AppDelegate.swift in Sources */,
 				0BF1B63422924736002627AB /* TutViewController.swift in Sources */,
+				0BE80B0C2292F45800B8F341 /* Booth.swift in Sources */,
 				0BE38F1522923CE800C95BDA /* MapViewController.swift in Sources */,
-				B300B2392292E39E009D37D1 /* PubGameScene.swift in Sources */,
+				0BE6443D2292EC19008E521F /* MapModel.swift in Sources */,
 				0BE3737F2292C64400623A89 /* PubViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
