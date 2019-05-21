@@ -9,29 +9,35 @@
 
 import UIKit
 import SpriteKit
+import GameplayKit
 
 class PubViewController: UIViewController {
     
     
-    @IBOutlet var PubActivity: SKView!
+    //@IBOutlet var PubActivity: SKView!
+    
+    @IBOutlet var PubGame: SKView!
     
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
         
-        if let view = self.view as! SKView? {
+        
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "PubGameScene") {
+            print("trying to load PubGameScene")
+            if let scene = SKScene(fileNamed: "PubActivityScene") {
+                //let scene = SKScene(fileNamed: "PubActivityScene")!
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
-                
+                print("Loaded scene PubActivityScenes")
                 // Present the scene
-                view.presentScene(scene)
-            }
+                PubGame.ignoresSiblingOrder = true
+                
+                PubGame.showsFPS = true
+                PubGame.showsNodeCount = true
+                PubGame.presentScene(scene)
             
-            view.ignoresSiblingOrder = true
             
-            view.showsFPS = true
-            view.showsNodeCount = true
+
         }
         
 //        if let scene = SKScene(fileNamed: "PubGameScene"){
