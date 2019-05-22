@@ -94,4 +94,12 @@ class MapViewController: UIViewController {
         }
         
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return .landscapeLeft
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
+    }
 }
