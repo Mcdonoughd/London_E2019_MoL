@@ -627,8 +627,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="London_Street" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-DP-0Uw">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="728"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lonMap.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-DP-0Uw">
+                                <rect key="frame" x="-59" y="-7" width="1135" height="788"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4e-ap-0aZ">
                                 <rect key="frame" x="172.5" y="54" width="679" height="135"/>
@@ -642,23 +642,16 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WPI_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-HW-te9">
-                                <rect key="frame" x="924" y="668" width="80" height="80"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="WPI_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-HW-te9">
+                                <rect key="frame" x="876" y="640" width="110" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="AXq-cc-zLt"/>
                                     <constraint firstAttribute="width" constant="80" id="MsK-Hm-rdp"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Museum_of_london_logo" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
-                                <rect key="frame" x="20" y="668" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="QzA-oP-9Wg"/>
-                                    <constraint firstAttribute="height" constant="80" id="X8o-UY-PHC"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ygk-Vo-1t2">
                                 <rect key="frame" x="337" y="321.5" width="350" height="125"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.66666668653488159" green="0.0080580480074735686" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="125" id="IzI-GD-J9c"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="bt2-ef-1RC"/>
@@ -668,7 +661,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Begin">
                                             <attributes>
-                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="75" name="Helvetica-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -679,6 +672,13 @@
                                     <segue destination="51k-bE-CvS" kind="show" id="yZq-Ld-LOg"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MoL Logo Proper.png" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
+                                <rect key="frame" x="47" y="631" width="118" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="QzA-oP-9Wg"/>
+                                    <constraint firstAttribute="height" constant="80" id="X8o-UY-PHC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -686,14 +686,14 @@
                             <constraint firstItem="T4e-ap-0aZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Um-8L-gur"/>
                             <constraint firstItem="Ygk-Vo-1t2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C6H-uT-Rfo"/>
                             <constraint firstItem="T4e-ap-0aZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="CFs-06-aCs"/>
-                            <constraint firstItem="2YG-DP-0Uw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JBZ-sE-Ssm"/>
-                            <constraint firstItem="2YG-DP-0Uw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NBM-fB-0Iu"/>
-                            <constraint firstItem="2YG-DP-0Uw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R17-pi-oKj"/>
+                            <constraint firstItem="2YG-DP-0Uw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-79" id="Ngu-T8-0VT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2YG-DP-0Uw" secondAttribute="trailing" constant="-72" id="T6z-ed-tOn"/>
                             <constraint firstItem="Ygk-Vo-1t2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TWM-4l-Fol"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rj4-HW-te9" secondAttribute="bottom" constant="20" id="dNJ-5V-VgK"/>
                             <constraint firstAttribute="trailing" secondItem="rj4-HW-te9" secondAttribute="trailing" constant="20" id="lE1-ae-o7e"/>
                             <constraint firstItem="b4X-Ki-z6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lQL-ml-Fwq"/>
-                            <constraint firstItem="2YG-DP-0Uw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lvh-Xr-uvu"/>
+                            <constraint firstItem="2YG-DP-0Uw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-27" id="lew-Pk-DWV"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2YG-DP-0Uw" secondAttribute="bottom" constant="-13" id="opP-1o-ZrY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -705,8 +705,9 @@
     </scenes>
     <resources>
         <image name="London_Street" width="512" height="364"/>
-        <image name="Museum_of_london_logo" width="108" height="84.5"/>
+        <image name="MoL Logo Proper.png" width="921" height="715"/>
         <image name="Victorian_Walk_Map" width="209.5" height="140"/>
         <image name="WPI_logo" width="120" height="120"/>
+        <image name="lonMap.jpg" width="6000" height="4598"/>
     </resources>
 </document>
