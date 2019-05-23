@@ -10,9 +10,10 @@ import UIKit
 
 //This is the controller for the Map View
 class TextViewController: UIViewController {
-        
- 
     
+    @IBOutlet weak var ActivityTitle: UILabel!
+    @IBOutlet weak var Backbutton: UIButton!
+    @IBOutlet weak var Helpbutton: UIButton!
     //fucntion called when app loads
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,5 +27,7 @@ class TextViewController: UIViewController {
     override var shouldAutorotate: Bool {
         return true
     }
+    
+    
 }
 
