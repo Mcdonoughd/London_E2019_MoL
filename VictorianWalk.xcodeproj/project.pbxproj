@@ -28,6 +28,7 @@
 		B36293952296C02C00D7EDAD /* HighResMap.png in Resources */ = {isa = PBXBuildFile; fileRef = B36293942296C02C00D7EDAD /* HighResMap.png */; };
 		B36293972296CD2A00D7EDAD /* TexturedVWMap.png in Resources */ = {isa = PBXBuildFile; fileRef = B36293962296CD2A00D7EDAD /* TexturedVWMap.png */; };
 		B36293992296D06E00D7EDAD /* TexturedVWMapTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = B36293982296D06E00D7EDAD /* TexturedVWMapTrans.png */; };
+		B371D34A2296EB5500F9F200 /* TextBar.png in Resources */ = {isa = PBXBuildFile; fileRef = B371D3492296EB5400F9F200 /* TextBar.png */; };
 		B3EF8E262296B76C000D6A8A /* PubActivityScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */; };
 		B3EF8E272296B76C000D6A8A /* woodbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EF8E242296B76C000D6A8A /* woodbg.jpg */; };
 		B3EF8E292296B7F5000D6A8A /* PubActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */; };
@@ -59,6 +60,7 @@
 		B36293942296C02C00D7EDAD /* HighResMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HighResMap.png; sourceTree = "<group>"; };
 		B36293962296CD2A00D7EDAD /* TexturedVWMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TexturedVWMap.png; sourceTree = "<group>"; };
 		B36293982296D06E00D7EDAD /* TexturedVWMapTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TexturedVWMapTrans.png; sourceTree = "<group>"; };
+		B371D3492296EB5400F9F200 /* TextBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextBar.png; sourceTree = "<group>"; };
 		B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PubActivityScene.sks; sourceTree = "<group>"; };
 		B3EF8E242296B76C000D6A8A /* woodbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodbg.jpg; sourceTree = "<group>"; };
 		B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubActivityScene.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		0BE1204F2291D39F0073EBA3 /* VictorianWalk */ = {
 			isa = PBXGroup;
 			children = (
+				B371D3492296EB5400F9F200 /* TextBar.png */,
 				B32F973A2296E4E000B1396E /* MST.png */,
 				B36293942296C02C00D7EDAD /* HighResMap.png */,
 				B3EF8E2E2296BB90000D6A8A /* MoL Logo Proper.png */,
@@ -199,6 +202,7 @@
 				B32F973B2296E4E000B1396E /* MST.png in Resources */,
 				B36293952296C02C00D7EDAD /* HighResMap.png in Resources */,
 				0BE1205B2291D3A10073EBA3 /* LaunchScreen.storyboard in Resources */,
+				B371D34A2296EB5500F9F200 /* TextBar.png in Resources */,
 				B3EF8E262296B76C000D6A8A /* PubActivityScene.sks in Resources */,
 				B3EF8E2F2296BB91000D6A8A /* MoL Logo Proper.png in Resources */,
 				B36293992296D06E00D7EDAD /* TexturedVWMapTrans.png in Resources */,
