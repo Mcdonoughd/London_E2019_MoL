@@ -11,37 +11,36 @@ import Foundation
 //This handles what text to be displayed when a display is clicked
 class MapModel{
     
-    var TitleDesc:[String:Booth] = [
-        "1":Booth(desc:"",title:"Toy Shop",hasGame:.none),
-        "2":Booth(desc:"",title:"Tabaconist",hasGame:.none),
-        "3":Booth(desc:"",title:"Barber Shop",hasGame:.none),
-        "4":Booth(desc:"",title:"The Pub",hasGame:.pub),
-        "5":Booth(desc:"",title:"Glass Showroom",hasGame:.none),
+    var TitleDesc:[String : Booth] = [
+        "1":Booth(id:1, desc:"",title:"Toy Shop", Activities: [.none]),
+        "2":Booth(id:2, desc:"",title:"Tabaconist", Activities: [.none]),
+        "3":Booth(id:3, desc:"",title:"Barber Shop",Activities: [.none]),
+        "4":Booth(id:4, desc:"",title:"The Pub",Activities: [.none]),
+        "5":Booth(id:5, desc:"",title:"Glass Showroom",Activities: [.none]),
 
-        "6":Booth(desc:"",title:"Barrel Organ",hasGame:.none),
-        "7":Booth(desc:"",title:"Tea & Coffee Warehouse",hasGame:.none),
-        "8":Booth(desc:"",title:"Engraver",hasGame:.engraver),
-        "9":Booth(desc:"",title:"Watchmaker",hasGame:.none),
-        "10":Booth(desc:"",title:"public Urinal",hasGame:.none),
+        "6":Booth(id:6, desc:"",title:"Barrel Organ",Activities: [.none]),
+        "7":Booth(id:7, desc:"",title:"Tea & Coffee Warehouse",Activities: [.none]),
+        "8":Booth(id:8, desc:"",title:"Engraver",Activities: [.none]),
+        "9":Booth(id:9, desc:"",title:"Watchmaker",Activities: [.none]),
+        "10":Booth(id:10, desc:"",title:"Public Urinal",Activities: [.none]),
 
-        "11":Booth(desc:"",title:"Baker's Cart",hasGame:.none),
-        "12":Booth(desc:"",title:"Grocer",hasGame:.none),
-        "13":Booth(desc:"",title:"Pharmacy",hasGame:.pharmacy),
-        "14":Booth(desc:"",title:"Milliner",hasGame:.none),
-        "15":Booth(desc:"",title:"Tailor",hasGame:.none),
+        "11":Booth(id:11, desc:"",title:"Baker's Cart",Activities: [.none]),
+        "12":Booth(id:12, desc:"",title:"Grocer",Activities: [.none]),
+        "13":Booth(id:13, desc:"",title:"Pharmacy",Activities: [.none]),
+        "14":Booth(id:14, desc:"",title:"Milliner",Activities: [.none]),
+        "15":Booth(id:15,desc:"",title:"Tailor",Activities: [.none]),
 
-        "16":Booth(desc:"",title:"Fancy Stationer",hasGame:.none),
-        "17":Booth(desc:"",title:"Pawnbroker",hasGame:.none),
-        "18":Booth(desc:"",title:"Bank Clerks' Office",hasGame:.none),
-        "19":Booth(desc:"",title:"Bank Manager's Office",hasGame:.none),
-        "0":Booth(desc:"",title:"EMPTY",hasGame:.none),
+        "16":Booth(id:16,desc:"",title:"Fancy Stationer",Activities: [.none]),
+        "17":Booth(id:17,desc:"",title:"Pawnbroker",Activities: [.none]),
+        "18":Booth(id:18,desc:"",title:"Bank Clerks' Office",Activities: [.none]),
+        "19":Booth(id:19,desc:"",title:"Bank Manager's Office",Activities: [.Imagine, .Quiz])
  ]
     
   
     func chooseBooth(at: String) -> Booth
     {
         print(at)
-        return  TitleDesc[at] ?? Booth(desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now. ",title:"404",hasGame:.none)
+        return  TitleDesc[at] ?? Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now. ",title:"404",Activities: [.none])
     }
     
  

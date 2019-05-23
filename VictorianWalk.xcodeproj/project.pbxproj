@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B61DE0E2296B72B001DC9C6 /* TextActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */; };
+		0B61DE102296BD39001DC9C6 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE0F2296BD39001DC9C6 /* TextViewController.swift */; };
+		0B61DE122296C076001DC9C6 /* TextActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE112296C076001DC9C6 /* TextActivityModel.swift */; };
 		0BD794F82292D006004ACC83 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD794F72292D006004ACC83 /* SpriteKit.framework */; };
 		0BE086A42294A4D100CC5438 /* PharmacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE086A32294A4D100CC5438 /* PharmacyViewController.swift */; };
 		0BE120512291D39F0073EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE120502291D39F0073EBA3 /* AppDelegate.swift */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextActivity.swift; sourceTree = "<group>"; };
+		0B61DE0F2296BD39001DC9C6 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		0B61DE112296C076001DC9C6 /* TextActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextActivityModel.swift; sourceTree = "<group>"; };
 		0BD794F72292D006004ACC83 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		0BE086A32294A4D100CC5438 /* PharmacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyViewController.swift; sourceTree = "<group>"; };
 		0BE1204D2291D39F0073EBA3 /* VictorianWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictorianWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +106,9 @@
 				0BE1BF4D229454E600124F3B /* PubActivityScene.swift */,
 				0BE153BD22947F70009085DE /* EngraverViewController.swift */,
 				0BE086A32294A4D100CC5438 /* PharmacyViewController.swift */,
+				0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */,
+				0B61DE0F2296BD39001DC9C6 /* TextViewController.swift */,
+				0B61DE112296C076001DC9C6 /* TextActivityModel.swift */,
 			);
 			path = VictorianWalk;
 			sourceTree = "<group>";
@@ -175,6 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B61DE0E2296B72B001DC9C6 /* TextActivity.swift in Sources */,
 				0BE38F11229234C700C95BDA /* ViewController.swift in Sources */,
 				0BE086A42294A4D100CC5438 /* PharmacyViewController.swift in Sources */,
 				0BE120512291D39F0073EBA3 /* AppDelegate.swift in Sources */,
@@ -185,6 +195,8 @@
 				0BE6443D2292EC19008E521F /* MapModel.swift in Sources */,
 				0BE153BE22947F70009085DE /* EngraverViewController.swift in Sources */,
 				0BE3737F2292C64400623A89 /* PubViewController.swift in Sources */,
+				0B61DE102296BD39001DC9C6 /* TextViewController.swift in Sources */,
+				0B61DE122296C076001DC9C6 /* TextActivityModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

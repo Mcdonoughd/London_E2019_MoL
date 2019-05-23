@@ -10,23 +10,32 @@ import Foundation
 
 //This holds a Booths sidebar data
 struct Booth{
-    enum games{
-        case pub
-        case pharmacy
-        case engraver
+    
+    enum ActivityName{
+        case Search
+        case Quiz
+        case Imagine
+        case Act
+        case game
         case none
     }
     
+    var id = 0
     var desc = ""
     var title = ""
-    var hasGame = games.none
+    var Activities = [ActivityName.none]
     
-    init(desc: String, title: String, hasGame: games){
+    init(id: Int, desc: String, title: String, Activities: Array<ActivityName>){
+        self.id = id
         self.desc = desc
         self.title = title
-        self.hasGame = hasGame
-        
+        self.Activities = Activities
     }
+
+    func hasActivity() -> Bool {
+        return !Activities.contains(.none)
+    }
+    
     
     
 }

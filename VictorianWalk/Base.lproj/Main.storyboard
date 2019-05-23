@@ -474,7 +474,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Play a Game"/>
                                                 <connections>
-                                                    <action selector="ToPubGame:" destination="gpA-nO-A60" eventType="touchUpInside" id="s8w-LB-a2t"/>
+                                                    <segue destination="3C6-dH-pMI" kind="show" id="RX8-vs-Ati"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -498,7 +498,7 @@
                     </view>
                     <connections>
                         <outlet property="DesciptionLabel" destination="Pyb-ft-Wxu" id="7pS-cf-jAb"/>
-                        <outlet property="PlayGameButton" destination="QSG-1D-Nfx" id="5tV-vb-6Yq"/>
+                        <outlet property="PlayGameButton" destination="QSG-1D-Nfx" id="pw6-MF-eYZ"/>
                         <outlet property="TitleLabel" destination="0jA-kX-ffM" id="sQo-AM-T30"/>
                         <outletCollection property="MapButtons" destination="293-r2-gGO" collectionClass="NSMutableArray" id="NV2-My-Vm4"/>
                         <outletCollection property="MapButtons" destination="fKZ-gK-T1K" collectionClass="NSMutableArray" id="Swe-Vc-uul"/>
@@ -545,6 +545,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q2k-ZI-oBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2124" y="98"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="gcX-SC-flc">
+            <objects>
+                <viewController storyboardIdentifier="TextActivityView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3C6-dH-pMI" customClass="TextViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L50-HY-HvZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-h3-h91">
+                                <rect key="frame" x="491" y="98" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MJg-FB-lVX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-pL-fvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1177" y="928"/>
         </scene>
         <!--Engraver View Controller-->
         <scene sceneID="ZPn-eY-mJb">
@@ -617,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ehm-gx-eWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337.6953125" y="976.5625"/>
+            <point key="canvasLocation" x="1884" y="876"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

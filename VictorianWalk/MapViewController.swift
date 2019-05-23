@@ -57,28 +57,28 @@ class MapViewController: UIViewController {
         
         TitleLabel.text = button.title
         DesciptionLabel.text = button.desc
-        let showbutton = button.hasGame == .none
+        let showbutton = button.hasActivity()
         
         PlayGameButton.isHidden = showbutton ? true : false
         
         //Change the button link depending on what booth was picked
-        switch button.hasGame {
-            
-            case .pub:
-               controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
-                break;
-            
-            case .pharmacy:
-                controller = MyStoryBoard.instantiateViewController(withIdentifier: "PharmacyView")
-                break;
-            
-            case .engraver:
-                controller = MyStoryBoard.instantiateViewController(withIdentifier: "EngraverView")
-                break;
-            
-            default:
-                print("ERROR")
-        }
+//        switch button.hasGame {
+//
+//            case .pub:
+//               controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
+//                break;
+//
+//            case .pharmacy:
+//                controller = MyStoryBoard.instantiateViewController(withIdentifier: "PharmacyView")
+//                break;
+//
+//            case .engraver:
+//                controller = MyStoryBoard.instantiateViewController(withIdentifier: "EngraverView")
+//                break;
+//
+//            default:
+//                print("ERROR")
+//        }
         
     }
     
