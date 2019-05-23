@@ -97,34 +97,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-g7-MaV">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="790"/>
+                                <rect key="frame" x="0.0" y="0.0" width="995" height="768"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bPd-g7-MaV" secondAttribute="height" multiplier="1025:791" id="nng-lm-J4e"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p2G-5M-3Xu">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="770"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KeF-8M-3W0">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="770"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="748"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jA-kX-ffM">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="256.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="249.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description..." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-ft-Wxu">
-                                                <rect key="frame" x="0.0" y="256.5" width="300" height="257"/>
+                                                <rect key="frame" x="0.0" y="249.5" width="300" height="249"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-1D-Nfx">
-                                                <rect key="frame" x="0.0" y="513.5" width="300" height="256.5"/>
+                                                <rect key="frame" x="0.0" y="498.5" width="300" height="249.5"/>
                                                 <state key="normal" title="Play a Game"/>
                                                 <connections>
-                                                    <segue destination="3C6-dH-pMI" kind="show" id="RX8-vs-Ati"/>
+                                                    <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="ula-fJ-X93"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -135,7 +135,7 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Kt-0z-g8y">
-                                        <rect key="frame" x="300" y="0.0" width="724" height="770"/>
+                                        <rect key="frame" x="300" y="0.0" width="724" height="748"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TexturedVWMapTrans.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6J-xq-kKl">
                                                 <rect key="frame" x="0.0" y="11" width="716" height="717"/>
@@ -401,8 +401,6 @@
                         <constraints>
                             <constraint firstItem="p2G-5M-3Xu" firstAttribute="top" secondItem="Jm7-03-I16" secondAttribute="top" id="12j-W4-a2B"/>
                             <constraint firstItem="bPd-g7-MaV" firstAttribute="leading" secondItem="fjL-Y7-XZK" secondAttribute="leading" id="1Jq-Dc-IH4"/>
-                            <constraint firstItem="bPd-g7-MaV" firstAttribute="leading" secondItem="fjL-Y7-XZK" secondAttribute="leading" id="6vS-sY-nwl"/>
-                            <constraint firstItem="Jm7-03-I16" firstAttribute="trailing" secondItem="bPd-g7-MaV" secondAttribute="trailing" id="7K7-ag-q2N"/>
                             <constraint firstItem="bPd-g7-MaV" firstAttribute="top" secondItem="fjL-Y7-XZK" secondAttribute="top" id="AUU-K4-l8r"/>
                             <constraint firstItem="Jm7-03-I16" firstAttribute="bottom" secondItem="bPd-g7-MaV" secondAttribute="bottom" id="Gf4-ib-qe1"/>
                             <constraint firstItem="p2G-5M-3Xu" firstAttribute="leading" secondItem="Jm7-03-I16" secondAttribute="leading" id="hTs-SA-Rb0"/>
@@ -437,6 +435,7 @@
                         <segue destination="0aS-22-JNt" kind="showDetail" id="jkf-tA-cgr"/>
                         <segue destination="xto-c3-7ge" kind="show" id="jGQ-Q7-XHT"/>
                         <segue destination="5Lc-tp-FJG" kind="show" id="FXZ-cx-0tR"/>
+                        <segue destination="3C6-dH-pMI" kind="show" id="M3Q-n7-XCj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUQ-uU-g3N" userLabel="First Responder" sceneMemberID="firstResponder"/>

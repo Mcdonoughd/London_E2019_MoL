@@ -11,6 +11,9 @@ import UIKit
 //This is the controller for the Map View
 class TextViewController: UIViewController {
     
+    var passedBooth = Booth(id:0,desc:"",title:"",Activities: [.none])
+    
+    
     @IBOutlet weak var ActivityTitle: UILabel!
     @IBOutlet weak var Backbutton: UIButton!
     @IBOutlet weak var Helpbutton: UIButton!
@@ -18,6 +21,7 @@ class TextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Text View Controller has Loaded")
+        //print("Passed data for \(passedBooth.title)")
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{

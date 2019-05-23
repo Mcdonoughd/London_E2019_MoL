@@ -10,6 +10,8 @@ import Foundation
 
 //This handles what text to be displayed when a display is clicked
 class MapModel{
+    var currentBooth = Booth(id:0,desc:"",title:"",Activities: [.none])
+    
     
     var TitleDesc:[String : Booth] = [
         "1":Booth(id:1, desc:"",title:"Toy Shop", Activities: [.none]),
@@ -40,8 +42,12 @@ class MapModel{
     func chooseBooth(at: String) -> Booth
     {
         print(at)
-        return  TitleDesc[at] ?? Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now. ",title:"404",Activities: [.none])
+        setbooth(booth: TitleDesc[at])
+        return  TitleDesc[at] ?? Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now.            ",title:"404",Activities: [.none])
     }
     
+    func setbooth(booth: Booth?){
+        currentBooth = booth ?? Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now.            ",title:"404",Activities: [.none])
+    }
  
 }

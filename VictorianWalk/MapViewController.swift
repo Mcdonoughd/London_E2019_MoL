@@ -31,6 +31,11 @@ class MapViewController: UIViewController {
     //PlayGameButton refference
     @IBOutlet weak var PlayGameButton: UIButton!
     
+    @IBAction func LaunchTextActivity(_ sender: Any) {
+        print("Performing segue")
+        //MyStoryBoard.instantiateViewController(withIdentifier: "TextActivityView")
+        performSegue(withIdentifier: "TextActivityView", sender: self)
+    }
     //Function called on Map Button Press
     @IBAction func ButtonPressed(_ sender: UIButton) {
         
@@ -38,15 +43,14 @@ class MapViewController: UIViewController {
         
         let btnPressed = sender.titleLabel?.text ?? "0"
         
-        
         UpdateViewfromModel(key: btnPressed)
     }
- 
     
-    @IBAction func ToPubGame(_ sender: UIButton) {
-        self.present(controller,animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preparing...")
+    let vc = segue.destination as! TextViewController
+        vc.passedBooth = Map.currentBooth
     }
-    
     
     
     //Update the view
@@ -58,8 +62,8 @@ class MapViewController: UIViewController {
         TitleLabel.text = button.title
         DesciptionLabel.text = button.desc
         let showbutton = button.hasActivity()
-        
-        PlayGameButton.isHidden = showbutton ? true : false
+        print("Show button is : \(showbutton)")
+        PlayGameButton.isHidden = showbutton ? false : true
         
         //Change the button link depending on what booth was picked
 //        switch button.hasGame {

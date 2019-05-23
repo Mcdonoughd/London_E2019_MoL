@@ -33,7 +33,7 @@ struct Booth{
     }
 
     func hasActivity() -> Bool {
-        return !Activities.contains(.none)
+        return !(Activities.contains(.none))
     }
     
     
