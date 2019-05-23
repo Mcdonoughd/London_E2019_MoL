@@ -96,13 +96,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woodbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-g7-MaV">
+                                <rect key="frame" x="-1" y="-23" width="1025" height="791"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8yX-C2-Fag">
                                 <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-8E-6S5">
                                         <rect key="frame" x="0.0" y="0.0" width="674" height="748"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Victorian_Walk_Map" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6J-xq-kKl">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TexturedVWMapTrans.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y6J-xq-kKl">
                                                 <rect key="frame" x="0.0" y="0.0" width="674" height="748"/>
                                             </imageView>
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jq3-Vb-YHu">
@@ -384,7 +388,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="4fK-pV-1Es" firstAttribute="leading" secondItem="Dc2-8E-6S5" secondAttribute="leading" constant="27" id="0Ln-7R-z6J"/>
                                             <constraint firstItem="zUJ-vK-wwQ" firstAttribute="baseline" secondItem="uh3-eS-9tj" secondAttribute="firstBaseline" id="1Ob-VD-GM7"/>
@@ -519,7 +522,7 @@
                         <outletCollection property="MapButtons" destination="7eW-hs-gfn" collectionClass="NSMutableArray" id="FPw-ae-562"/>
                         <outletCollection property="MapButtons" destination="Efu-kZ-NPB" collectionClass="NSMutableArray" id="RLC-Kf-xb2"/>
                         <outletCollection property="MapButtons" destination="6r4-Wu-sRe" collectionClass="NSMutableArray" id="0Rg-EG-ysP"/>
-                        <segue destination="0aS-22-JNt" kind="show" id="jkf-tA-cgr"/>
+                        <segue destination="0aS-22-JNt" kind="showDetail" id="jkf-tA-cgr"/>
                         <segue destination="xto-c3-7ge" kind="show" id="jGQ-Q7-XHT"/>
                         <segue destination="5Lc-tp-FJG" kind="show" id="FXZ-cx-0tR"/>
                     </connections>
@@ -706,8 +709,9 @@
     <resources>
         <image name="London_Street" width="512" height="364"/>
         <image name="MoL Logo Proper.png" width="921" height="715"/>
-        <image name="Victorian_Walk_Map" width="209.5" height="140"/>
+        <image name="TexturedVWMapTrans.png" width="1030" height="1030"/>
         <image name="WPI_logo" width="120" height="120"/>
         <image name="lonMap.jpg" width="6000" height="4598"/>
+        <image name="woodbg.jpg" width="2560" height="1600"/>
     </resources>
 </document>
