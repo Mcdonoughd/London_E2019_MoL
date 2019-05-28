@@ -24,7 +24,7 @@ class MapModel{
         
         "3":Booth(id:3, desc:"A barber’s services for men included haircuts, shaves, and shampooing. Hair was also, ‘signed.’ A lit wax taper was passed over the ends and the burnt tips rubbed off to seal and strengthen the hair. Barbers often stored customer’s personal shaving mugs at the back of their shop. They also sold tobacco and pipes’",
             title:"Barber Shop",
-            Activities: [.Act, .Imagine]),
+            Activities: [.Act]),
         
         "4":Booth(id:4, desc:"Working men in London relaxed in the ‘pub’. It was the heart of the local community. They met with friends, played darts and attended political meetings. Children sat outside, awaiting their parents, or were sent in to buy beer for drinking at home. Many pubs had a public bar and a saloon. Saloons were favored by couples as they were more comfortable.",
             title:"The Pub",
@@ -79,7 +79,7 @@ class MapModel{
         
         "17":Booth(id:17,desc:"Pawnbrokers, referred to as ‘uncle’, were the poor person’s bank. Clothing and jewellery were handed over in exchange for a loan. If the loan was not repaid within a year, ‘uncle’ could sell the goods. By 1900 there were 700 pawnbrokers in London. Forfeited articles for sale in the window include Sunday best clothing, wedding gifts and ornaments.",
             title:"Pawnbroker",
-            Activities: [.Search,.Imagine]),
+            Activities: [.Search]),
         
         "18":Booth(id:18,desc:"London’s financial services employed thousands of clerks. Their duties included bookkeeping, correspondence and cashier work behind grilles or screens. Banking jobs offered security, promotion and generally higher wages. In the 1890s the Bank of England for the first time hired women who had passed an exam to count and register banknotes. These offices were created from the central banking hall and offices of Barings Bank in Bishopsgate.",
             title:"Bank Clerks' Office",

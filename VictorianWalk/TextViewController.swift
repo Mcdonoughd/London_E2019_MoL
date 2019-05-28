@@ -77,7 +77,7 @@ class TextViewController: UIViewController {
         let ActDesc = ActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
      
         ActivityText.text = ActDesc
-    
+        ActivityText.adjustsFontSizeToFitWidth = true
         
         
     }
