@@ -35,7 +35,7 @@ class MapModel{
         "16":Booth(id:16,desc:"",title:"Fancy Stationer",Activities: [.none]),
         "17":Booth(id:17,desc:"",title:"Pawnbroker",Activities: [.none]),
         "18":Booth(id:18,desc:"",title:"Bank Clerks' Office",Activities: [.none]),
-        "19":Booth(id:19,desc:"",title:"Bank Manager's Office",Activities: [.Imagine, .Quiz])
+        "19":Booth(id:19,desc:"",title:"Bank Manager's Office",Activities: [.Imagine])
  ]
     
   let errorBooth = Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now.            ",title:"404",Activities: [.none])

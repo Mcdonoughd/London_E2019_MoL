@@ -109,19 +109,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="748"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jA-kX-ffM">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="249.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="374"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description..." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-ft-Wxu">
-                                                <rect key="frame" x="0.0" y="249.5" width="300" height="249"/>
+                                                <rect key="frame" x="0.0" y="374" width="300" height="374"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-1D-Nfx">
-                                                <rect key="frame" x="0.0" y="498.5" width="300" height="249.5"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-1D-Nfx">
+                                                <rect key="frame" x="0.0" y="748" width="300" height="0.0"/>
                                                 <state key="normal" title="Play a Game"/>
                                                 <connections>
                                                     <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="ula-fJ-X93"/>
@@ -507,6 +507,7 @@
                         <viewLayoutGuide key="safeArea" id="MJg-FB-lVX"/>
                     </view>
                     <connections>
+                        <outlet property="ActivityText" destination="fzv-h3-h91" id="DuR-6E-Xgs"/>
                         <outlet property="ActivityTitle" destination="vt5-np-chW" id="0zk-xe-c6d"/>
                         <outlet property="Backbutton" destination="8F6-9e-77U" id="BkS-aK-uIl"/>
                         <outlet property="ButtonStack" destination="Sd4-Q5-aIh" id="sBi-0G-yv9"/>

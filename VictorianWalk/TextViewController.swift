@@ -11,13 +11,22 @@ import UIKit
 //This is the controller for the Map View
 class TextViewController: UIViewController {
     
+    var CurrActivity = ""
+
+    let ChooseAnActivity = "Choose An Activity"
+    
+    
+    
+    
     var passedBooth = Booth(id:0,desc:"",title:"",Activities: [.none])
     var ActivityModel =  TextActivityModel()
     
+    @IBOutlet weak var ActivityText: UILabel!
     @IBOutlet weak var ButtonStack: UIStackView!
     @IBOutlet weak var ActivityTitle: UILabel!
     @IBOutlet weak var Backbutton: UIButton!
     @IBOutlet weak var Helpbutton: UIButton!
+   
     //fucntion called when app loads
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +36,26 @@ class TextViewController: UIViewController {
         LoadButtons(boothData: passedBooth)
     }
     
+    
     @IBAction func BackButton(_ sender: UIButton) {
             //Load old map
-        //Note keep a boolean to check the layout of the stroyboard
+            //Note keep a boolean to check the layout of the stroyboard
+        
     }
     
-    
+    //On ActivityChoose screen load a thing for each of the buttons
     func LoadButtons(boothData: Booth){
         for Activity in boothData.Activities {
             if (Activity == .none) {
                 //Print error message
+                print("Error")
             }
-            
-            
             //Make a button
             MakeButton(DisplayText: Activity.toString() )
         }
     }
     
-    
+    //this makes a button
     func MakeButton(DisplayText: String){
         let button = UIButton(frame: CGRect(x:100, y:100,width:10,height:10))
         button.setTitle(DisplayText, for: .normal)
@@ -58,10 +68,17 @@ class TextViewController: UIViewController {
     
     
     @objc func DisplayActivity(){
-        // change the text on the jam
+        //print("hello")
+        print("We are working...")
         
-        //remove buttons on the stack
-        //add a label
+        
+        
+        print(passedBooth.title)
+        
+        let ActDesc = ActivityModel.getActivityText(key: [passedBooth.title,"Imagine"])
+     
+        ActivityText.text = ActDesc
+    
         
         
     }
