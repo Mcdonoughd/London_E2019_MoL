@@ -593,7 +593,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose an Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-h3-h91">
-                                <rect key="frame" x="223" y="154" width="579" height="89"/>
+                                <rect key="frame" x="223" y="154" width="579" height="442"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="a1d-KX-hkL"/>
                                 </constraints>

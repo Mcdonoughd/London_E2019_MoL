@@ -22,7 +22,7 @@ class MapModel{
             title:"Tobacconist",
             Activities: [.none]),
         
-        "3":Booth(id:3, desc:"A barber’s services for men included haircuts, shaves, and shampooing. Hair was also, ‘signed.’ A lit wax taper was passed over the ends and the burnt tips rubbed off to seal and strengthen the hair. Barbers often stored customer’s personal shaving mugs at the back of their shop. They also sold tobacco and pipes’",
+        "3":Booth(id:3, desc:"A barber’s services for men included haircuts, shaves, and shampooing. Hair was also, ‘singed.’ A lit wax taper was passed over the ends and the burnt tips rubbed off to seal and strengthen the hair. Barbers often stored customer’s personal shaving mugs at the back of their shop. They also sold tobacco and pipes",
             title:"Barber Shop",
             Activities: [.Act]),
         
