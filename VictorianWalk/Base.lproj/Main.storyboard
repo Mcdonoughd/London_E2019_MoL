@@ -497,7 +497,7 @@
                                     <constraint firstAttribute="height" constant="81" id="8N9-Ef-LKy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Play a game"/>
+                                <state key="normal" title="Go"/>
                                 <connections>
                                     <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="NaD-aQ-jq5"/>
                                 </connections>
@@ -592,12 +592,12 @@
                                 <rect key="frame" x="20" y="37" width="1020" height="711"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Choose an Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-h3-h91">
-                                <rect key="frame" x="223" y="154" width="579" height="442"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an Activity" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-h3-h91">
+                                <rect key="frame" x="223" y="154" width="574" height="352"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="89" id="a1d-KX-hkL"/>
+                                    <constraint firstAttribute="height" constant="352" id="xva-p5-t7N"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -628,15 +628,15 @@
                         <constraints>
                             <constraint firstItem="rTx-QE-kwA" firstAttribute="baseline" secondItem="8F6-9e-77U" secondAttribute="baseline" id="5Uo-2O-eoM"/>
                             <constraint firstItem="Sd4-Q5-aIh" firstAttribute="leading" secondItem="MJg-FB-lVX" secondAttribute="leading" constant="92" id="EZo-7P-oWd"/>
+                            <constraint firstItem="fzv-h3-h91" firstAttribute="top" secondItem="vt5-np-chW" secondAttribute="bottom" constant="33" id="L2T-aw-jIn"/>
                             <constraint firstItem="vt5-np-chW" firstAttribute="centerX" secondItem="Sd4-Q5-aIh" secondAttribute="centerX" id="LJF-Ui-UZX"/>
                             <constraint firstItem="rTx-QE-kwA" firstAttribute="top" secondItem="MJg-FB-lVX" secondAttribute="top" constant="49" id="MvG-1a-MxB"/>
-                            <constraint firstItem="fzv-h3-h91" firstAttribute="top" secondItem="vt5-np-chW" secondAttribute="bottom" constant="32" id="dWw-Ns-LYK"/>
+                            <constraint firstItem="MJg-FB-lVX" firstAttribute="trailing" secondItem="fzv-h3-h91" secondAttribute="trailing" constant="227" id="c3h-ak-1gU"/>
                             <constraint firstItem="8F6-9e-77U" firstAttribute="leading" secondItem="L50-HY-HvZ" secondAttribute="leadingMargin" constant="48" id="e8N-Ls-VMa"/>
                             <constraint firstItem="rTx-QE-kwA" firstAttribute="trailing" secondItem="L50-HY-HvZ" secondAttribute="trailingMargin" constant="-72" id="gZm-Sw-Dg2"/>
+                            <constraint firstItem="fzv-h3-h91" firstAttribute="leading" secondItem="MJg-FB-lVX" secondAttribute="leading" constant="223" id="hgw-nN-4aW"/>
                             <constraint firstItem="rTx-QE-kwA" firstAttribute="top" secondItem="vt5-np-chW" secondAttribute="top" constant="2" id="m4o-u3-Tgu"/>
-                            <constraint firstItem="fzv-h3-h91" firstAttribute="centerX" secondItem="vt5-np-chW" secondAttribute="centerX" id="nwU-kj-WYm"/>
                             <constraint firstItem="MJg-FB-lVX" firstAttribute="trailing" secondItem="Sd4-Q5-aIh" secondAttribute="trailing" constant="92" id="sJ7-Ns-oQY"/>
-                            <constraint firstItem="fzv-h3-h91" firstAttribute="leading" secondItem="MJg-FB-lVX" secondAttribute="leading" constant="223" id="v4Y-vp-GF4"/>
                             <constraint firstItem="MJg-FB-lVX" firstAttribute="bottom" secondItem="Sd4-Q5-aIh" secondAttribute="bottom" constant="150" id="zUj-U6-Ctz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MJg-FB-lVX"/>
@@ -818,6 +818,7 @@
         <image name="woodbg.jpg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="M3Q-n7-XCj"/>
         <segue reference="c6c-Q7-I3c"/>
     </inferredMetricsTieBreakers>
 </document>
