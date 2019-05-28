@@ -137,32 +137,9 @@
                                 <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KeF-8M-3W0">
-<<<<<<< HEAD
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="748"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jA-kX-ffM">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="374"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description..." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-ft-Wxu">
-                                                <rect key="frame" x="0.0" y="374" width="300" height="374"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-1D-Nfx">
-                                                <rect key="frame" x="0.0" y="748" width="300" height="0.0"/>
-                                                <state key="normal" title="Play a Game"/>
-                                                <connections>
-                                                    <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="ula-fJ-X93"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-=======
-                                        <rect key="frame" x="0.0" y="0.0" width="306" height="748"/>
->>>>>>> 872f5c27281d00e787e12a8f9d22d7d68764a242
+                                        
+
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                     <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="3Kt-0z-g8y">

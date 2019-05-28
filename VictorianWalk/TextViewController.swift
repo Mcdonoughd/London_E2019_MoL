@@ -68,10 +68,6 @@ class TextViewController: UIViewController {
     
     
     @objc func DisplayActivity(){
-        //print("hello")
-        print("We are working...")
-        
-        
         
         print(passedBooth.title)
         
