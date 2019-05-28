@@ -83,6 +83,16 @@ class TextViewController: UIViewController {
     }
     
     
+    @IBAction func HelpButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottum of the screen!\nAct:", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
+        //alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return .landscapeLeft
     }
