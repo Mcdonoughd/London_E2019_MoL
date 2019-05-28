@@ -31,10 +31,11 @@ class MapViewController: UIViewController {
     //PlayGameButton refference
     @IBOutlet weak var PlayGameButton: UIButton!
     
+    //Function called on "Play" btn press
+    // it launches the choose activity segue
     @IBAction func LaunchTextActivity(_ sender: Any) {
         print("Performing segue")
-        //MyStoryBoard.instantiateViewController(withIdentifier: "TextActivityView")
-        performSegue(withIdentifier: "TextActivityView", sender: self)
+         self.performSegue(withIdentifier: "ActivitySegue", sender: self)
     }
     //Function called on Map Button Press
     @IBAction func ButtonPressed(_ sender: UIButton) {
@@ -46,10 +47,16 @@ class MapViewController: UIViewController {
         UpdateViewfromModel(key: btnPressed)
     }
     
+    //This passes the data if the segue is to Activitychooser
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing...")
-    let vc = segue.destination as! TextViewController
-        vc.passedBooth = Map.currentBooth
+        
+        if(segue.identifier == "ActivitySegue"){
+            print("preparing...")
+            let vc = segue.destination as! TextViewController
+            vc.passedBooth = Map.currentBooth
+        }
+        
+        
     }
     
     
@@ -64,26 +71,7 @@ class MapViewController: UIViewController {
         let showbutton = button.hasActivity()
         print("Show button is : \(showbutton)")
         PlayGameButton.isHidden = showbutton ? false : true
-        
-        //Change the button link depending on what booth was picked
-//        switch button.hasGame {
-//
-//            case .pub:
-//               controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
-//                break;
-//
-//            case .pharmacy:
-//                controller = MyStoryBoard.instantiateViewController(withIdentifier: "PharmacyView")
-//                break;
-//
-//            case .engraver:
-//                controller = MyStoryBoard.instantiateViewController(withIdentifier: "EngraverView")
-//                break;
-//
-//            default:
-//                print("ERROR")
-//        }
-        
+      
     }
     
     //fucntion called when app loads

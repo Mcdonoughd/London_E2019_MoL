@@ -11,13 +11,17 @@ import Foundation
 //This holds a Booths sidebar data
 struct Booth{
     
-    enum ActivityName{
+    enum ActivityName :String{
         case Search
         case Quiz
         case Imagine
         case Act
         case game
         case none
+        
+        func toString() -> String{
+            return self.rawValue
+        }
     }
     
     var id = 0

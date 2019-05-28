@@ -38,16 +38,18 @@ class MapModel{
         "19":Booth(id:19,desc:"",title:"Bank Manager's Office",Activities: [.Imagine, .Quiz])
  ]
     
-  
+  let errorBooth = Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now.            ",title:"404",Activities: [.none])
+    
+    
     func chooseBooth(at: String) -> Booth
     {
         print(at)
         setbooth(booth: TitleDesc[at])
-        return  TitleDesc[at] ?? Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now.            ",title:"404",Activities: [.none])
+        return  TitleDesc[at] ?? errorBooth
     }
     
     func setbooth(booth: Booth?){
-        currentBooth = booth ?? Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now.            ",title:"404",Activities: [.none])
+        currentBooth = booth ?? errorBooth
     }
  
 }

@@ -432,10 +432,7 @@
                         <outletCollection property="MapButtons" destination="F4m-A1-QVO" collectionClass="NSMutableArray" id="TVT-AH-bEY"/>
                         <outletCollection property="MapButtons" destination="DI3-vC-v1H" collectionClass="NSMutableArray" id="hjM-Um-5Lh"/>
                         <outletCollection property="MapButtons" destination="Jq3-Vb-YHu" collectionClass="NSMutableArray" id="Od3-6W-8QC"/>
-                        <segue destination="0aS-22-JNt" kind="showDetail" id="jkf-tA-cgr"/>
-                        <segue destination="xto-c3-7ge" kind="show" id="jGQ-Q7-XHT"/>
-                        <segue destination="5Lc-tp-FJG" kind="show" id="FXZ-cx-0tR"/>
-                        <segue destination="3C6-dH-pMI" kind="show" id="M3Q-n7-XCj"/>
+                        <segue destination="3C6-dH-pMI" kind="show" identifier="ActivitySegue" id="M3Q-n7-XCj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUQ-uU-g3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -480,6 +477,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="BackButton:" destination="3C6-dH-pMI" eventType="touchUpInside" id="zOn-Xs-ZFu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTx-QE-kwA">
                                 <rect key="frame" x="949" y="11" width="65" height="51"/>
@@ -494,19 +494,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Q5-aIh">
+                                <rect key="frame" x="92" y="392" width="840" height="226"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sd4-Q5-aIh" firstAttribute="leading" secondItem="MJg-FB-lVX" secondAttribute="leading" constant="92" id="EZo-7P-oWd"/>
+                            <constraint firstItem="MJg-FB-lVX" firstAttribute="trailing" secondItem="Sd4-Q5-aIh" secondAttribute="trailing" constant="92" id="sJ7-Ns-oQY"/>
+                            <constraint firstItem="MJg-FB-lVX" firstAttribute="bottom" secondItem="Sd4-Q5-aIh" secondAttribute="bottom" constant="150" id="zUj-U6-Ctz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MJg-FB-lVX"/>
                     </view>
                     <connections>
                         <outlet property="ActivityTitle" destination="vt5-np-chW" id="0zk-xe-c6d"/>
                         <outlet property="Backbutton" destination="8F6-9e-77U" id="BkS-aK-uIl"/>
+                        <outlet property="ButtonStack" destination="Sd4-Q5-aIh" id="sBi-0G-yv9"/>
                         <outlet property="Helpbutton" destination="rTx-QE-kwA" id="26b-u9-Ie4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-pL-fvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="928"/>
+            <point key="canvasLocation" x="1176.5625" y="927.34375"/>
         </scene>
         <!--Engraver View Controller-->
         <scene sceneID="ZPn-eY-mJb">
