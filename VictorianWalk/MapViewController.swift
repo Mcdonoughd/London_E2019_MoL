@@ -71,6 +71,11 @@ class MapViewController: UIViewController {
         let showbutton = button.hasActivity()
         print("Show button is : \(showbutton)")
         PlayGameButton.isHidden = showbutton ? false : true
+        
+        if(PlayGameButton.isHidden == false){
+            PlayGameButton.setTitle("Play a game", for: UIControl.State.normal)
+        }
+        
       
     }
     
