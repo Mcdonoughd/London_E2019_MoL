@@ -61,18 +61,20 @@ class TextViewController: UIViewController {
         let button = UIButton(frame: CGRect(x:100, y:100,width:10,height:10))
         button.setTitle(DisplayText, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        button.addTarget(self, action: #selector(DisplayActivity), for: .touchUpInside)
-        
+        button.addTarget(self, action: #selector(DisplayActivity(sender:)), for: .touchUpInside)
+//        let selector = #selector(DisplayActivity(type:DisplayText))
         ButtonStack.addArrangedSubview(button)
         print("Button Added: \(DisplayText)")
     }
     
     
-    @objc func DisplayActivity(){
+    @objc func DisplayActivity(sender: UIButton!){
+        //let btnsendtag: UIButton = sender
+        
         
         print(passedBooth.title)
         
-        let ActDesc = ActivityModel.getActivityText(key: [passedBooth.title,"Imagine"])
+        let ActDesc = ActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
      
         ActivityText.text = ActDesc
     
