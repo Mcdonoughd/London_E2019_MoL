@@ -34,29 +34,26 @@ class MapViewController: UIViewController {
     //Function called on "Play" btn press
     // it launches the choose activity segue
     @IBAction func LaunchTextActivity(_ sender: Any) {
-        print("Performing segue")
+         print("Performing segue")
          self.performSegue(withIdentifier: "ActivitySegue", sender: self)
     }
+    
     //Function called on Map Button Press
     @IBAction func ButtonPressed(_ sender: UIButton) {
         
         print("button pressed was \(String(describing: sender.titleLabel?.text))")
         
         let btnPressed = sender.titleLabel?.text ?? "0"
-        
         UpdateViewfromModel(key: btnPressed)
     }
     
     //This passes the data if the segue is to Activitychooser
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if(segue.identifier == "ActivitySegue"){
             print("preparing...")
             let vc = segue.destination as! TextViewController
             vc.passedBooth = Map.currentBooth
         }
-        
-        
     }
     
     
@@ -71,11 +68,7 @@ class MapViewController: UIViewController {
         let showbutton = button.hasActivity()
         print("Show button is : \(showbutton)")
         PlayGameButton.isHidden = showbutton ? false : true
-        
-        if(PlayGameButton.isHidden == false){
-            PlayGameButton.setTitle("Play a game", for: UIControl.State.normal)
-        }
-        
+        print("play game button is hidden: \(PlayGameButton.isHidden)")
       
     }
     

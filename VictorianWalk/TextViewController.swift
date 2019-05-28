@@ -40,7 +40,8 @@ class TextViewController: UIViewController {
     @IBAction func BackButton(_ sender: UIButton) {
             //Load old map
             //Note keep a boolean to check the layout of the stroyboard
-        
+        print("Performing segue")
+        self.performSegue(withIdentifier: "MapSegue", sender: self)
     }
     
     //On ActivityChoose screen load a thing for each of the buttons

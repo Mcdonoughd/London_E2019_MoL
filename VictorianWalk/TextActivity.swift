@@ -16,8 +16,8 @@ struct TextActivity {
     var type = ""
     
     init(text: String, type: String){
-        
         self.text = text
         self.type = type
     }
+    
 }
