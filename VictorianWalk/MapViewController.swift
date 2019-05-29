@@ -14,6 +14,8 @@ class MapViewController: UIViewController {
     //The model
     var Map = MapModel()
     
+    @IBOutlet weak var Homebutton: UIButton!
+    
     //reference to the MainStoryBoards
     let MyStoryBoard = UIStoryboard(name:"Main",bundle: nil)
     
@@ -31,6 +33,10 @@ class MapViewController: UIViewController {
     //PlayGameButton refference
     @IBOutlet weak var PlayGameButton: UIButton!
     
+    @IBAction func LaunchHomeScreen(_ sender: UIButton) {
+        print("Launching home screen")
+        self.performSegue(withIdentifier: "MaptoHome", sender: self)
+    }
     //Function called on "Play" btn press
     // it launches the choose activity segue
     @IBAction func LaunchTextActivity(_ sender: Any) {

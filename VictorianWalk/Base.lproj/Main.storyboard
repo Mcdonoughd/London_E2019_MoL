@@ -18,14 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodbg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-bk-lgt">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-7o-kf3">
-                                <rect key="frame" x="39" y="78" width="985" height="621"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="London_Street" translatesAutoresizingMaskIntoConstraints="NO" id="Ks1-3q-sEo">
-                                <rect key="frame" x="519" y="213" width="412" height="293"/>
+                                <rect key="frame" x="543" y="150" width="412" height="293"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="412" id="O5d-iJ-Lho"/>
                                     <constraint firstAttribute="width" secondItem="Ks1-3q-sEo" secondAttribute="height" multiplier="128:91" id="Q3n-m1-qjC"/>
@@ -43,6 +37,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ing-mc-bFq">
+                                <rect key="frame" x="97" y="126" width="404.5" height="53"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlh-bO-atx">
                                 <rect key="frame" x="440.5" y="559" width="143" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
@@ -51,33 +51,19 @@
                                     <segue destination="gpA-nO-A60" kind="show" id="ihq-QR-gMi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ing-mc-bFq">
-                                <rect key="frame" x="310" y="124" width="404.5" height="53"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="RLw-7o-kf3" firstAttribute="trailing" secondItem="6iX-bk-lgt" secondAttribute="trailing" id="1YX-DR-feV"/>
-                            <constraint firstItem="6iX-bk-lgt" firstAttribute="top" secondItem="a2s-qg-PFN" secondAttribute="top" id="3Pw-UC-Yod"/>
-                            <constraint firstItem="ing-mc-bFq" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="104" id="4hd-xs-iIP"/>
-                            <constraint firstItem="iPe-tG-ruP" firstAttribute="bottom" secondItem="RLw-7o-kf3" secondAttribute="bottom" constant="69" id="Fl9-WU-piX"/>
-                            <constraint firstAttribute="trailing" secondItem="RLw-7o-kf3" secondAttribute="trailing" id="LB5-t8-3Bi"/>
-                            <constraint firstItem="iPe-tG-ruP" firstAttribute="trailing" secondItem="Ks1-3q-sEo" secondAttribute="trailing" constant="93" id="NFG-HJ-10c"/>
-                            <constraint firstItem="6iX-bk-lgt" firstAttribute="centerX" secondItem="xlh-bO-atx" secondAttribute="centerX" id="UBU-XW-3bs"/>
-                            <constraint firstItem="ing-mc-bFq" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="310" id="W6E-FX-Fzp"/>
+                            <constraint firstItem="ing-mc-bFq" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="106" id="4hd-xs-iIP"/>
+                            <constraint firstItem="iPe-tG-ruP" firstAttribute="trailing" secondItem="Ks1-3q-sEo" secondAttribute="trailing" constant="69" id="NFG-HJ-10c"/>
+                            <constraint firstItem="ing-mc-bFq" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="97" id="W6E-FX-Fzp"/>
                             <constraint firstItem="xlh-bO-atx" firstAttribute="centerX" secondItem="a2s-qg-PFN" secondAttribute="centerX" id="Yfi-80-rpz"/>
-                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="ing-mc-bFq" secondAttribute="trailing" constant="-195.5" id="Z7P-No-Vba"/>
-                            <constraint firstItem="RLw-7o-kf3" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="39" id="cWW-Pd-gyy"/>
-                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="193" id="gE6-dC-mJ4"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="ing-mc-bFq" secondAttribute="trailing" constant="41.5" id="Z7P-No-Vba"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="130" id="gE6-dC-mJ4"/>
                             <constraint firstItem="fJj-5e-LXX" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="97" id="gRM-kd-g0F"/>
-                            <constraint firstItem="fJj-5e-LXX" firstAttribute="top" secondItem="ing-mc-bFq" secondAttribute="bottom" constant="75" id="jvG-Th-6cK"/>
-                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="trailing" constant="22" id="jx0-Pm-9nk"/>
+                            <constraint firstItem="fJj-5e-LXX" firstAttribute="top" secondItem="ing-mc-bFq" secondAttribute="bottom" constant="73" id="jvG-Th-6cK"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="trailing" constant="46" id="jx0-Pm-9nk"/>
                             <constraint firstItem="iPe-tG-ruP" firstAttribute="bottom" secondItem="xlh-bO-atx" secondAttribute="bottom" constant="143" id="kje-of-MbM"/>
-                            <constraint firstItem="6iX-bk-lgt" firstAttribute="bottom" secondItem="iPe-tG-ruP" secondAttribute="bottom" id="mB4-Mx-xBS"/>
-                            <constraint firstItem="RLw-7o-kf3" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="58" id="mcF-1U-xEA"/>
                             <constraint firstItem="xlh-bO-atx" firstAttribute="top" secondItem="fJj-5e-LXX" secondAttribute="bottom" constant="68" id="p16-3T-ePo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iPe-tG-ruP"/>
@@ -133,7 +119,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="jfa-Wx-XWc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -439,6 +425,15 @@
                                                     <action selector="ButtonPressed:" destination="gpA-nO-A60" eventType="touchUpInside" id="aTA-xP-3LD"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4w-Tn-qhI">
+                                                <rect key="frame" x="618" y="706" width="122" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Home"/>
+                                                <connections>
+                                                    <action selector="LaunchHomeScreen:" destination="gpA-nO-A60" eventType="touchUpInside" id="69o-Wi-fcw"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="zo2-80-i1y" firstAttribute="top" secondItem="tfi-Kr-9Sh" secondAttribute="bottom" constant="8" symbolic="YES" id="0xo-0J-EHv"/>
@@ -506,11 +501,11 @@
                                 </constraints>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-1D-Nfx">
-                                <rect key="frame" x="92" y="560" width="114" height="149"/>
+                                <rect key="frame" x="92" y="553" width="114" height="81"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="149" id="8N9-Ef-LKy"/>
+                                    <constraint firstAttribute="height" constant="81" id="8N9-Ef-LKy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="54"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <state key="normal" title="Go"/>
                                 <connections>
                                     <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="NaD-aQ-jq5"/>
@@ -525,7 +520,7 @@
                             <constraint firstItem="HUo-eQ-Kvq" firstAttribute="top" secondItem="p2G-5M-3Xu" secondAttribute="top" id="7sA-xl-Ih4"/>
                             <constraint firstItem="0jA-kX-ffM" firstAttribute="leading" secondItem="Jm7-03-I16" secondAttribute="leading" constant="44" id="9U5-qA-G5F"/>
                             <constraint firstItem="bPd-g7-MaV" firstAttribute="top" secondItem="fjL-Y7-XZK" secondAttribute="top" id="AUU-K4-l8r"/>
-                            <constraint firstItem="Jm7-03-I16" firstAttribute="bottom" secondItem="QSG-1D-Nfx" secondAttribute="bottom" constant="59" id="C8U-Cn-rD9"/>
+                            <constraint firstItem="Jm7-03-I16" firstAttribute="bottom" secondItem="QSG-1D-Nfx" secondAttribute="bottom" constant="134" id="C8U-Cn-rD9"/>
                             <constraint firstItem="HUo-eQ-Kvq" firstAttribute="leading" secondItem="fjL-Y7-XZK" secondAttribute="leadingMargin" id="FDG-n2-g6v"/>
                             <constraint firstItem="Jm7-03-I16" firstAttribute="bottom" secondItem="bPd-g7-MaV" secondAttribute="bottom" id="Gf4-ib-qe1"/>
                             <constraint firstItem="0jA-kX-ffM" firstAttribute="leading" secondItem="Pyb-ft-Wxu" secondAttribute="leading" id="Ird-HR-Zgj"/>
@@ -544,6 +539,7 @@
                     </view>
                     <connections>
                         <outlet property="DesciptionLabel" destination="Pyb-ft-Wxu" id="7pS-cf-jAb"/>
+                        <outlet property="Homebutton" destination="v4w-Tn-qhI" id="EZq-31-hoM"/>
                         <outlet property="PlayGameButton" destination="QSG-1D-Nfx" id="hU0-A1-QRy"/>
                         <outlet property="TitleLabel" destination="0jA-kX-ffM" id="sQo-AM-T30"/>
                         <outletCollection property="MapButtons" destination="tqG-fq-K9D" collectionClass="NSMutableArray" id="776-by-i8k"/>
@@ -566,11 +562,12 @@
                         <outletCollection property="MapButtons" destination="fKZ-gK-T1K" collectionClass="NSMutableArray" id="Swe-Vc-uul"/>
                         <outletCollection property="MapButtons" destination="4fK-pV-1Es" collectionClass="NSMutableArray" id="QXh-jd-MKn"/>
                         <segue destination="3C6-dH-pMI" kind="show" identifier="ActivitySegue" id="M3Q-n7-XCj"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="MaptoHome" id="GXC-mb-t2E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUQ-uU-g3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337.6953125" y="97.65625"/>
+            <point key="canvasLocation" x="1371" y="98"/>
         </scene>
         <!--Pub View Controller-->
         <scene sceneID="NUa-KR-Hem">
@@ -640,6 +637,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Q5-aIh">
                                 <rect key="frame" x="92" y="396" width="840" height="226"/>
                             </stackView>
+                            <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-ii-2xw">
+                                <rect key="frame" x="882" y="706" width="122" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="LaunchHomeActivity:" destination="3C6-dH-pMI" eventType="touchUpInside" id="rnB-E4-PGR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -665,11 +671,12 @@
                         <outlet property="ButtonStack" destination="Sd4-Q5-aIh" id="sBi-0G-yv9"/>
                         <outlet property="Helpbutton" destination="rTx-QE-kwA" id="26b-u9-Ie4"/>
                         <segue destination="gpA-nO-A60" kind="show" identifier="MapSegue" id="c6c-Q7-I3c"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ActivitytoHome" id="Kr5-Js-4hY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-pL-fvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176.5625" y="927.34375"/>
+            <point key="canvasLocation" x="1190.625" y="1514.84375"/>
         </scene>
         <!--Engraver View Controller-->
         <scene sceneID="ZPn-eY-mJb">
@@ -775,7 +782,7 @@
                                         <fragment content="Begin">
                                             <attributes>
                                                 <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="80" name="SnellRoundhand"/>
+                                                <font key="NSFont" size="75" name="Helvetica-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -835,6 +842,7 @@
         <image name="woodbg.jpg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ihq-QR-gMi"/>
+        <segue reference="Kr5-Js-4hY"/>
+        <segue reference="c6c-Q7-I3c"/>
     </inferredMetricsTieBreakers>
 </document>

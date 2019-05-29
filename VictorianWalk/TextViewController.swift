@@ -15,8 +15,7 @@ class TextViewController: UIViewController {
 
     let ChooseAnActivity = "Choose An Activity"
     
-    
-    
+    var isShown = false
     
     var passedBooth = Booth(id:0,desc:"",title:"",Activities: [.none])
     var ActivityModel =  TextActivityModel()
@@ -44,6 +43,11 @@ class TextViewController: UIViewController {
         self.performSegue(withIdentifier: "MapSegue", sender: self)
     }
     
+    @IBAction func LaunchHomeActivity(_ sender: UIButton) {
+        print("Performing segue")
+        self.performSegue(withIdentifier: "ActivitytoHome", sender: self)
+    }
+    
     //On ActivityChoose screen load a thing for each of the buttons
     func LoadButtons(boothData: Booth){
         for Activity in boothData.Activities {
@@ -52,18 +56,22 @@ class TextViewController: UIViewController {
                 print("Error")
             }
             //Make a button
-            MakeButton(DisplayText: Activity.toString() )
+            MakeButton(DisplayText: Activity.toString())
         }
     }
     
     //this makes a button
     func MakeButton(DisplayText: String){
-        let button = UIButton(frame: CGRect(x:100, y:100,width:10,height:10))
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x:100, y:100,width:50,height:50)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle(DisplayText, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.addTarget(self, action: #selector(DisplayActivity(sender:)), for: .touchUpInside)
 //        let selector = #selector(DisplayActivity(type:DisplayText))
         ButtonStack.addArrangedSubview(button)
+        ButtonStack.customSpacing(after: button)
+        ButtonStack.distribution = .fillEqually
         print("Button Added: \(DisplayText)")
     }
     
@@ -71,17 +79,34 @@ class TextViewController: UIViewController {
     @objc func DisplayActivity(sender: UIButton!){
         //let btnsendtag: UIButton = sender
         
-        
-        print(passedBooth.title)
-        
         let ActDesc = ActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
      
-        ActivityText.text = ActDesc
-        //ActivityText.adjustsFontSizeToFitWidth = true
+        ActivityText.text = ActDesc.text
         
-        
+        if ActDesc.answer != "none"{
+            MakeShowButton(answer: ActDesc.answer)
+            ButtonStack.removeArrangedSubview(sender)
+        }
     }
     
+    var tempAnswer = ""
+    
+    func MakeShowButton(answer:String){
+        let button = UIButton(type:.custom)
+        button.frame = CGRect(x:100, y:100,width:50,height:50)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.setTitle("Show", for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
+        tempAnswer = answer; ButtonStack.addArrangedSubview(button)
+    }
+    
+    @objc func ShowAnswer(sender:UIButton){
+        print(tempAnswer)
+        ActivityText.text = tempAnswer
+        ButtonStack.isHidden = true
+        
+    }
     
     @IBAction func HelpButton(_ sender: Any) {
         let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottum of the screen!\n\nAct: Live life as a Victorian through your actions!\n\nSearch: Find Victorian artifacts in the shops\n\nImagine: Use your imagination to live back in Victorian London\n\nDiscuss: Talk about topics and questions from the shop with your family\n\nPress back when you are finished", preferredStyle: .alert)
