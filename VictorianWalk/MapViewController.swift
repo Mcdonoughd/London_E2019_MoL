@@ -21,10 +21,11 @@ class MapViewController: UIViewController {
     
     lazy var controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
     
-    @IBOutlet var roomSelectors: [UIImageView]!
+ 
     //Array of all buttons
     @IBOutlet var MapButtons: [UIButton]!
     
+    @IBOutlet var selectors: [UIImageView]!
     //Title Label reference
     @IBOutlet weak var TitleLabel: UILabel!
     
@@ -70,6 +71,16 @@ class MapViewController: UIViewController {
         let button = Map.chooseBooth(at: key)
         print(button.title)
         
+        for selectImage in selectors{
+            if(selectImage.tag == Int(key)){
+                selectImage.isHidden = false
+                
+            }else{
+                selectImage.isHidden = true
+            }
+            
+        }
+        
         TitleLabel.text = button.title
         TitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
         
@@ -91,6 +102,11 @@ class MapViewController: UIViewController {
             button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), for: .normal)
             
         }
+        
+        for selectImage in selectors{
+            selectImage.isHidden = true;
+        }
+
         
     }
     

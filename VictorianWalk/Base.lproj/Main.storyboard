@@ -376,13 +376,13 @@
                                                     <action selector="ButtonPressed:" destination="gpA-nO-A60" eventType="touchUpInside" id="rsq-tn-8C7"/>
                                                 </connections>
                                             </button>
-                                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r4-Wu-sRe">
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r4-Wu-sRe">
                                                 <rect key="frame" x="196" y="582" width="311" height="101"/>
                                                 <color key="backgroundColor" red="0.9437301159" green="0.94062405819999995" blue="0.1008634046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="5" label="5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="311" id="Jpc-2l-4AX"/>
-                                                    <constraint firstAttribute="height" constant="86" id="vq8-zx-tLp"/>
+                                                    <constraint firstAttribute="height" constant="101" id="vq8-zx-tLp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="17">
@@ -423,13 +423,13 @@
                                                     <action selector="ButtonPressed:" destination="gpA-nO-A60" eventType="touchUpInside" id="tDJ-xP-yZ5"/>
                                                 </connections>
                                             </button>
-                                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-kZ-NPB">
-                                                <rect key="frame" x="95" y="603" width="104" height="73"/>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-kZ-NPB">
+                                                <rect key="frame" x="95" y="603" width="104" height="101"/>
                                                 <color key="backgroundColor" red="0.9437301159" green="0.94062405819999995" blue="0.1008634046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="5" label="5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="104" id="hkh-9Z-n5V"/>
-                                                    <constraint firstAttribute="height" constant="40" id="kCX-CA-vgf"/>
+                                                    <constraint firstAttribute="height" constant="101" id="kCX-CA-vgf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="16">
@@ -448,79 +448,79 @@
                                                     <action selector="LaunchHomeScreen:" destination="gpA-nO-A60" eventType="touchUpInside" id="69o-Wi-fcw"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="1It-RC-Jng" userLabel="1selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="1It-RC-Jng" userLabel="1selected">
                                                 <rect key="frame" x="598" y="552" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="cjB-RH-wkX" userLabel="2selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="cjB-RH-wkX" userLabel="2selected">
                                                 <rect key="frame" x="598" y="433" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z5e-sH-d21" userLabel="3selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z5e-sH-d21" userLabel="3selected">
                                                 <rect key="frame" x="597" y="322" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="zim-22-nZh" userLabel="4selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="zim-22-nZh" userLabel="4selected">
                                                 <rect key="frame" x="455" y="423" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="VCy-p2-SB8" userLabel="5selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="VCy-p2-SB8" userLabel="5selected">
                                                 <rect key="frame" x="540" y="139" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="hya-N9-cUk" userLabel="6selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="hya-N9-cUk" userLabel="6selected">
                                                 <rect key="frame" x="405" y="114" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="eaK-Af-Gti" userLabel="7selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="eaK-Af-Gti" userLabel="7selected">
                                                 <rect key="frame" x="200" y="53" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="CRC-8K-rvD" userLabel="8selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="CRC-8K-rvD" userLabel="8selected">
                                                 <rect key="frame" x="298" y="222" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mpl-RH-OmP" userLabel="9selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mpl-RH-OmP" userLabel="9selected">
                                                 <rect key="frame" x="235" y="223" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-dT-yWX" userLabel="10selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-dT-yWX" userLabel="10selected">
                                                 <rect key="frame" x="173" y="222" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-WB-3Se" userLabel="11selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="11" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-WB-3Se" userLabel="11selected">
                                                 <rect key="frame" x="0.0" y="173" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="WzO-RO-LXv" userLabel="12selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="WzO-RO-LXv" userLabel="12selected">
                                                 <rect key="frame" x="10" y="395" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="eVm-g8-Bjy" userLabel="13selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="13" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="eVm-g8-Bjy" userLabel="13selected">
                                                 <rect key="frame" x="9" y="573" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vh2-bd-3lB" userLabel="14selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="14" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vh2-bd-3lB" userLabel="14selected">
                                                 <rect key="frame" x="175" y="296" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="pR0-Bh-p3j" userLabel="15selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="15" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="pR0-Bh-p3j" userLabel="15selected">
                                                 <rect key="frame" x="173" y="383" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1e-Ed-byV" userLabel="16selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="16" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="G1e-Ed-byV" userLabel="16selected">
                                                 <rect key="frame" x="88" y="635" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="t7j-Dm-zyq" userLabel="17selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="17" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="t7j-Dm-zyq" userLabel="17selected">
                                                 <rect key="frame" x="310" y="637" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="BfY-vt-9T5" userLabel="18selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="18" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="BfY-vt-9T5" userLabel="18selected">
                                                 <rect key="frame" x="279" y="427" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="agW-r6-FiZ" userLabel="19selected">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="19" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selectionHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="agW-r6-FiZ" userLabel="19selected">
                                                 <rect key="frame" x="278" y="312" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -530,7 +530,7 @@
                                             <constraint firstItem="y6J-xq-kKl" firstAttribute="leading" secondItem="3Kt-0z-g8y" secondAttribute="leading" id="60e-hW-lIF"/>
                                             <constraint firstAttribute="trailing" secondItem="y6J-xq-kKl" secondAttribute="trailing" constant="2" id="6jh-gw-K43"/>
                                             <constraint firstItem="DI3-vC-v1H" firstAttribute="leading" secondItem="3Kt-0z-g8y" secondAttribute="leading" constant="95" id="8LB-oI-Bii"/>
-                                            <constraint firstItem="F4m-A1-QVO" firstAttribute="bottom" secondItem="6r4-Wu-sRe" secondAttribute="bottom" id="8RH-Bm-iIy"/>
+                                            <constraint firstItem="F4m-A1-QVO" firstAttribute="bottom" secondItem="6r4-Wu-sRe" secondAttribute="bottom" constant="-15" id="8RH-Bm-iIy"/>
                                             <constraint firstAttribute="bottom" secondItem="y6J-xq-kKl" secondAttribute="bottom" constant="20" id="BXP-Wk-dYv"/>
                                             <constraint firstItem="QkV-GR-gXf" firstAttribute="bottom" secondItem="293-r2-gGO" secondAttribute="bottom" id="BYY-DQ-aPn"/>
                                             <constraint firstItem="uh3-eS-9tj" firstAttribute="top" secondItem="DI3-vC-v1H" secondAttribute="bottom" constant="40" id="Bpw-UW-bzK"/>
@@ -651,7 +651,25 @@
                         <outletCollection property="MapButtons" destination="Jq3-Vb-YHu" collectionClass="NSMutableArray" id="Od3-6W-8QC"/>
                         <outletCollection property="MapButtons" destination="fKZ-gK-T1K" collectionClass="NSMutableArray" id="Swe-Vc-uul"/>
                         <outletCollection property="MapButtons" destination="4fK-pV-1Es" collectionClass="NSMutableArray" id="QXh-jd-MKn"/>
-                        <outletCollection property="roomSelectors" destination="CRC-8K-rvD" collectionClass="NSMutableArray" id="m0z-bb-1Q1"/>
+                        <outletCollection property="selectors" destination="1It-RC-Jng" collectionClass="NSMutableArray" id="THV-Zy-JKQ"/>
+                        <outletCollection property="selectors" destination="cjB-RH-wkX" collectionClass="NSMutableArray" id="iQg-6C-U44"/>
+                        <outletCollection property="selectors" destination="Z5e-sH-d21" collectionClass="NSMutableArray" id="JbL-sa-ih1"/>
+                        <outletCollection property="selectors" destination="zim-22-nZh" collectionClass="NSMutableArray" id="8EF-9f-cNH"/>
+                        <outletCollection property="selectors" destination="VCy-p2-SB8" collectionClass="NSMutableArray" id="Ehd-kv-PW5"/>
+                        <outletCollection property="selectors" destination="hya-N9-cUk" collectionClass="NSMutableArray" id="sDr-6i-Hmy"/>
+                        <outletCollection property="selectors" destination="eaK-Af-Gti" collectionClass="NSMutableArray" id="D3a-BY-0JB"/>
+                        <outletCollection property="selectors" destination="CRC-8K-rvD" collectionClass="NSMutableArray" id="vH3-LX-qhu"/>
+                        <outletCollection property="selectors" destination="Mpl-RH-OmP" collectionClass="NSMutableArray" id="dWu-R6-7aE"/>
+                        <outletCollection property="selectors" destination="HXz-dT-yWX" collectionClass="NSMutableArray" id="cWm-HF-2RS"/>
+                        <outletCollection property="selectors" destination="Rmm-WB-3Se" collectionClass="NSMutableArray" id="xsQ-td-wUa"/>
+                        <outletCollection property="selectors" destination="WzO-RO-LXv" collectionClass="NSMutableArray" id="OaE-BL-car"/>
+                        <outletCollection property="selectors" destination="eVm-g8-Bjy" collectionClass="NSMutableArray" id="K6W-Rq-yTz"/>
+                        <outletCollection property="selectors" destination="Vh2-bd-3lB" collectionClass="NSMutableArray" id="pbW-RA-bnr"/>
+                        <outletCollection property="selectors" destination="pR0-Bh-p3j" collectionClass="NSMutableArray" id="Pcx-od-1j1"/>
+                        <outletCollection property="selectors" destination="G1e-Ed-byV" collectionClass="NSMutableArray" id="S9K-sq-JgX"/>
+                        <outletCollection property="selectors" destination="t7j-Dm-zyq" collectionClass="NSMutableArray" id="wNW-H2-XS8"/>
+                        <outletCollection property="selectors" destination="BfY-vt-9T5" collectionClass="NSMutableArray" id="1lV-cd-7ax"/>
+                        <outletCollection property="selectors" destination="agW-r6-FiZ" collectionClass="NSMutableArray" id="pvK-2m-XBw"/>
                         <segue destination="3C6-dH-pMI" kind="show" identifier="ActivitySegue" id="M3Q-n7-XCj"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="MaptoHome" id="GXC-mb-t2E"/>
                     </connections>
