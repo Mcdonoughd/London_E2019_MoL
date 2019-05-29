@@ -14,7 +14,7 @@ class MapModel{
     
     
     var TitleDesc:[String : Booth] = [
-        "1":Booth(id:1, desc:"on: Victorian children saved their farthings to buy ‘penny toys’ from street sellers and dazzling toy arcades such as Lowther’s on the Strand. With rows of small shops like this one, Lowther’s was an ‘Aladdin fairy palace’ of expensive train sets, dolls, and lead soldiers, ‘all the glories and wonders a child’s fancy can conceive.’",
+        "1":Booth(id:1, desc:"Victorian children saved their farthings to buy ‘penny toys’ from street sellers and dazzling toy arcades such as Lowther’s on the Strand. With rows of small shops like this one, Lowther’s was an ‘Aladdin fairy palace’ of expensive train sets, dolls, and lead soldiers, ‘all the glories and wonders a child’s fancy can conceive.’",
             title:"Toy Shop",
             Activities: [.none]),
         
