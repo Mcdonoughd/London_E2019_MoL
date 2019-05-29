@@ -21,6 +21,7 @@ class MapViewController: UIViewController {
     
     lazy var controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
     
+    @IBOutlet var roomSelectors: [UIImageView]!
     //Array of all buttons
     @IBOutlet var MapButtons: [UIButton]!
     
