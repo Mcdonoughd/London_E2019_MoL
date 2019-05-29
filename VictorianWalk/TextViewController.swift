@@ -92,13 +92,19 @@ class TextViewController: UIViewController {
     var tempAnswer = ""
     
     func MakeShowButton(answer:String){
+        
+        for subView in ButtonStack.subviews as [UIView]{
+            subView.removeFromSuperview()
+        }
+        
         let button = UIButton(type:.custom)
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle("Show", for: .normal)
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
-        tempAnswer = answer; ButtonStack.addArrangedSubview(button)
+        tempAnswer = answer
+        ButtonStack.addArrangedSubview(button)
     }
     
     @objc func ShowAnswer(sender:UIButton){
