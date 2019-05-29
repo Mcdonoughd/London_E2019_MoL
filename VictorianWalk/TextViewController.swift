@@ -84,7 +84,7 @@ class TextViewController: UIViewController {
     
     
     @IBAction func HelpButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottum of the screen!\nAct:", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottum of the screen!\n\nAct: Live life as a Victorian through your actions!\n\nSearch: Find Victorian artifacts in the shops\n\nImagine: Use your imagination to live back in Victorian London\n\nDiscuss: Talk about topics and questions from the shop with your family\n\nPress back when you are finished", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
         //alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))

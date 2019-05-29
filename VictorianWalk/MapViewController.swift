@@ -64,6 +64,8 @@ class MapViewController: UIViewController {
         print(button.title)
         
         TitleLabel.text = button.title
+        TitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+        
         DesciptionLabel.text = button.desc
         let showbutton = button.hasActivity()
         print("Show button is : \(showbutton)")
@@ -76,7 +78,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Map View Controller has Loaded")
-        
+        TitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
         for button in MapButtons{
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
             button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), for: .normal)
