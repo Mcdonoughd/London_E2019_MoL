@@ -14,10 +14,16 @@ struct TextActivity {
     
     var text = ""
     var type = ""
+    var answer = ""
     
-    init(text: String, type: String){
+    init(text: String){
         self.text = text
-        self.type = type
+        answer = "none"
+    }
+    
+    init(text:String, answer: String){
+        self.text = text
+        self.answer = answer
     }
     
 }

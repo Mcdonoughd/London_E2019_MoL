@@ -425,6 +425,15 @@
                                                     <action selector="ButtonPressed:" destination="gpA-nO-A60" eventType="touchUpInside" id="aTA-xP-3LD"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4w-Tn-qhI">
+                                                <rect key="frame" x="618" y="706" width="122" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Home"/>
+                                                <connections>
+                                                    <action selector="LaunchHomeScreen:" destination="gpA-nO-A60" eventType="touchUpInside" id="69o-Wi-fcw"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="zo2-80-i1y" firstAttribute="top" secondItem="tfi-Kr-9Sh" secondAttribute="bottom" constant="8" symbolic="YES" id="0xo-0J-EHv"/>
@@ -530,6 +539,7 @@
                     </view>
                     <connections>
                         <outlet property="DesciptionLabel" destination="Pyb-ft-Wxu" id="7pS-cf-jAb"/>
+                        <outlet property="Homebutton" destination="v4w-Tn-qhI" id="EZq-31-hoM"/>
                         <outlet property="PlayGameButton" destination="QSG-1D-Nfx" id="hU0-A1-QRy"/>
                         <outlet property="TitleLabel" destination="0jA-kX-ffM" id="sQo-AM-T30"/>
                         <outletCollection property="MapButtons" destination="tqG-fq-K9D" collectionClass="NSMutableArray" id="776-by-i8k"/>
@@ -552,11 +562,12 @@
                         <outletCollection property="MapButtons" destination="fKZ-gK-T1K" collectionClass="NSMutableArray" id="Swe-Vc-uul"/>
                         <outletCollection property="MapButtons" destination="4fK-pV-1Es" collectionClass="NSMutableArray" id="QXh-jd-MKn"/>
                         <segue destination="3C6-dH-pMI" kind="show" identifier="ActivitySegue" id="M3Q-n7-XCj"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="MaptoHome" id="GXC-mb-t2E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUQ-uU-g3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337.6953125" y="97.65625"/>
+            <point key="canvasLocation" x="1371" y="98"/>
         </scene>
         <!--Pub View Controller-->
         <scene sceneID="NUa-KR-Hem">
@@ -623,6 +634,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Q5-aIh">
                                 <rect key="frame" x="92" y="396" width="840" height="226"/>
                             </stackView>
+                            <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-ii-2xw">
+                                <rect key="frame" x="882" y="706" width="122" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="LaunchHomeActivity:" destination="3C6-dH-pMI" eventType="touchUpInside" id="rnB-E4-PGR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -648,11 +668,12 @@
                         <outlet property="ButtonStack" destination="Sd4-Q5-aIh" id="sBi-0G-yv9"/>
                         <outlet property="Helpbutton" destination="rTx-QE-kwA" id="26b-u9-Ie4"/>
                         <segue destination="gpA-nO-A60" kind="show" identifier="MapSegue" id="c6c-Q7-I3c"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ActivitytoHome" id="Kr5-Js-4hY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-pL-fvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1176.5625" y="927.34375"/>
+            <point key="canvasLocation" x="1190.625" y="1514.84375"/>
         </scene>
         <!--Engraver View Controller-->
         <scene sceneID="ZPn-eY-mJb">
@@ -818,7 +839,7 @@
         <image name="woodbg.jpg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M3Q-n7-XCj"/>
+        <segue reference="Kr5-Js-4hY"/>
         <segue reference="c6c-Q7-I3c"/>
     </inferredMetricsTieBreakers>
 </document>

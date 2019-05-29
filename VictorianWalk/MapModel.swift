@@ -24,7 +24,7 @@ class MapModel{
         
         "3":Booth(id:3, desc:"A barber’s services for men included haircuts, shaves, and shampooing. Hair was also, ‘singed.’ A lit wax taper was passed over the ends and the burnt tips rubbed off to seal and strengthen the hair. Barbers often stored customer’s personal shaving mugs at the back of their shop. They also sold tobacco and pipes",
             title:"Barber Shop",
-            Activities: [.Act]),
+            Activities: [.Act,.Imagine]),
         
         "4":Booth(id:4, desc:"Working men in London relaxed in the ‘pub’. It was the heart of the local community. They met with friends, played darts and attended political meetings. Children sat outside, awaiting their parents, or were sent in to buy beer for drinking at home. Many pubs had a public bar and a saloon. Saloons were favored by couples as they were more comfortable.",
             title:"The Pub",
