@@ -38,7 +38,7 @@ class MapModel{
             title:"Barrel Organ",
             Activities: [.none]),
         
-        "7":Booth(id:7, desc:"Goods from around the world arrived at London’s port. They were taken from the docks to the city’s many warehouses. Tea was imported from China, India, and Ceylon (now called Sri Lanka); cocoa and coffee from Africa and South America. After being graded and weighed, tea was blended, and coffee roasted and ground for distribution to grocers, tea rooms and hotels. ",
+        "7":Booth(id:7, desc:"Goods from around the world arrived at London’s port. They were taken from the docks to the city’s many warehouses. Tea was imported from China, India, and Ceylon (now called Sri Lanka); cocoa and coffee from Africa and South America. After being graded and weighed, tea was blended, and coffee roasted and ground for distribution to grocers, tea rooms and hotels. ",title:"Tea & Coffee Warehouse",
             Activities: [.Imagine,.Quiz]),
         
         "8":Booth(id:8, desc:"Mr. Elkington on Lamb’s Conduit Street made visiting cards, business cards, invitations, and bookplates. He might spend half a day engraving one intricate design onto a copper plate for printing. Engravers usually worked alone in small workshops that smelt strongly of the inks, acids, and polishes they used. They received work from private customers and small printing firms.",
