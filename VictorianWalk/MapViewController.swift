@@ -89,9 +89,7 @@ class MapViewController: UIViewController {
         for button in MapButtons{
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
             button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), for: .normal)
-            
         }
-        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
@@ -101,4 +99,8 @@ class MapViewController: UIViewController {
     override var shouldAutorotate: Bool {
         return true
     }
+    
+    
+    
+    
 }

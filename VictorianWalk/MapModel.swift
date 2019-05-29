@@ -60,7 +60,7 @@ class MapModel{
         
         "12":Booth(id:12, desc:"Grocers liked Fred Bugg in Bayswater sold the essentials of daily life. Tea, flour, sugar, and rice were drawn from larger containers, then weighed and wrapped for customers. Grocers also sold firewood and paraffin and for the first time, canned and processed foods - condensed milk, tinned fish. They often lived about the shops. Grocers worked weekdays and late into the evening on Saturdays, when workers came to shop after being paid their wages.",
             title:"Grocer",
-            Activities: [.Imagine,.Quiz]),
+            Activities: [.Imagine]),
         
         "13":Booth(id:13, desc:"For those too poor to pay the doctor, the pharmacist prepared pills and powder, or sold pre-packaged ‘patent’ remedies. The herbs and chemicals he mixed together were stored in tiny drawers behind the counter. Poisonous liquids were kept in dark green or blue glass bottles with fluted sides to distinguish them from harmless fluids.",
             title:"Pharmacy",
