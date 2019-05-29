@@ -10,10 +10,9 @@ import UIKit
 import AVFoundation
 
 //This is the controller for the Map View
-class MapViewController: UIViewController,AVAudioRecorderDelegate {
+class MapViewController: UIViewController, AVAudioRecorderDelegate {
     
-    var audioRecorder: AVAudioRecorder?
-    
+   
     //The model
     var Map = MapModel()
     
@@ -40,13 +39,24 @@ class MapViewController: UIViewController,AVAudioRecorderDelegate {
     
     @IBAction func LaunchHomeScreen(_ sender: UIButton) {
         print("Launching home screen")
+        
+        if audioRecorder?.isRecording == true {
+            print("Stop recording")
+            audioRecorder?.stop()
+        }
         self.performSegue(withIdentifier: "MaptoHome", sender: self)
     }
     //Function called on "Play" btn press
     // it launches the choose activity segue
     @IBAction func LaunchTextActivity(_ sender: Any) {
          print("Performing segue")
-         audioRecorder?.record()
+        
+        if audioRecorder?.isRecording == false {
+            print("begin recording")
+    
+            audioRecorder?.record()
+        }
+        
          self.performSegue(withIdentifier: "ActivitySegue", sender: self)
     }
     
@@ -68,7 +78,6 @@ class MapViewController: UIViewController,AVAudioRecorderDelegate {
         }
     }
     
-    
     //Update the view
     func UpdateViewfromModel(key: String){
         
@@ -82,7 +91,6 @@ class MapViewController: UIViewController,AVAudioRecorderDelegate {
             }else{
                 selectImage.isHidden = true
             }
-            
         }
         
         TitleLabel.text = button.title
@@ -93,7 +101,6 @@ class MapViewController: UIViewController,AVAudioRecorderDelegate {
         print("Show button is : \(showbutton)")
         PlayGameButton.isHidden = showbutton ? false : true
         print("play game button is hidden: \(PlayGameButton.isHidden)")
-      
     }
     
     //fucntion called when app loads
@@ -111,13 +118,17 @@ class MapViewController: UIViewController,AVAudioRecorderDelegate {
             selectImage.isHidden = true;
         }
         
-        
         let fileMgr = FileManager.default
         
         let dirPaths = fileMgr.urls(for: .documentDirectory,
                                     in: .userDomainMask)
         
-        let soundFileURL = dirPaths[0].appendingPathComponent("sound.caf")
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        
+        let soundFileURL = dirPaths[0].appendingPathComponent("\(hour)\(minutes).caf")
         
         let recordSettings =
             [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
@@ -141,6 +152,7 @@ class MapViewController: UIViewController,AVAudioRecorderDelegate {
         } catch let error as NSError {
             print("audioSession error: \(error.localizedDescription)")
         }
+       
         
     }
     
@@ -151,6 +163,11 @@ class MapViewController: UIViewController,AVAudioRecorderDelegate {
     override var shouldAutorotate: Bool {
         return true
     }
+    
+    var audioRecorder: AVAudioRecorder?
+    
+    
+    
     
     
     
