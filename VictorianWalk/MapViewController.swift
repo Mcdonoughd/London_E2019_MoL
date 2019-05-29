@@ -40,22 +40,12 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func LaunchHomeScreen(_ sender: UIButton) {
         print("Launching home screen")
         
-        if audioRecorder?.isRecording == true {
-            print("Stop recording")
-            audioRecorder?.stop()
-        }
         self.performSegue(withIdentifier: "MaptoHome", sender: self)
     }
     //Function called on "Play" btn press
     // it launches the choose activity segue
     @IBAction func LaunchTextActivity(_ sender: Any) {
          print("Performing segue")
-        
-        if audioRecorder?.isRecording == false {
-            print("begin recording")
-    
-            audioRecorder?.record()
-        }
         
          self.performSegue(withIdentifier: "ActivitySegue", sender: self)
     }
@@ -118,42 +108,6 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
             selectImage.isHidden = true;
         }
         
-        let fileMgr = FileManager.default
-        
-        let dirPaths = fileMgr.urls(for: .documentDirectory,
-                                    in: .userDomainMask)
-        
-        let date = Date()
-        let calendar = Calendar.current
-        let hour = calendar.component(.hour, from: date)
-        let minutes = calendar.component(.minute, from: date)
-        
-        let soundFileURL = dirPaths[0].appendingPathComponent("\(hour)\(minutes).caf")
-        
-        let recordSettings =
-            [AVEncoderAudioQualityKey: AVAudioQuality.min.rawValue,
-             AVEncoderBitRateKey: 16,
-             AVNumberOfChannelsKey: 2,
-             AVSampleRateKey: 44100.0] as [String : Any]
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        
-        do {
-            try audioSession.setCategory(
-                AVAudioSession.Category.playAndRecord)
-        } catch let error as NSError {
-            print("audioSession error: \(error.localizedDescription)")
-        }
-        
-        do {
-            try audioRecorder = AVAudioRecorder(url: soundFileURL,
-                                                settings: recordSettings as [String : AnyObject])
-            audioRecorder?.prepareToRecord()
-        } catch let error as NSError {
-            print("audioSession error: \(error.localizedDescription)")
-        }
-       
-        
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
@@ -163,13 +117,6 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     override var shouldAutorotate: Bool {
         return true
     }
-    
-    var audioRecorder: AVAudioRecorder?
-    
-    
-    
-    
-    
-    
+   
     
 }
