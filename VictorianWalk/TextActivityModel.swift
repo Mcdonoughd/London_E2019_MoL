@@ -12,7 +12,6 @@ class TextActivityModel {
 //    var TextActivity = TextActivity()
     let errorActivity = TextActivity(text:"Take a deep breath...")
     
-    
     var ActivityLookUp:[Array<String> : TextActivity] = [
         ["Bank Manager's Office","Imagine"]:TextActivity(text:"Say you received a loan from the bank, and you could start any business of your choice. Of the shops you’ve already seen which one would you want to run and why?"),
         ["Barber Shop","Act"]: TextActivity(text: "Play out a scene like you’re inside the barbershop. Act like you’re shaving a family member’s face."),

@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="height" constant="239" id="Vg6-X4-1Sp"/>
                                     <constraint firstAttribute="width" constant="400" id="WAC-Sp-GUv"/>
                                 </constraints>
-                                <string key="text">You and your family have just left your small farm in the country side and moved to London! Your family, like many others, have heard rumors of vast new oppurtunities that await you in the big city. Take a walk through Victorian London and explore what the city has to offer!</string>
+                                <string key="text">You and your family have just left your small farm in the country side and moved to London! Your family, like many others, have heard rumours of vast new opportunities that await you in the big city. Take a walk through Victorian London and explore what the city has to offer!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -620,10 +620,13 @@
                                     <action selector="BackButton:" destination="3C6-dH-pMI" eventType="touchUpInside" id="zOn-Xs-ZFu"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTx-QE-kwA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTx-QE-kwA">
                                 <rect key="frame" x="867" y="69" width="65" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Help"/>
+                                <connections>
+                                    <action selector="HelpButton:" destination="3C6-dH-pMI" eventType="touchUpInside" id="MRZ-Qb-ATe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-np-chW">
                                 <rect key="frame" x="459" y="67" width="106" height="54"/>
