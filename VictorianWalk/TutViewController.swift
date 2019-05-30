@@ -8,18 +8,18 @@
 
 import UIKit
 
+
+//View Controller for Tutorial Screen
 class TutViewController: UIViewController {
-    
-    @IBOutlet weak var ExploreButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
     }
     
+    //Force Landscape Orientation
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return .landscapeLeft
     }

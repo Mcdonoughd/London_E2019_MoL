@@ -8,19 +8,17 @@
 
 import UIKit
 
+//View controller for the Home Screen
 class ViewController: UIViewController {
-
-    @IBOutlet weak var BeginButton: UIButton!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         // Do any additional setup after loading the view.
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
     }
 
+    //force landscape mode
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return .landscapeLeft
     }

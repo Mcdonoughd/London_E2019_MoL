@@ -12,11 +12,9 @@
 		0B61DE122296C076001DC9C6 /* TextActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE112296C076001DC9C6 /* TextActivityModel.swift */; };
 		0BD794F82292D006004ACC83 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD794F72292D006004ACC83 /* SpriteKit.framework */; };
 		0BE045B9229FE04800E4F256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE045B8229FE04700E4F256 /* Assets.xcassets */; };
-		0BE086A42294A4D100CC5438 /* PharmacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE086A32294A4D100CC5438 /* PharmacyViewController.swift */; };
 		0BE120512291D39F0073EBA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE120502291D39F0073EBA3 /* AppDelegate.swift */; };
 		0BE120562291D39F0073EBA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE120542291D39F0073EBA3 /* Main.storyboard */; };
 		0BE1205B2291D3A10073EBA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE120592291D3A10073EBA3 /* LaunchScreen.storyboard */; };
-		0BE153BE22947F70009085DE /* EngraverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE153BD22947F70009085DE /* EngraverViewController.swift */; };
 		0BE3737F2292C64400623A89 /* PubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3737E2292C64400623A89 /* PubViewController.swift */; };
 		0BE38F11229234C700C95BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE120522291D39F0073EBA3 /* ViewController.swift */; };
 		0BE38F1522923CE800C95BDA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE38F1422923CE800C95BDA /* MapViewController.swift */; };
@@ -24,11 +22,8 @@
 		0BE80B0C2292F45800B8F341 /* Booth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE80B0B2292F45800B8F341 /* Booth.swift */; };
 		0BF1B63422924736002627AB /* TutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF1B63322924736002627AB /* TutViewController.swift */; };
 		B300B23B2292F7BA009D37D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B300B23A2292F7BA009D37D1 /* UIKit.framework */; };
-		B315B338229FE36D00D0D980 /* goButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B315B337229FE36C00D0D980 /* goButton.png */; };
-		B36293952296C02C00D7EDAD /* HighResMap.png in Resources */ = {isa = PBXBuildFile; fileRef = B36293942296C02C00D7EDAD /* HighResMap.png */; };
 		B3EF8E262296B76C000D6A8A /* PubActivityScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */; };
 		B3EF8E292296B7F5000D6A8A /* PubActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */; };
-		B3EF8E2F2296BB91000D6A8A /* MoL Logo Proper.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EF8E2E2296BB90000D6A8A /* MoL Logo Proper.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,25 +32,20 @@
 		0B61DE112296C076001DC9C6 /* TextActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextActivityModel.swift; sourceTree = "<group>"; };
 		0BD794F72292D006004ACC83 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		0BE045B8229FE04700E4F256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0BE086A32294A4D100CC5438 /* PharmacyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmacyViewController.swift; sourceTree = "<group>"; };
 		0BE1204D2291D39F0073EBA3 /* VictorianWalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VictorianWalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE120502291D39F0073EBA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE120522291D39F0073EBA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0BE120552291D39F0073EBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0BE1205A2291D3A10073EBA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BE1205C2291D3A10073EBA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0BE153BD22947F70009085DE /* EngraverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngraverViewController.swift; sourceTree = "<group>"; };
 		0BE3737E2292C64400623A89 /* PubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubViewController.swift; sourceTree = "<group>"; };
 		0BE38F1422923CE800C95BDA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0BE6443C2292EC19008E521F /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		0BE80B0B2292F45800B8F341 /* Booth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booth.swift; sourceTree = "<group>"; };
 		0BF1B63322924736002627AB /* TutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutViewController.swift; sourceTree = "<group>"; };
 		B300B23A2292F7BA009D37D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B315B337229FE36C00D0D980 /* goButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goButton.png; sourceTree = SOURCE_ROOT; };
-		B36293942296C02C00D7EDAD /* HighResMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HighResMap.png; sourceTree = "<group>"; };
 		B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PubActivityScene.sks; sourceTree = "<group>"; };
 		B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubActivityScene.swift; sourceTree = "<group>"; };
-		B3EF8E2E2296BB90000D6A8A /* MoL Logo Proper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoL Logo Proper.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				0BE045B8229FE04700E4F256 /* Assets.xcassets */,
-				B315B337229FE36C00D0D980 /* goButton.png */,
-				B36293942296C02C00D7EDAD /* HighResMap.png */,
-				B3EF8E2E2296BB90000D6A8A /* MoL Logo Proper.png */,
 				B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */,
 				B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */,
 				0BF1B63322924736002627AB /* TutViewController.swift */,
@@ -116,8 +103,6 @@
 				0BE3737E2292C64400623A89 /* PubViewController.swift */,
 				0BE6443C2292EC19008E521F /* MapModel.swift */,
 				0BE80B0B2292F45800B8F341 /* Booth.swift */,
-				0BE153BD22947F70009085DE /* EngraverViewController.swift */,
-				0BE086A32294A4D100CC5438 /* PharmacyViewController.swift */,
 				0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */,
 				0B61DE0F2296BD39001DC9C6 /* TextViewController.swift */,
 				0B61DE112296C076001DC9C6 /* TextActivityModel.swift */,
@@ -183,12 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36293952296C02C00D7EDAD /* HighResMap.png in Resources */,
-				B315B338229FE36D00D0D980 /* goButton.png in Resources */,
 				0BE1205B2291D3A10073EBA3 /* LaunchScreen.storyboard in Resources */,
 				0BE045B9229FE04800E4F256 /* Assets.xcassets in Resources */,
 				B3EF8E262296B76C000D6A8A /* PubActivityScene.sks in Resources */,
-				B3EF8E2F2296BB91000D6A8A /* MoL Logo Proper.png in Resources */,
 				0BE120562291D39F0073EBA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,13 +185,11 @@
 				0B61DE0E2296B72B001DC9C6 /* TextActivity.swift in Sources */,
 				0BE38F11229234C700C95BDA /* ViewController.swift in Sources */,
 				B3EF8E292296B7F5000D6A8A /* PubActivityScene.swift in Sources */,
-				0BE086A42294A4D100CC5438 /* PharmacyViewController.swift in Sources */,
 				0BE120512291D39F0073EBA3 /* AppDelegate.swift in Sources */,
 				0BF1B63422924736002627AB /* TutViewController.swift in Sources */,
 				0BE80B0C2292F45800B8F341 /* Booth.swift in Sources */,
 				0BE38F1522923CE800C95BDA /* MapViewController.swift in Sources */,
 				0BE6443D2292EC19008E521F /* MapModel.swift in Sources */,
-				0BE153BE22947F70009085DE /* EngraverViewController.swift in Sources */,
 				0BE3737F2292C64400623A89 /* PubViewController.swift in Sources */,
 				0B61DE102296BD39001DC9C6 /* TextViewController.swift in Sources */,
 				0B61DE122296C076001DC9C6 /* TextActivityModel.swift in Sources */,
