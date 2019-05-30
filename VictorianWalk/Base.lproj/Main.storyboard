@@ -714,7 +714,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodbg" translatesAutoresizingMaskIntoConstraints="NO" id="pfO-9e-NpW">
-                                <rect key="frame" x="0.0" y="0.0" width="2560" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="16" height="768"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextBar" translatesAutoresizingMaskIntoConstraints="NO" id="xV1-TU-EOQ">
                                 <rect key="frame" x="20" y="37" width="1020" height="711"/>
