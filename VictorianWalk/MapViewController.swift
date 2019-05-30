@@ -57,7 +57,7 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
         if(segue.identifier == "ActivitySegue"){
             print("preparing...")
             let vc = segue.destination as! ActivityViewController
-            vc.passedBooth = Map.currentBooth
+            vc.passedBooth = Map.currentBooth.id
         }
     }
     
@@ -88,7 +88,7 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
         TitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
         
         DesciptionLabel.text = button.desc
-        let showbutton = button.hasActivity()
+        let showbutton = button.hasActivity
         PlayGameButton.isHidden = showbutton ? false : true
         print("play game button is hidden: \(PlayGameButton.isHidden)")
     }
