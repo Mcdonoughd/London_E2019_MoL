@@ -19,7 +19,7 @@ class ActivityViewController: UIViewController {
     var tempButtonStack = [UIButton]()
     
     //passedBooth data
-    var passedBooth = Booth(id:0,desc:"",title:"",Activities: [.none])
+    var passedBooth = 0
     
     //model reference
     var myActivityModel = ActivityModel()
@@ -34,18 +34,16 @@ class ActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Text View Controller has Loaded")
-        print("Passed data for \(passedBooth.title)")
+        print("Passed data for Booth \(passedBooth)")
         
         ButtonStack.isHidden = false
-        
-        //Make the title page the same as the chosen booth
-        ActivityTitle.text = passedBooth.title
-        
         //Make button stack fill equally
         ButtonStack.distribution = .fillEqually
         
+        let activityList = ActivityModel().getActivities(key:passedBooth)
+        
         //Load Buttons based on equivalent activities
-        LoadButtons(boothData: passedBooth)
+        LoadButtons(ActivityData:activityList)
     }
     
     //On Back button press
@@ -75,15 +73,19 @@ class ActivityViewController: UIViewController {
     }
     
     //On ActivityChoose screen load a button for each of the buttons
-    func LoadButtons(boothData: Booth){
-        for Activity in boothData.Activities {
-            if (Activity == .none) {
+    func LoadButtons(ActivityData: [Activity]){
+        
+        for Activity in ActivityData {
+            //error check
+            if (Activity.name == "ERROR") {
                 //Print error message
                 print("Error: Chosen Booth does not have any corresponding activities")
             }
+
             //Make a button
-            MakeButton(DisplayText: Activity.toString())
+            MakeButton(DisplayText: Activity.type)
         }
+        
     }
     
     //This makes a Choose Activity button

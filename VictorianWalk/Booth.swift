@@ -11,35 +11,23 @@ import Foundation
 //This holds a Booths sidebar data
 struct Booth{
     
-    enum ActivityName :String{
-        case Search
-        case Quiz
-        case Imagine
-        case Act
-        case game
-        case none
-        
-        func toString() -> String{
-            return self.rawValue
-        }
-    }
-    
     var id = 0
     var desc = ""
     var title = ""
-    var Activities = [ActivityName.none]
+    var hasActivity = false
     
-    init(id: Int, desc: String, title: String, Activities: Array<ActivityName>){
+    init(id: Int, desc: String, title: String){
         self.id = id
         self.desc = desc
         self.title = title
-        self.Activities = Activities
     }
 
-    func hasActivity() -> Bool {
-        return !(Activities.contains(.none))
+    init(id: Int, desc: String, title: String,hasActivity: Bool){
+        self.id = id
+        self.desc = desc
+        self.title = title
+        self.hasActivity = hasActivity
     }
-    
     
     
 }

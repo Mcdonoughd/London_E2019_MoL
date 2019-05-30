@@ -18,6 +18,4 @@ class Activity{
         self.name=name
         self.type=type
     }
-    
-    
 }
