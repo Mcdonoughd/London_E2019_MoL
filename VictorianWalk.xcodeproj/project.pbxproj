@@ -109,10 +109,10 @@
 				0BE3737E2292C64400623A89 /* PubViewController.swift */,
 				0BE6443C2292EC19008E521F /* MapModel.swift */,
 				0BE80B0B2292F45800B8F341 /* Booth.swift */,
-				0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */,
 				0B61DE0F2296BD39001DC9C6 /* ActivityViewController.swift */,
 				0BE045C0229FEDA300E4F256 /* ActivityModel.swift */,
 				0BE045BA229FEC4700E4F256 /* Activity.swift */,
+				0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */,
 				0BE045BC229FECCA00E4F256 /* QuizActivity.swift */,
 				0BE045BE229FED0200E4F256 /* GameActivity.swift */,
 			);

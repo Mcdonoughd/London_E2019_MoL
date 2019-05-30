@@ -11,5 +11,13 @@ import Foundation
 
 //This is the Parent Class of all Activities
 class Activity{
+    var name = ""
+    var type = ""
+    
+    init(name: String, type:String){
+        self.name=name
+        self.type=type
+    }
+    
     
 }
