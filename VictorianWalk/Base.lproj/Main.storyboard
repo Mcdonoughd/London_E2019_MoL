@@ -519,6 +519,14 @@
                                                 <rect key="frame" x="278" y="312" width="113" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfn-JD-FJM">
+                                                <rect key="frame" x="607" y="32" width="46" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="0aS-22-JNt" kind="show" id="Wu0-xX-4hf"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="zo2-80-i1y" firstAttribute="top" secondItem="tfi-Kr-9Sh" secondAttribute="bottom" constant="8" symbolic="YES" id="0xo-0J-EHv"/>
