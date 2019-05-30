@@ -47,12 +47,21 @@ class ActivityModel {
     
     let errorActivity = TextActivity(name:"ERROR",type:"ERROR",text:"Take a deep breath...")
     
+    var cachedActivities = [Activity]()
    
     //get the list of activities from the given booth ID
     func getActivities(key:Int) -> [Activity] {
-        return ActivityLookUp[key] ?? [errorActivity]
+        cachedActivities = ActivityLookUp[key] ?? [errorActivity]
+        return cachedActivities
     }
     
-    
+    func searchCache(type:String) -> Activity{
+        for activity in cachedActivities{
+            if activity.type == type{
+                return activity
+            }
+        }
+        return errorActivity
+    }
     
 }

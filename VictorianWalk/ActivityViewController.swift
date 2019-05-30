@@ -39,8 +39,11 @@ class ActivityViewController: UIViewController {
         ButtonStack.isHidden = false
         //Make button stack fill equally
         ButtonStack.distribution = .fillEqually
+    
+        let activityList = myActivityModel.getActivities(key:passedBooth)
         
-        let activityList = ActivityModel().getActivities(key:passedBooth)
+        //Set the title to the name of the booth
+        ActivityTitle.text = activityList[0].name
         
         //Load Buttons based on equivalent activities
         LoadButtons(ActivityData:activityList)
@@ -72,6 +75,7 @@ class ActivityViewController: UIViewController {
         }
     }
     
+    
     //On ActivityChoose screen load a button for each of the buttons
     func LoadButtons(ActivityData: [Activity]){
         
@@ -81,16 +85,16 @@ class ActivityViewController: UIViewController {
                 //Print error message
                 print("Error: Chosen Booth does not have any corresponding activities")
             }
-
             //Make a button
+            
             MakeButton(DisplayText: Activity.type)
         }
-        
     }
     
     //This makes a Choose Activity button
     func MakeButton(DisplayText: String){
         let button = UIButton(type: .custom)
+        
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle(DisplayText, for: .normal)
@@ -112,16 +116,32 @@ class ActivityViewController: UIViewController {
     @objc func DisplayActivity(sender: UIButton!){
         ActivityChosen = true
         
-//        let ActDesc = myActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
-//     
-//        ActivityText.text = ActDesc.text
-//        
-//        //If the activity has an answer (IE Imagine or Quiz)
-//        if ActDesc.answer != "none"{
-//            MakeShowButton(answer: ActDesc.answer)
-//            ButtonStack.removeArrangedSubview(sender)
-//        }
-//        
+        let Activity = myActivityModel.searchCache(type: sender.titleLabel!.text ?? "Imagine")
+        
+        switch(Activity){
+            case is TextActivity:
+                print("Loading Text Activity...")
+                let newActivity = Activity as! TextActivity; //cast Activity to TextActivity
+                ActivityText.text = newActivity.text
+                break;
+            case is QuizActivity:
+                print("Loading Quiz...")
+                let newActivity = Activity as! QuizActivity
+                ActivityText.text = newActivity.question
+                
+                MakeShowButton(answer: newActivity.answer)
+                ButtonStack.removeArrangedSubview(sender)
+                
+                break;
+            case is GameActivity:
+                print("Loading Game...")
+                _ = Activity as! GameActivity
+                //Load the segue to the game
+                break
+            default:
+                print("The Activity has no type!")
+                break;
+        }
     }
     
     var tempAnswer = ""
