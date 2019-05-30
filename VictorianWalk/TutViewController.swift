@@ -10,9 +10,12 @@ import UIKit
 
 class TutViewController: UIViewController {
     
+    @IBOutlet weak var ExploreButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
     }
