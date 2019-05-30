@@ -10,15 +10,18 @@ import UIKit
 
 //This is the controller for the Map View
 class ActivityViewController: UIViewController {
-    
-    var CurrActivity = ""
 
     let ChooseAnActivity = "Choose An Activity"
+    //has an activity been chosen
+    var ActivityChosen = false
     
-    var ActivityChosen = false //has an activity been chosen
-    var tempButtonStack = [UIButton]() //temp button stack to hold prev data
+    //temp button stack to hold prev data
+    var tempButtonStack = [UIButton]()
     
+    //passedBooth data
     var passedBooth = Booth(id:0,desc:"",title:"",Activities: [.none])
+    
+    //model reference
     var myActivityModel = ActivityModel()
     
     @IBOutlet weak var ActivityText: UILabel!
@@ -32,29 +35,27 @@ class ActivityViewController: UIViewController {
         super.viewDidLoad()
         print("Text View Controller has Loaded")
         print("Passed data for \(passedBooth.title)")
+        
         ButtonStack.isHidden = false
+        
         //Make the title page the same as the chosen booth
         ActivityTitle.text = passedBooth.title
+        
         //Make button stack fill equally
         ButtonStack.distribution = .fillEqually
+        
         //Load Buttons based on equivalent activities
         LoadButtons(boothData: passedBooth)
     }
     
+    //On Back button press
     @IBAction func BackButton(_ sender: UIButton) {
-            //Load old map
-            //Note keep a boolean to check the layout of the stroyboard
-        
-        
-        //if on the activity screen (ie quiz, act)
+        //if on the activity screen (ie QUIZ, ACT, GAME)
         if(ActivityChosen){
-            //Load choose an activity screen
             ActivityChosen = false
             ActivityText.text = ChooseAnActivity //reset Activity text
             ButtonStack.isHidden = false
             reloadStackArray()
-            //to do reset button stack
-            
         }
         //if no activity is chosen then launch the map
         else{
@@ -62,18 +63,18 @@ class ActivityViewController: UIViewController {
         }
     }
     
+    //Removes all buttons on the Current Stack and replaces them with the Activity Buttons
     func reloadStackArray(){
         print("Reloading Stack Array")
         for button in ButtonStack.subviews{
             button.removeFromSuperview()
         }
-        
         for button in tempButtonStack{
             ButtonStack.addArrangedSubview(button)
         }
     }
     
-    //On ActivityChoose screen load a thing for each of the buttons
+    //On ActivityChoose screen load a button for each of the buttons
     func LoadButtons(boothData: Booth){
         for Activity in boothData.Activities {
             if (Activity == .none) {
@@ -109,16 +110,16 @@ class ActivityViewController: UIViewController {
     @objc func DisplayActivity(sender: UIButton!){
         ActivityChosen = true
         
-        let ActDesc = myActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
-     
-        ActivityText.text = ActDesc.text
-        
-        //If the activity has an answer (IE Imagine or Quiz)
-        if ActDesc.answer != "none"{
-            MakeShowButton(answer: ActDesc.answer)
-            ButtonStack.removeArrangedSubview(sender)
-        }
-        
+//        let ActDesc = myActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
+//     
+//        ActivityText.text = ActDesc.text
+//        
+//        //If the activity has an answer (IE Imagine or Quiz)
+//        if ActDesc.answer != "none"{
+//            MakeShowButton(answer: ActDesc.answer)
+//            ButtonStack.removeArrangedSubview(sender)
+//        }
+//        
     }
     
     var tempAnswer = ""
