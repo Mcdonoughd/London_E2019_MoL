@@ -78,10 +78,10 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
             if(selectImage.tag == Int(key)){
                 selectImage.isHidden = false
                 
-                UIImageView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse, .beginFromCurrentState, .curveEaseOut], animations: {
-                    var x = 0
-                    x = x + 1
-                    selectImage.transform = CGAffineTransform(rotationAngle: CGFloat(x))
+                UIImageView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse, .beginFromCurrentState], animations: {
+                    //var x = 0.0
+                    //x = x + 15
+                    selectImage.transform = CGAffineTransform(rotationAngle: CGFloat(90))
                 }, completion: { finished in
                     print("animation started opened!")
                 })
