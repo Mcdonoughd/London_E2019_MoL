@@ -32,7 +32,7 @@ class TextViewController: UIViewController {
         super.viewDidLoad()
         print("Text View Controller has Loaded")
         print("Passed data for \(passedBooth.title)")
-        
+        ButtonStack.isHidden = false
         //Make the title page the same as the chosen booth
         ActivityTitle.text = passedBooth.title
         //Make button stack fill equally
@@ -51,6 +51,7 @@ class TextViewController: UIViewController {
             //Load choose an activity screen
             ActivityChosen = false
             ActivityText.text = ChooseAnActivity //reset Activity text
+            ButtonStack.isHidden = false
             reloadStackArray()
             //to do reset button stack
             
