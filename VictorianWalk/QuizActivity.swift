@@ -29,6 +29,14 @@ class QuizActivity: Activity{
         self.answer = answer
     }
     
+    func hasChoices() -> Bool{
+        if self.choices.count < 1 {
+            return false
+        }
+        return true
+    }
+    
+    
     //Shuffle the multiple choice answers to provide a unique expereince for each visitor
     func ShuffleChoices() -> Array<String>{
         

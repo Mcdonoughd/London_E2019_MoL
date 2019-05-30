@@ -56,6 +56,7 @@ class ActivityViewController: UIViewController {
             ActivityChosen = false
             ActivityText.text = ChooseAnActivity //reset Activity text
             ButtonStack.isHidden = false
+            ClearButtonStack()
             reloadStackArray()
         }
         //if no activity is chosen then launch the map
@@ -67,9 +68,6 @@ class ActivityViewController: UIViewController {
     //Removes all buttons on the Current Stack and replaces them with the Activity Buttons
     func reloadStackArray(){
         print("Reloading Stack Array")
-        for button in ButtonStack.subviews{
-            button.removeFromSuperview()
-        }
         for button in tempButtonStack{
             ButtonStack.addArrangedSubview(button)
         }
@@ -129,9 +127,14 @@ class ActivityViewController: UIViewController {
                 let newActivity = Activity as! QuizActivity
                 ActivityText.text = newActivity.question
                 
-                MakeShowButton(answer: newActivity.answer)
-                ButtonStack.removeArrangedSubview(sender)
-                
+                if(newActivity.hasChoices()){
+                    //make Multiple choice button
+                    LoadChoices(quiz: newActivity)
+                }
+                else{
+                    //make a simple show button
+                    MakeShowButton(answer: newActivity.answer)
+                }
                 break;
             case is GameActivity:
                 print("Loading Game...")
@@ -144,16 +147,57 @@ class ActivityViewController: UIViewController {
         }
     }
     
-    var tempAnswer = ""
-    
-    func MakeShowButton(answer:String){
-        for subView in ButtonStack.subviews as [UIView]{
-            subView.removeFromSuperview()
+    func LoadChoices(quiz: QuizActivity){
+        ClearButtonStack()
+        for choice in quiz.choices.indices{
+            let isAnswer = choice == quiz.answerIndex //check if this is the correct answer
+            MakeMultiChoiceButtons(choice: quiz.choices[choice],answer: isAnswer)
         }
+        tempAnswer = quiz.answer
+    }
+    
+    func MakeMultiChoiceButtons(choice: String,answer: Bool){
         let button = UIButton(type:.custom)
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.setTitle("Show", for: .normal)
+        button.setTitle(choice, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        if(answer){
+          //if the answer is correct then...
+          button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
+            
+        }
+        else{
+            button.addTarget(self, action: #selector(WrongAnswer(sender:)), for: .touchUpInside)
+            
+        }
+        ButtonStack.addArrangedSubview(button)
+        
+    }
+    
+    @objc func WrongAnswer(sender: UIButton){
+        print("Wrong Answer! >:( ")
+        sender.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+    }
+    
+    
+    var tempAnswer = ""
+    
+    //This function removes all subviews from the button stack
+    func ClearButtonStack(){
+        for subView in ButtonStack.subviews as [UIView]{
+            subView.removeFromSuperview()
+        }
+    }
+    
+    //This makes a simple "Show Answer Button on a quiz"
+    func MakeShowButton(answer:String){
+        ClearButtonStack()
+        let button = UIButton(type:.custom)
+        button.frame = CGRect(x:100, y:100,width:50,height:50)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.setTitle("Show Answer", for: .normal)
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
         tempAnswer = answer
@@ -161,11 +205,10 @@ class ActivityViewController: UIViewController {
     }
     
     @objc func ShowAnswer(sender:UIButton){
-        print(tempAnswer)
+        print("Good Answer!")
         ActivityText.text = tempAnswer
         ButtonStack.isHidden = true
     }
-    
     
     //Help Button Action
     @IBAction func HelpButton(_ sender: Any) {
@@ -176,7 +219,7 @@ class ActivityViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    
+    //Force Landscape mode
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return .landscapeLeft
     }
