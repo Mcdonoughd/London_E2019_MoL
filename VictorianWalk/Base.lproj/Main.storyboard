@@ -37,14 +37,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You and your family have just moved to Victorian London! Take a walk through the streets and see what the city has the offer!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
                                 <rect key="frame" x="81" y="231.5" width="400" height="303"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fJj-5e-LXX" secondAttribute="height" multiplier="400:239" constant="-107.11297071129707" id="8Yr-IR-xzk"/>
                                     <constraint firstAttribute="height" constant="303" id="Vg6-X4-1Sp"/>
                                     <constraint firstAttribute="width" constant="400" id="WAC-Sp-GUv"/>
                                 </constraints>
-                                <string key="text">You and your family have just left your small farm in the country side and moved to London! Your family, like many others, have heard rumours of vast new opportunities that await you in the big city. Take a walk through Victorian London and explore what the city has to offer!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -596,14 +595,15 @@
                                     <constraint firstItem="KeF-8M-3W0" firstAttribute="top" secondItem="p2G-5M-3Xu" secondAttribute="top" id="mFC-WE-hrF"/>
                                 </constraints>
                             </stackView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-1D-Nfx">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSG-1D-Nfx">
                                 <rect key="frame" x="44" y="553" width="208" height="121"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="2Eb-qy-pi3"/>
-                                    <constraint firstAttribute="height" constant="121" id="8N9-Ef-LKy"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="K55-sO-JWo"/>
+                                    <constraint firstAttribute="height" constant="121" id="dyI-eR-6nC"/>
                                 </constraints>
+
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="goButton"/>
+
                                 <connections>
                                     <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="NaD-aQ-jq5"/>
                                 </connections>
@@ -617,14 +617,14 @@
                             <constraint firstItem="HUo-eQ-Kvq" firstAttribute="top" secondItem="p2G-5M-3Xu" secondAttribute="top" id="7sA-xl-Ih4"/>
                             <constraint firstItem="0jA-kX-ffM" firstAttribute="leading" secondItem="Jm7-03-I16" secondAttribute="leading" constant="44" id="9U5-qA-G5F"/>
                             <constraint firstItem="bPd-g7-MaV" firstAttribute="top" secondItem="fjL-Y7-XZK" secondAttribute="top" id="AUU-K4-l8r"/>
-                            <constraint firstItem="Jm7-03-I16" firstAttribute="bottom" secondItem="QSG-1D-Nfx" secondAttribute="bottom" constant="94" id="C8U-Cn-rD9"/>
                             <constraint firstItem="HUo-eQ-Kvq" firstAttribute="leading" secondItem="fjL-Y7-XZK" secondAttribute="leadingMargin" id="FDG-n2-g6v"/>
+                            <constraint firstItem="QSG-1D-Nfx" firstAttribute="leading" secondItem="Pyb-ft-Wxu" secondAttribute="leading" id="GLK-rM-abK"/>
                             <constraint firstItem="Jm7-03-I16" firstAttribute="bottom" secondItem="bPd-g7-MaV" secondAttribute="bottom" id="Gf4-ib-qe1"/>
                             <constraint firstItem="0jA-kX-ffM" firstAttribute="leading" secondItem="Pyb-ft-Wxu" secondAttribute="leading" id="Ird-HR-Zgj"/>
                             <constraint firstItem="Jm7-03-I16" firstAttribute="trailing" secondItem="0jA-kX-ffM" secondAttribute="trailing" constant="772" id="MSP-Kd-yzu"/>
+                            <constraint firstItem="QSG-1D-Nfx" firstAttribute="trailing" secondItem="Pyb-ft-Wxu" secondAttribute="trailing" id="NJQ-Qn-k5H"/>
                             <constraint firstItem="0jA-kX-ffM" firstAttribute="trailing" secondItem="Pyb-ft-Wxu" secondAttribute="trailing" id="P9G-sq-cBq"/>
-                            <constraint firstItem="QSG-1D-Nfx" firstAttribute="leading" secondItem="Jm7-03-I16" secondAttribute="leading" constant="44" id="RZs-S4-GPg"/>
-                            <constraint firstItem="Jm7-03-I16" firstAttribute="trailing" secondItem="QSG-1D-Nfx" secondAttribute="trailing" constant="772" id="ZI3-fa-Wp9"/>
+                            <constraint firstItem="Jm7-03-I16" firstAttribute="bottom" secondItem="QSG-1D-Nfx" secondAttribute="bottom" constant="94" id="ZzY-X1-xYc"/>
                             <constraint firstItem="p2G-5M-3Xu" firstAttribute="leading" secondItem="Jm7-03-I16" secondAttribute="leading" id="hTs-SA-Rb0"/>
                             <constraint firstItem="Jm7-03-I16" firstAttribute="trailing" secondItem="p2G-5M-3Xu" secondAttribute="trailing" id="l5x-fv-281"/>
                             <constraint firstItem="Jm7-03-I16" firstAttribute="trailing" secondItem="HUo-eQ-Kvq" secondAttribute="trailing" constant="725" id="pjO-aX-DLa"/>
@@ -971,7 +971,9 @@
         <image name="woodbg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
+
         <segue reference="Kr5-Js-4hY"/>
+
         <segue reference="ihq-QR-gMi"/>
     </inferredMetricsTieBreakers>
 </document>
