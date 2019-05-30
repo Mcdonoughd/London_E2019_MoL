@@ -104,9 +104,9 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     //fucntion called when app loads
     override func viewDidLoad() {
         super.viewDidLoad()
-        PlayGameButton.layer.borderWidth = 2
-        PlayGameButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        PlayGameButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
+        //PlayGameButton.layer.borderWidth = 2
+        //PlayGameButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        //PlayGameButton.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
         print("Map View Controller has Loaded")
         TitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
         for button in MapButtons{
