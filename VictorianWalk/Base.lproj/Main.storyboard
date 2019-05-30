@@ -600,10 +600,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="121" id="dyI-eR-6nC"/>
                                 </constraints>
-
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="goButton"/>
-
+                                <state key="normal" image="goButton.png"/>
                                 <connections>
                                     <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="NaD-aQ-jq5"/>
                                 </connections>
@@ -964,16 +962,14 @@
         <image name="backButton" width="1000" height="500"/>
         <image name="beginButton" width="1000" height="500"/>
         <image name="exploreButton" width="1000" height="500"/>
-        <image name="goButton" width="16" height="16"/>
+        <image name="goButton.png" width="1000" height="500"/>
         <image name="helpButton" width="1000" height="500"/>
         <image name="lonMap" width="6000" height="4598"/>
         <image name="selectionHighlight2" width="200" height="200"/>
         <image name="woodbg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-
         <segue reference="Kr5-Js-4hY"/>
-
         <segue reference="ihq-QR-gMi"/>
     </inferredMetricsTieBreakers>
 </document>
