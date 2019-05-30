@@ -42,6 +42,7 @@
 		B3EF8E292296B7F5000D6A8A /* PubActivityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */; };
 		B3EF8E2D2296B9FB000D6A8A /* lonMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3EF8E2C2296B9FB000D6A8A /* lonMap.jpg */; };
 		B3EF8E2F2296BB91000D6A8A /* MoL Logo Proper.png in Resources */ = {isa = PBXBuildFile; fileRef = B3EF8E2E2296BB90000D6A8A /* MoL Logo Proper.png */; };
+		B3F39A29229F1B1E0078FEAD /* selectionHighlight2.png in Resources */ = {isa = PBXBuildFile; fileRef = B3F39A28229F1B1E0078FEAD /* selectionHighlight2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubActivityScene.swift; sourceTree = "<group>"; };
 		B3EF8E2C2296B9FB000D6A8A /* lonMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lonMap.jpg; sourceTree = "<group>"; };
 		B3EF8E2E2296BB90000D6A8A /* MoL Logo Proper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoL Logo Proper.png"; sourceTree = "<group>"; };
+		B3F39A28229F1B1E0078FEAD /* selectionHighlight2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectionHighlight2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		0BE120442291D39F0073EBA3 = {
 			isa = PBXGroup;
 			children = (
+				B3F39A28229F1B1E0078FEAD /* selectionHighlight2.png */,
 				B3A312C2229F0EEF0063477E /* backButton.png */,
 				B3A312C7229F0EF00063477E /* beginButton.png */,
 				B3A312C6229F0EF00063477E /* blankSign.png */,
@@ -231,6 +234,7 @@
 				B371D34A2296EB5500F9F200 /* TextBar.png in Resources */,
 				B3EF8E262296B76C000D6A8A /* PubActivityScene.sks in Resources */,
 				B3A312C8229F0EF00063477E /* backButton.png in Resources */,
+				B3F39A29229F1B1E0078FEAD /* selectionHighlight2.png in Resources */,
 				B3EF8E2F2296BB91000D6A8A /* MoL Logo Proper.png in Resources */,
 				B3A312CA229F0EF00063477E /* exploreButton.png in Resources */,
 				B3A312CD229F0EF00063477E /* beginButton.png in Resources */,
