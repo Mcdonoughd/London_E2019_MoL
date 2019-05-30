@@ -161,11 +161,5 @@ class TextViewController: UIViewController {
     override var shouldAutorotate: Bool {
         return true
     }
-    
-    //Secret home button Action
-    @IBAction func LaunchHomeActivity(_ sender: UIButton) {
-        print("Performing segue")
-        self.performSegue(withIdentifier: "ActivitytoHome", sender: self)
-    }
 }
 
