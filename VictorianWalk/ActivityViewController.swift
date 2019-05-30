@@ -9,7 +9,7 @@
 import UIKit
 
 //This is the controller for the Map View
-class TextViewController: UIViewController {
+class ActivityViewController: UIViewController {
     
     var CurrActivity = ""
 
@@ -19,7 +19,7 @@ class TextViewController: UIViewController {
     var tempButtonStack = [UIButton]() //temp button stack to hold prev data
     
     var passedBooth = Booth(id:0,desc:"",title:"",Activities: [.none])
-    var ActivityModel =  TextActivityModel()
+    var myActivityModel = ActivityModel()
     
     @IBOutlet weak var ActivityText: UILabel!
     @IBOutlet weak var ButtonStack: UIStackView!
@@ -109,7 +109,7 @@ class TextViewController: UIViewController {
     @objc func DisplayActivity(sender: UIButton!){
         ActivityChosen = true
         
-        let ActDesc = ActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
+        let ActDesc = myActivityModel.getActivityText(key: [passedBooth.title,sender.titleLabel!.text ?? "Imagine"])
      
         ActivityText.text = ActDesc.text
         

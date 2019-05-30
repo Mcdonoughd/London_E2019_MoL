@@ -10,7 +10,7 @@ import Foundation
 
 
 //This struct holds the text information of a TextActivity
-struct TextActivity {
+class TextActivity: Activity {
     
     var text = ""
     var type = ""
