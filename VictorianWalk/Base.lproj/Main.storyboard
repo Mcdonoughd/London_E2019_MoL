@@ -84,28 +84,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iPe-tG-ruP"/>
                     </view>
-                    <connections>
-                        <outlet property="ExploreButton" destination="xlh-bO-atx" id="aE9-Ip-Qh7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQ2-eQ-eCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="610.546875" y="86.71875"/>
-        </scene>
-        <!--Engraver View Controller-->
-        <scene sceneID="ZUh-pd-QS5">
-            <objects>
-                <viewController storyboardIdentifier="PharmacyView" id="5Lc-tp-FJG" customClass="EngraverViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yka-wx-SCs" customClass="Engr">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Txm-yn-2F2"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0H0-RR-SxK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2040" y="-645"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="c6s-DE-HhI">
@@ -601,7 +583,7 @@
                                     <constraint firstAttribute="height" constant="121" id="dyI-eR-6nC"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="goButton.png"/>
+                                <state key="normal" image="goButton"/>
                                 <connections>
                                     <action selector="LaunchTextActivity:" destination="gpA-nO-A60" eventType="touchUpInside" id="NaD-aQ-jq5"/>
                                 </connections>
@@ -735,8 +717,8 @@
                                     <action selector="BackButton:" destination="3C6-dH-pMI" eventType="touchUpInside" id="zOn-Xs-ZFu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-np-chW">
-                                <rect key="frame" x="459" y="67" width="106" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-np-chW">
+                                <rect key="frame" x="379" y="67" width="266" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -806,79 +788,6 @@
             </objects>
             <point key="canvasLocation" x="1190.625" y="1514.84375"/>
         </scene>
-        <!--Engraver View Controller-->
-        <scene sceneID="ZPn-eY-mJb">
-            <objects>
-                <viewController storyboardIdentifier="EngraverView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xto-c3-7ge" customClass="EngraverViewController" customModule="VictorianWalk" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KGi-4z-dwQ" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxF-Jk-71B">
-                                <rect key="frame" x="20" y="20" width="51" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="I5r-ws-gnt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Exit"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hh-Zl-wab">
-                                <rect key="frame" x="854" y="10" width="150" height="126"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ac1-3E-bTI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Continue"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do The Thing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1H-RN-AtH">
-                                <rect key="frame" x="307" y="-60" width="410" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="410" id="EGe-Tf-9Hi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="-1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="MainImageView" translatesAutoresizingMaskIntoConstraints="NO" id="7Vy-zq-x1f">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <accessibility key="accessibilityConfiguration" label="MainImageView"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="tempImageView" translatesAutoresizingMaskIntoConstraints="NO" id="B15-fm-v4q">
-                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="7Vy-zq-x1f" firstAttribute="centerX" secondItem="KGi-4z-dwQ" secondAttribute="centerX" id="2fg-Xl-j29"/>
-                            <constraint firstItem="hxF-Jk-71B" firstAttribute="top" secondItem="wKv-qt-hMT" secondAttribute="top" id="2tc-CF-stW"/>
-                            <constraint firstItem="7Vy-zq-x1f" firstAttribute="top" secondItem="S1H-RN-AtH" secondAttribute="bottom" id="38J-mj-aJD"/>
-                            <constraint firstItem="7Vy-zq-x1f" firstAttribute="leading" secondItem="wKv-qt-hMT" secondAttribute="leading" id="4yI-vq-qTd"/>
-                            <constraint firstItem="wKv-qt-hMT" firstAttribute="bottom" secondItem="6Hh-Zl-wab" secondAttribute="bottom" constant="632" id="5gk-Ra-aag"/>
-                            <constraint firstItem="7Vy-zq-x1f" firstAttribute="centerY" secondItem="KGi-4z-dwQ" secondAttribute="centerY" id="6ps-KW-82C"/>
-                            <constraint firstItem="B15-fm-v4q" firstAttribute="top" secondItem="wKv-qt-hMT" secondAttribute="top" id="BBd-1j-1DF"/>
-                            <constraint firstItem="wKv-qt-hMT" firstAttribute="bottom" secondItem="B15-fm-v4q" secondAttribute="bottom" id="Bf9-Pi-6ck"/>
-                            <constraint firstItem="B15-fm-v4q" firstAttribute="leading" secondItem="wKv-qt-hMT" secondAttribute="leading" id="E2L-gP-ibJ"/>
-                            <constraint firstItem="6Hh-Zl-wab" firstAttribute="leading" secondItem="hxF-Jk-71B" secondAttribute="trailing" constant="783" id="MuV-Z4-eAF"/>
-                            <constraint firstItem="6Hh-Zl-wab" firstAttribute="trailing" secondItem="KGi-4z-dwQ" secondAttribute="trailingMargin" id="TC1-i4-CDz"/>
-                            <constraint firstItem="wKv-qt-hMT" firstAttribute="trailing" secondItem="B15-fm-v4q" secondAttribute="trailing" id="VdQ-Vg-dT7"/>
-                            <constraint firstItem="S1H-RN-AtH" firstAttribute="centerX" secondItem="B15-fm-v4q" secondAttribute="centerX" id="Y4c-Q8-kfV"/>
-                            <constraint firstItem="wKv-qt-hMT" firstAttribute="trailing" secondItem="7Vy-zq-x1f" secondAttribute="trailing" id="aIS-55-N0c"/>
-                            <constraint firstItem="hxF-Jk-71B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KGi-4z-dwQ" secondAttribute="leadingMargin" id="aRa-E9-otE"/>
-                            <constraint firstItem="6Hh-Zl-wab" firstAttribute="top" secondItem="KGi-4z-dwQ" secondAttribute="topMargin" constant="-10" id="e1z-0X-ugL"/>
-                            <constraint firstItem="wKv-qt-hMT" firstAttribute="bottom" secondItem="hxF-Jk-71B" secondAttribute="bottom" constant="706" id="ioS-Yh-8fY"/>
-                            <constraint firstItem="wKv-qt-hMT" firstAttribute="bottom" secondItem="7Vy-zq-x1f" secondAttribute="bottom" id="tc3-gL-5bs"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="wKv-qt-hMT"/>
-                    </view>
-                    <connections>
-                        <outlet property="MainImage" destination="7Vy-zq-x1f" id="2KG-f8-dCl"/>
-                        <outlet property="TempImage" destination="B15-fm-v4q" id="UOI-uf-YXc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ehm-gx-eWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1884" y="876"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -897,7 +806,7 @@
                                     <constraint firstAttribute="width" constant="80" id="MsK-Hm-rdp"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MoL Logo Proper.png" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MoL Logo Proper" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
                                 <rect key="frame" x="47" y="631" width="118" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="QzA-oP-9Wg"/>
@@ -943,9 +852,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="BeginButton" destination="Ygk-Vo-1t2" id="pfg-Fp-gsm"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -955,14 +861,14 @@
     <resources>
         <image name="London_Street" width="512" height="364"/>
         <image name="MST" width="2000" height="1000"/>
-        <image name="MoL Logo Proper.png" width="921" height="715"/>
+        <image name="MoL Logo Proper" width="921" height="715"/>
         <image name="TextBar" width="430" height="1030"/>
         <image name="TexturedVWMapTrans" width="1030" height="1030"/>
         <image name="WPI_logo" width="120" height="120"/>
         <image name="backButton" width="1000" height="500"/>
         <image name="beginButton" width="1000" height="500"/>
         <image name="exploreButton" width="1000" height="500"/>
-        <image name="goButton.png" width="1000" height="500"/>
+        <image name="goButton" width="1000" height="500"/>
         <image name="helpButton" width="1000" height="500"/>
         <image name="lonMap" width="6000" height="4598"/>
         <image name="selectionHighlight2" width="200" height="200"/>
