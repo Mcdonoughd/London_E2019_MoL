@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TextActivityModel {
+class ActivityModel {
 //    var TextActivity = TextActivity()
     let errorActivity = TextActivity(text:"Take a deep breath...")
     

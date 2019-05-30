@@ -9,21 +9,15 @@
 import Foundation
 
 
-//This struct holds the text information of a TextActivity
-struct TextActivity {
+//This struct holds the text information of a TextActivity (ie ACT or SEARCH)
+class TextActivity: Activity {
     
     var text = ""
-    var type = ""
     var answer = ""
     
-    init(text: String){
+    init(name:String,type:String,text: String){
+        super.init(name:name,type:type)
         self.text = text
-        answer = "none"
+        self.answer = "none"
     }
-    
-    init(text:String, answer: String){
-        self.text = text
-        self.answer = answer
-    }
-    
 }
