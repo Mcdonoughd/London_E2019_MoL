@@ -101,7 +101,7 @@ class ActivityViewController: UIViewController {
         
         //Add button to stackView
         ButtonStack.addArrangedSubview(button)
-        ButtonStack.customSpacing(after: button)
+        ButtonStack.setCustomSpacing(20,after: button)
         
         //Add button to temp Array
         tempButtonStack.append(button)
@@ -173,6 +173,7 @@ class ActivityViewController: UIViewController {
             
         }
         ButtonStack.addArrangedSubview(button)
+        ButtonStack.setCustomSpacing(20,after: button)
         
     }
     
