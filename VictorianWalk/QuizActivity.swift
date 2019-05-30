@@ -21,9 +21,16 @@ class QuizActivity: Activity{
         self.choices = choices
     }
     
+    init(name:String,type:String,question:String,answer:String){
+        super.init(name:name,type:type)
+        self.question = question
+        self.answer = answer
+    }
+    
     //Shuffle the multiple choice answers to provide a unique expereince for each visitor
-    func ShuffleChoices(){
+    func ShuffleChoices() -> Array<String>{
         self.choices.shuffle()
+        return choices
     }
     
 }
