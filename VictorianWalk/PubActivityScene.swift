@@ -13,7 +13,8 @@ import SpriteKit
 class PubActivityScene: SKScene {
     
     var label:SKLabelNode!
-    var penny:SKSpriteNode!
+    var penny = Penny()
+    
     var bars = [SKShapeNode]()
     var playArea:SKShapeNode!
     override func didMove(to view: SKView) {
@@ -28,16 +29,17 @@ class PubActivityScene: SKScene {
 
             
         loadBars()
-        
         print("We made it")
+        
+//        penny = (self.childNode as? Penny
         //self.addChild(label)
-        penny = self.childNode(withName: "penny") as? SKSpriteNode
+        
         playArea = self.childNode(withName: "playArea") as? SKShapeNode
         
         let background = SKSpriteNode(imageNamed: "woodbg.jpg")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.zPosition = -1
-        penny.zPosition = 1
+        
         let canvasSize = CGSize(width: size.width, height: size.height)
         background.scale(to: canvasSize)
         addChild(background)

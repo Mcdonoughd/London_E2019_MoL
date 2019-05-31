@@ -11,14 +11,14 @@ import SpriteKit
 
 class pubGame{
     
-    var turns:[Int]
+    var turns = [Int]()
     
-    var player1ScoredInBars:[Int]
-    var player2ScoredInBars:[Int]
+    var player1ScoredInBars = [Int]()
+    var player2ScoredInBars = [Int]()
 
     
-    var player1Pennys:[SKNode]
-    var player2Pennys:[SKNode]
+    var player1Pennys = [SKNode]()
+    var player2Pennys =  [SKNode]()
     
     init(){
         
@@ -39,9 +39,6 @@ class pubGame{
     
 }
 
-class player{
-    var playerScoredInBars:[Int]
-    var playerPennies:[SKNode]
-}
+
 
 

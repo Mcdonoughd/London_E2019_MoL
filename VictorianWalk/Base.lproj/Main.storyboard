@@ -524,7 +524,7 @@
                                                     <segue destination="BYZ-38-t0r" kind="show" id="GeS-UN-YN8"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iB-K8-n41">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iB-K8-n41">
                                                 <rect key="frame" x="578" y="50" width="30" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Pint"/>
@@ -908,7 +908,8 @@
         <image name="woodbg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1xQ-rY-5yT"/>
+        <segue reference="M3Q-n7-XCj"/>
+        <segue reference="GeS-UN-YN8"/>
         <segue reference="c6c-Q7-I3c"/>
     </inferredMetricsTieBreakers>
 </document>
