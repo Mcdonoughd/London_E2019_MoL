@@ -97,6 +97,9 @@ class ActivityViewController: UIViewController {
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle(DisplayText, for: .normal)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(32)
+        button.titleLabel?.adjustsFontSizeToFitWidth=true
+        
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.addTarget(self, action: #selector(DisplayActivity(sender:)), for: .touchUpInside)
         
@@ -162,6 +165,8 @@ class ActivityViewController: UIViewController {
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle(choice, for: .normal)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(32)
+
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         if(answer){
@@ -200,6 +205,8 @@ class ActivityViewController: UIViewController {
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle("Show Answer", for: .normal)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(42)
+        
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
         tempAnswer = answer
