@@ -73,9 +73,9 @@ class PubActivityScene: SKScene {
     
     
     override func update(_ currentTime: TimeInterval) {
-        if(penny.intersects(playArea)){
-            print("Intersection")
-        }
+//        if(penny.intersects(playArea)){
+//            print("Intersection")
+//        }
     }
     
     func loadBars(){
