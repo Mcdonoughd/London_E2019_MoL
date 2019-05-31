@@ -11,34 +11,44 @@ import SpriteKit
 
 class pubGame{
     
-    var turns = [Int]()
-    
-    var player1ScoredInBars = [Int]()
-    var player2ScoredInBars = [Int]()
 
+    var currentTurn:Int
+    var numberOfTurns:Int
     
-    var player1Pennys = [SKNode]()
-    var player2Pennys =  [SKNode]()
-    
-    init(){
+    var playerOne:player
+    var playerTwo:player
+   
+    init(numberOfTurns: Int){
         
-        var turn = 1;
+        self.numberOfTurns = numberOfTurns
         
-        player1ScoredInBars = [Int]()
-        player1Pennys = [SKNode]()
+        playerOne = player()
+        playerTwo = player()
         
-        player2ScoredInBars = [Int]()
-        player2Pennys = [SKNode]()
+        currentTurn = 0
         
-        for _ in 0...9 {
-            self.player1ScoredInBars.append(0);
-            self.player2ScoredInBars.append(0);
-        }
     }
+    
     
     
 }
 
 
+class player{
+    
+    var playerScoredInBars:[Int]
+    var playerPennies:[SKNode]
+    
+    init(){
+        playerScoredInBars = [Int]()
+        for _ in 0...9 {
+            playerScoredInBars.append(0);
+        }
+        playerPennies = [SKNode]()
 
-
+    }
+    
+    func runTurn(){
+        
+    }
+}
