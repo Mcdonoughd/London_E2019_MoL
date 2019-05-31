@@ -19,6 +19,7 @@ class Penny: SKSpriteNode{
         self.physicsBody = SKPhysicsBody(texture: self.texture!,size: self.texture!.size())
         self.physicsBody?.isDynamic = true
         self.physicsBody?.velocity = CGVector(dx: 10.0,dy: 10.0)
+        self.physicsBody?.affectedByGravity = false
         self.zPosition = 1
         self.xScale = 0.3
         self.yScale = 0.3
