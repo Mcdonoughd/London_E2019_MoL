@@ -1,0 +1,30 @@
+//
+//  Penny.swift
+//  VictorianWalk
+//
+//  Created by Daniel McDonough on 31/05/2019.
+//  Copyright © 2019 Daniel McDonough. All rights reserved.
+//
+
+import Foundation
+import SpriteKit
+
+class Penny: SKSpriteNode{
+    
+    init(){
+        let texture = SKTexture(imageNamed: "penny")
+        super.init(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: texture.size())
+        self.name = "penny"
+        
+        self.physicsBody = SKPhysicsBody(rectangleOf: texture.size())
+        self.physicsBody?.isDynamic = true
+        self.physicsBody?.velocity = CGVector(dx: 10.0,dy: 10.0)
+        self.zPosition = 1
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+}

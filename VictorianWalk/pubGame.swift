@@ -11,13 +11,13 @@ import SpriteKit
 
 class pubGame{
     
+
     var currentTurn:Int
     var numberOfTurns:Int
     
-    
     var playerOne:player
     var playerTwo:player
-    
+   
     init(numberOfTurns: Int){
         
         self.numberOfTurns = numberOfTurns
@@ -32,6 +32,7 @@ class pubGame{
     
     
 }
+
 
 class player{
     
@@ -51,5 +52,3 @@ class player{
         
     }
 }
-
-
