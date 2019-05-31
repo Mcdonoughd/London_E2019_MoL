@@ -15,8 +15,7 @@ class PubActivityScene: SKScene {
     
     var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
     var label:SKLabelNode!
-    var penny = Penny()
-    
+    //var penny = Penny()
     var bars = [SKShapeNode]()
     var playArea:SKShapeNode!
     
@@ -30,14 +29,14 @@ class PubActivityScene: SKScene {
 //        //backgroundColor = UIColor.red
         //bars = [SKShapeNode]()
 
-            
+        self.addChild(PubGame.PlayersArray[0].playerPennies[0])
         loadBars()
         print("We made it")
         
-        self.addChild(penny)
+        //self.addChild(penny)
         //self.addChild(label)
         
-        playArea = self.childNode(withName: "playArea") as? SKShapeNode
+        //playArea = self.childNode(withName: "playArea") as? SKShapeNode
         
         let background = SKSpriteNode(imageNamed: "woodbg")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -53,33 +52,42 @@ class PubActivityScene: SKScene {
     //var isFingerOnPenny = false
     //var touchedGlowNode : SKNode!
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        <#code#>
-//    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches{
+            let location = touch.location(in: self)
+            PubGame.PlayersArray[0].playerPennies[0].position.x = location.x
+            PubGame.PlayersArray[0].playerPennies[0].position.y = location.y
+        }
+    }
     
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches{
             let location = touch.location(in: self)
             
-            let old_posX = penny.position.x
-            let old_posY = penny.position.y
+            let old_posX = PubGame.PlayersArray[0].playerPennies[0].position.x
+            let old_posY = PubGame.PlayersArray[0].playerPennies[0].position.y
             
-            penny.position.x = location.x
-            penny.position.y = location.y
+            PubGame.PlayersArray[0].playerPennies[0].position.x = location.x
+            PubGame.PlayersArray[0].playerPennies[0].position.y = location.y
             
-            if(penny.intersects(playArea) == false){
-                penny.position.x = old_posX
-                penny.position.y = old_posY
-            }
+//            if(penny.intersects(playArea) == false){
+//                penny.position.x = old_posX
+//                penny.position.y = old_posY
+//            }
             
         }
     }
     
+    //186!
     
     override func update(_ currentTime: TimeInterval) {
-//        if(penny.intersects(playArea)){
-//            print("Intersection")
+//        switch PubGame.currentGameState{
+//            case pubGame.gamestates.OPENING:
+//                PubGame.currentGameState = pubGame.gamestates.PLAYING
+//            case pubGame.gamestates.PLAYING:
+//
+//            case pubGame.gamestates.CLOSING:
 //        }
     }
     

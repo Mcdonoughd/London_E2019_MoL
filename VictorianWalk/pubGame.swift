@@ -14,8 +14,18 @@ class pubGame{
     var numberOfRounds:Int
     var numberOfPlayers:Int
     var numberOfPennies:Int
-    var currentTurn:Int
+    var currentRound:Int
     var PlayersArray = [player]()
+    
+    
+    
+    enum gamestates {
+        case OPENING
+        case PLAYING
+        case CLOSING
+    }
+    
+    var currentGameState:gamestates
  
    
     init(numberOfRounds:Int, numberOfPennies: Int, numberOfPlayers:Int){
@@ -23,14 +33,15 @@ class pubGame{
         self.numberOfRounds = numberOfRounds
         self.numberOfPennies = numberOfPennies
         
-        currentTurn = 0
+        currentRound = 1
+        currentGameState = gamestates.OPENING
         
         makePlayers(players: numberOfPlayers)
     }
     
     func makePlayers(players:Int){
         for _ in 1...players{
-            let newPlayer = player()
+            let newPlayer = player(amountOfPennies: numberOfPennies)
             self.PlayersArray.append(newPlayer)
         }
     }

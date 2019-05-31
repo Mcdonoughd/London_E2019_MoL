@@ -11,18 +11,20 @@ import SpriteKit
 
 class Penny: SKSpriteNode{
     
+    var isPresent:Int
+    
     init(){
         let texture = SKTexture(imageNamed: "hapenny")
+        self.isPresent = 0
         super.init(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: texture.size())
         self.name = "penny"
-        
         self.physicsBody = SKPhysicsBody(texture: self.texture!,size: self.texture!.size())
         self.physicsBody?.isDynamic = true
-        self.physicsBody?.velocity = CGVector(dx: 10.0,dy: 10.0)
+        //self.physicsBody?.velocity = CGVector(dx: 10.0,dy: 10.0)
         self.physicsBody?.affectedByGravity = false
         self.zPosition = 1
-        self.xScale = 0.3
-        self.yScale = 0.3
+        self.xScale = 0.5
+        self.yScale = 0.5
     }
     
     required init?(coder aDecoder: NSCoder) {

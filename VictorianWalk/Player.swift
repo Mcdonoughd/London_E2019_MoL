@@ -10,17 +10,20 @@ import Foundation
 import SpriteKit
 
 class player{
-    
+    var amountOfPennies:Int
     var playerScoredInBars:[Int]
-    var playerPennies:[SKNode]
+    var playerPennies:[Penny]
     
-    init(){
+    init(amountOfPennies: Int){
         playerScoredInBars = [Int]()
         for _ in 0...9 {
             playerScoredInBars.append(0);
         }
-        playerPennies = [SKNode]()
-        
+        playerPennies = [Penny]()
+        self.amountOfPennies = amountOfPennies
+        for _ in 1...amountOfPennies{
+            playerPennies.append(Penny())
+        }
     }
     
     func runTurn(){
