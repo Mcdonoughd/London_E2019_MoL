@@ -21,7 +21,7 @@ class ActivityModel {
         4:[ GameActivity(name:"Shove Ha'pny",type:"Game",segueRef:"")],
         7:[
             TextActivity(name:"Tea & Coffee Warehouse",type:"Imagine",text:"Look at different shops. Where else might tea be sold around town?"),
-            QuizActivity(name:"Tea & Coffee Warehouse",type:"Quiz",question:"How much tea did the average Londoner drink in Victorian times?",answer:"1 pound/year (~150-250 bags/year) In comparison, modern Londoner’s will drink about 550 cups of tea a year",choices:["20 pounds/year","5 pounds/year","1 pound/year"],answerIndex:2),
+            QuizActivity(name:"Tea & Coffee Warehouse",type:"Quiz",question:"How much tea did the average Londoner drink in Victorian times?",answer:"1 pound/year (~150-250 bags/year) In comparison, modern Londoners will drink about 550 cups of tea a year",choices:["20 pounds/year","5 pounds/year","1 pound/year"],answerIndex:2),
         ],
         5:[
             TextActivity(name:"Glass Showroom",type:"Search",text:"How many different colored glasses can you spot?"),
