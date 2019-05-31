@@ -12,14 +12,14 @@ import SpriteKit
 class player{
     var amountOfPennies:Int
     var playerScoredInBars:[Int]
-    var playerPennies:[Penny]
+    var playerPennies = [Penny]()
     
     init(amountOfPennies: Int){
         playerScoredInBars = [Int]()
         for _ in 0...9 {
             playerScoredInBars.append(0);
         }
-        playerPennies = [Penny]()
+        
         self.amountOfPennies = amountOfPennies
         for _ in 1...amountOfPennies{
             playerPennies.append(Penny())

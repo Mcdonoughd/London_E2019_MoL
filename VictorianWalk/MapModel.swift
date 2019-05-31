@@ -15,7 +15,7 @@ class MapModel{
     
     var TitleDesc:[String : Booth] = [
         "1":Booth(id:1, desc:"Victorian children saved their farthings to buy ”penny toys” from street sellers and dazzling toy arcades such as Lowther’s on the Strand. Lowther’s was an ”Aladdin fairy palace” of expensive train sets, dolls, and lead soldiers.",
-            title:"Toy Shop"),
+            title:"Toy Shop",hasActivity: true),
         
         "2":Booth(id:2, desc:"Tobacconists sold blends of loose tobacco, snuff, cigarettes, and smoking accessories. During Victorian times, habits were changing. Rolled cigarettes were available, and briar-root pipes replaced clay ones.",
             title:"Tobacconist"),
