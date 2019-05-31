@@ -15,7 +15,6 @@ class pubGame{
     var numberOfPlayers:Int
     var numberOfPennies:Int
     var currentTurn:Int
-    var numberOfTurns:Int
     var PlayersArray = [player]()
  
    

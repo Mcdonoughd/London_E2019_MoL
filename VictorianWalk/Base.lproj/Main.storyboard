@@ -37,6 +37,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You and your family have just moved to Victorian London! Take a walk through the streets and see what the city has the offer!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
+                                <rect key="frame" x="81" y="232" width="400" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fJj-5e-LXX" secondAttribute="height" multiplier="400:239" constant="-107.11297071129707" id="8Yr-IR-xzk"/>
+                                    <constraint firstAttribute="height" constant="303" id="Vg6-X4-1Sp"/>
+                                    <constraint firstAttribute="width" constant="400" id="WAC-Sp-GUv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xlh-bO-atx">
                                 <rect key="frame" x="396" y="567" width="233" height="118"/>
                                 <constraints>
@@ -58,29 +69,10 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="ee1-Vo-OkO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="This is a self guided experience and you do not need to follow the order of numbers on the exhibits" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsX-ux-cXb">
-                                <rect key="frame" x="78" y="440" width="400" height="100"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
-                                <rect key="frame" x="78" y="247" width="400" height="185"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="fJj-5e-LXX" secondAttribute="height" multiplier="400:239" constant="90.376569037656907" id="8Yr-IR-xzk"/>
-                                    <constraint firstAttribute="height" constant="185" id="Vg6-X4-1Sp"/>
-                                    <constraint firstAttribute="width" constant="400" id="WAC-Sp-GUv"/>
-                                </constraints>
-                                <string key="text">You and your family have just moved to Victorian London! Take a walk through the streets and see what the city has the offer!                                   </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Qfr-LI-kSR" firstAttribute="bottom" secondItem="iPe-tG-ruP" secondAttribute="bottom" id="3n3-7Y-qXb"/>
-                            <constraint firstItem="qsX-ux-cXb" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="leading" id="3w2-QH-bxh"/>
                             <constraint firstItem="ing-mc-bFq" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="80" id="4hd-xs-iIP"/>
                             <constraint firstAttribute="trailing" secondItem="Chr-YQ-u5S" secondAttribute="trailing" id="5YD-0D-75g"/>
                             <constraint firstItem="Chr-YQ-u5S" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="31" id="755-ZJ-tTx"/>
@@ -88,22 +80,20 @@
                             <constraint firstItem="Chr-YQ-u5S" firstAttribute="trailing" secondItem="9ct-gM-VYQ" secondAttribute="trailing" id="9CT-5V-cHS"/>
                             <constraint firstItem="9ct-gM-VYQ" firstAttribute="bottom" secondItem="iPe-tG-ruP" secondAttribute="bottom" id="ETr-Pq-JIK"/>
                             <constraint firstItem="iPe-tG-ruP" firstAttribute="trailing" secondItem="Ks1-3q-sEo" secondAttribute="trailing" constant="98" id="NFG-HJ-10c"/>
-                            <constraint firstItem="qsX-ux-cXb" firstAttribute="top" secondItem="fJj-5e-LXX" secondAttribute="bottom" constant="8" symbolic="YES" id="Nwf-mN-TpF"/>
                             <constraint firstItem="ing-mc-bFq" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="310" id="W6E-FX-Fzp"/>
                             <constraint firstItem="xlh-bO-atx" firstAttribute="centerX" secondItem="a2s-qg-PFN" secondAttribute="centerX" id="Yfi-80-rpz"/>
                             <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="ing-mc-bFq" secondAttribute="trailing" constant="-189.5" id="Z7P-No-Vba"/>
                             <constraint firstItem="Chr-YQ-u5S" firstAttribute="leading" secondItem="a2s-qg-PFN" secondAttribute="leadingMargin" id="ZHj-dl-oJa"/>
                             <constraint firstItem="9ct-gM-VYQ" firstAttribute="centerX" secondItem="xlh-bO-atx" secondAttribute="centerX" id="aJm-vt-VFr"/>
                             <constraint firstItem="xlh-bO-atx" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="396" id="eWW-11-Sja"/>
-                            <constraint firstItem="xlh-bO-atx" firstAttribute="top" secondItem="qsX-ux-cXb" secondAttribute="bottom" constant="27" id="fcx-3f-zvb"/>
                             <constraint firstItem="Ks1-3q-sEo" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="227" id="gE6-dC-mJ4"/>
-                            <constraint firstItem="fJj-5e-LXX" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="78" id="gRM-kd-g0F"/>
-                            <constraint firstItem="fJj-5e-LXX" firstAttribute="top" secondItem="ing-mc-bFq" secondAttribute="bottom" constant="94" id="jvG-Th-6cK"/>
-                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="trailing" constant="47" id="jx0-Pm-9nk"/>
+                            <constraint firstItem="fJj-5e-LXX" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="81" id="gRM-kd-g0F"/>
+                            <constraint firstItem="fJj-5e-LXX" firstAttribute="top" secondItem="ing-mc-bFq" secondAttribute="bottom" constant="79" id="jvG-Th-6cK"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="trailing" constant="44" id="jx0-Pm-9nk"/>
                             <constraint firstItem="9ct-gM-VYQ" firstAttribute="centerY" secondItem="Ks1-3q-sEo" secondAttribute="centerY" constant="-1.5" id="ljC-Yr-QLR"/>
                             <constraint firstItem="Qfr-LI-kSR" firstAttribute="trailing" secondItem="Chr-YQ-u5S" secondAttribute="trailing" id="nYY-mh-lmd"/>
                             <constraint firstItem="Qfr-LI-kSR" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="904" id="oTa-Xw-o4E"/>
-                            <constraint firstItem="xlh-bO-atx" firstAttribute="top" secondItem="fJj-5e-LXX" secondAttribute="bottom" constant="135" id="p16-3T-ePo"/>
+                            <constraint firstItem="xlh-bO-atx" firstAttribute="top" secondItem="fJj-5e-LXX" secondAttribute="bottom" constant="32" id="p16-3T-ePo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iPe-tG-ruP"/>
                     </view>
@@ -817,6 +807,7 @@
                         <outlet property="ButtonStack" destination="Sd4-Q5-aIh" id="sBi-0G-yv9"/>
                         <outlet property="Helpbutton" destination="rTx-QE-kwA" id="26b-u9-Ie4"/>
                         <segue destination="gpA-nO-A60" kind="show" identifier="MapSegue" id="c6c-Q7-I3c"/>
+                        <segue destination="0aS-22-JNt" kind="show" identifier="PubGameSegue" id="cRw-Tv-NvM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-pL-fvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -910,7 +901,7 @@
         <image name="woodbg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ee1-Vo-OkO"/>
-        <segue reference="ihq-QR-gMi"/>
+        <segue reference="1xQ-rY-5yT"/>
+        <segue reference="c6c-Q7-I3c"/>
     </inferredMetricsTieBreakers>
 </document>
