@@ -17,6 +17,7 @@ class PubActivityScene: SKScene {
     
     var bars = [SKShapeNode]()
     var playArea:SKShapeNode!
+    
     override func didMove(to view: SKView) {
 //        label = SKLabelNode(fontNamed: "Chalkduster")
 //        label.fontSize = 45
@@ -31,7 +32,7 @@ class PubActivityScene: SKScene {
         loadBars()
         print("We made it")
         
-//        penny = (self.childNode as? Penny
+        self.addChild(penny)
         //self.addChild(label)
         
         playArea = self.childNode(withName: "playArea") as? SKShapeNode
