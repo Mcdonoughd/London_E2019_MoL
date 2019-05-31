@@ -722,7 +722,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woodbg" translatesAutoresizingMaskIntoConstraints="NO" id="pfO-9e-NpW">
-                                <rect key="frame" x="0.0" y="0.0" width="2560" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1040" height="768"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TextBar" translatesAutoresizingMaskIntoConstraints="NO" id="xV1-TU-EOQ">
                                 <rect key="frame" x="20" y="37" width="1020" height="711"/>
@@ -781,20 +781,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="pfO-9e-NpW" firstAttribute="trailing" secondItem="xV1-TU-EOQ" secondAttribute="trailing" id="5CY-bV-FEw"/>
                             <constraint firstItem="xV1-TU-EOQ" firstAttribute="leading" secondItem="L50-HY-HvZ" secondAttribute="leadingMargin" id="6sL-Dx-dNL"/>
                             <constraint firstItem="rTx-QE-kwA" firstAttribute="top" secondItem="MJg-FB-lVX" secondAttribute="top" constant="47" id="9Pp-OS-5ek"/>
-                            <constraint firstItem="pfO-9e-NpW" firstAttribute="bottom" secondItem="MJg-FB-lVX" secondAttribute="bottom" id="9j2-K4-vVl"/>
                             <constraint firstItem="MJg-FB-lVX" firstAttribute="trailing" secondItem="rTx-QE-kwA" secondAttribute="trailing" constant="73" id="BVJ-1N-wAG"/>
                             <constraint firstItem="xV1-TU-EOQ" firstAttribute="top" secondItem="MJg-FB-lVX" secondAttribute="top" constant="17" id="H4F-Dj-iia"/>
                             <constraint firstItem="0WT-ii-2xw" firstAttribute="top" secondItem="Sd4-Q5-aIh" secondAttribute="bottom" constant="48" id="JmT-Pg-NLn"/>
                             <constraint firstItem="fzv-h3-h91" firstAttribute="top" secondItem="vt5-np-chW" secondAttribute="bottom" constant="33" id="L2T-aw-jIn"/>
                             <constraint firstItem="rTx-QE-kwA" firstAttribute="top" secondItem="vt5-np-chW" secondAttribute="top" id="MGD-sb-I9R"/>
+                            <constraint firstItem="pfO-9e-NpW" firstAttribute="top" secondItem="L50-HY-HvZ" secondAttribute="top" id="Nge-N4-dmB"/>
+                            <constraint firstItem="pfO-9e-NpW" firstAttribute="leading" secondItem="L50-HY-HvZ" secondAttribute="leading" id="O54-Rn-4nG"/>
                             <constraint firstItem="8F6-9e-77U" firstAttribute="leading" secondItem="MJg-FB-lVX" secondAttribute="leading" constant="66" id="OjE-0r-0Hk"/>
-                            <constraint firstItem="pfO-9e-NpW" firstAttribute="top" secondItem="L50-HY-HvZ" secondAttribute="top" id="P8b-MJ-7ah"/>
-                            <constraint firstItem="pfO-9e-NpW" firstAttribute="leading" secondItem="L50-HY-HvZ" secondAttribute="leading" id="QUg-yN-frL"/>
                             <constraint firstItem="8F6-9e-77U" firstAttribute="top" secondItem="MJg-FB-lVX" secondAttribute="top" constant="49" id="QcB-aM-ZAG"/>
                             <constraint firstItem="Sd4-Q5-aIh" firstAttribute="top" secondItem="fzv-h3-h91" secondAttribute="bottom" constant="8" symbolic="YES" id="SI0-7w-5wP"/>
                             <constraint firstItem="Sd4-Q5-aIh" firstAttribute="centerX" secondItem="vt5-np-chW" secondAttribute="centerX" id="V3K-ej-Tcc"/>
+                            <constraint firstItem="pfO-9e-NpW" firstAttribute="bottom" secondItem="MJg-FB-lVX" secondAttribute="bottom" id="Ytm-uN-vog"/>
                             <constraint firstItem="MJg-FB-lVX" firstAttribute="trailing" secondItem="fzv-h3-h91" secondAttribute="trailing" constant="227" id="c3h-ak-1gU"/>
                             <constraint firstAttribute="trailing" secondItem="0WT-ii-2xw" secondAttribute="trailing" id="cWg-AR-eyu"/>
                             <constraint firstItem="0WT-ii-2xw" firstAttribute="bottom" secondItem="MJg-FB-lVX" secondAttribute="bottom" id="dlb-Uf-Kbq"/>
@@ -907,7 +908,7 @@
         <image name="woodbg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GeS-UN-YN8"/>
-        <segue reference="ihq-QR-gMi"/>
+        <segue reference="1xQ-rY-5yT"/>
+        <segue reference="c6c-Q7-I3c"/>
     </inferredMetricsTieBreakers>
 </document>
