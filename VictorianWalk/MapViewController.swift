@@ -37,7 +37,7 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
 
     //Function called on "Play" btn press
     // it launches the choose activity segue
-    @IBAction func LaunchTextActivity(_ sender: Any) {
+    @IBAction func LaunchTextActivity(_ sender: UIButton) {
          print("Performing segue")
         
          self.performSegue(withIdentifier: "ActivitySegue", sender: self)

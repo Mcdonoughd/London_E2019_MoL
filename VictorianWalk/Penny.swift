@@ -12,7 +12,7 @@ import SpriteKit
 class Penny: SKSpriteNode{
     
     init(){
-        let texture = SKTexture(imageNamed: "penny")
+        let texture = SKTexture(imageNamed: "hapenny")
         super.init(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: texture.size())
         self.name = "penny"
         

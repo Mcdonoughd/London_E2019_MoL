@@ -136,14 +136,31 @@ class ActivityViewController: UIViewController {
             case is GameActivity:
                 print("Loading Game...")
                 let newActivity = Activity as! GameActivity
-                ActivityText.text = newActivity.name
-                
+                ActivityText.text = newActivity.desc
+                tempSegue = newActivity.segueRef
+                ClearButtonStack()
+                MakeToGameButton()
                 //Load the segue to the game
                 break
             default:
                 print("The Activity has no type!")
                 break;
         }
+    }
+    
+    var tempSegue = ""
+    
+    func MakeToGameButton(){
+        let button = MakeGenericButton(text: "Play")
+        button.addTarget(self, action: #selector(LaunchPubGame(sender:)), for: .touchUpInside)
+        ButtonStack.addArrangedSubview(button)
+        ButtonStack.setCustomSpacing(20,after: button)
+        
+    }
+    
+    @objc func LaunchPubGame(sender: UIButton){
+        print("Launching Pub Game...")
+        self.performSegue(withIdentifier: tempSegue, sender: self)
     }
     
     func LoadChoices(quiz: QuizActivity){

@@ -10,11 +10,12 @@ import Foundation
 
 class GameActivity: Activity {
     var segueRef = ""
+    var desc = ""
     
-    
-    init(name:String,type:String,segueRef:String){
+    init(name:String,type:String,segueRef:String,desc:String){
         super.init(name:name,type:type)
         self.segueRef = segueRef
+        self.desc = desc
     }
     
 }

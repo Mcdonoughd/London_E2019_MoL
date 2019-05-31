@@ -524,14 +524,6 @@
                                                     <segue destination="BYZ-38-t0r" kind="show" id="GeS-UN-YN8"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iB-K8-n41">
-                                                <rect key="frame" x="578" y="50" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Pint"/>
-                                                <connections>
-                                                    <segue destination="0aS-22-JNt" kind="show" id="WkZ-QV-inB"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="zo2-80-i1y" firstAttribute="top" secondItem="tfi-Kr-9Sh" secondAttribute="bottom" constant="8" symbolic="YES" id="0xo-0J-EHv"/>
@@ -815,6 +807,7 @@
                         <outlet property="ButtonStack" destination="Sd4-Q5-aIh" id="sBi-0G-yv9"/>
                         <outlet property="Helpbutton" destination="rTx-QE-kwA" id="26b-u9-Ie4"/>
                         <segue destination="gpA-nO-A60" kind="show" identifier="MapSegue" id="c6c-Q7-I3c"/>
+                        <segue destination="0aS-22-JNt" kind="show" identifier="PubGameSegue" id="cRw-Tv-NvM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-pL-fvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -908,8 +901,7 @@
         <image name="woodbg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M3Q-n7-XCj"/>
-        <segue reference="GeS-UN-YN8"/>
+        <segue reference="1xQ-rY-5yT"/>
         <segue reference="c6c-Q7-I3c"/>
     </inferredMetricsTieBreakers>
 </document>
