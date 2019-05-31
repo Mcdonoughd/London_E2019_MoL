@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2DB78022A16656004AFC2C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DB77F22A16656004AFC2C /* Player.swift */; };
 		0B61DE0E2296B72B001DC9C6 /* TextActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */; };
 		0B61DE102296BD39001DC9C6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE0F2296BD39001DC9C6 /* ActivityViewController.swift */; };
 		0BD794F82292D006004ACC83 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD794F72292D006004ACC83 /* SpriteKit.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B2DB77F22A16656004AFC2C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextActivity.swift; sourceTree = "<group>"; };
 		0B61DE0F2296BD39001DC9C6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		0BD794F72292D006004ACC83 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 				0BE045BC229FECCA00E4F256 /* QuizActivity.swift */,
 				0BE045BE229FED0200E4F256 /* GameActivity.swift */,
 				0BE4B94822A14ADC00FE4406 /* Penny.swift */,
+				0B2DB77F22A16656004AFC2C /* Player.swift */,
 			);
 			path = VictorianWalk;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				0BE38F1522923CE800C95BDA /* MapViewController.swift in Sources */,
 				0BE6443D2292EC19008E521F /* MapModel.swift in Sources */,
 				0BE3737F2292C64400623A89 /* PubViewController.swift in Sources */,
+				0B2DB78022A16656004AFC2C /* Player.swift in Sources */,
 				0B61DE102296BD39001DC9C6 /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
