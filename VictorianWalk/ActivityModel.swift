@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 //this is the model that handles the activity loading
 class ActivityModel {
     
@@ -18,14 +17,14 @@ class ActivityModel {
             TextActivity(name:"Barber Shop",type:"Act",text: "Play out a scene like you’re inside the barbershop. Act like you’re shaving a family member’s face."),
             QuizActivity(name:"Barber Shop",type:"Quiz",question:"What do you think the shaving mugs in the cabinet were for?",answer:"The barber would pour shaving cream in the mug and mix it to build up a lather.",choices: ["Feed to the dogs","Build up a lather","Store tea & coffee"],answerIndex:1)
         ],
-        4:[ GameActivity(name:"Shove Ha'pny",type:"Game",segueRef:"")],
+        4:[ GameActivity(name:"Shove Ha'Penny",type:"Game",segueRef:"")],
+        5:[
+            TextActivity(name:"Glass Showroom",type:"Search",text:"How many different coloured glasses can you spot?"),
+            TextActivity(name:"Glass Showroom",type:"Imagine",text:"What kinds of glasses like these would you find in your own home?"),
+        ],
         7:[
             TextActivity(name:"Tea & Coffee Warehouse",type:"Imagine",text:"Look at different shops. Where else might tea be sold around town?"),
             QuizActivity(name:"Tea & Coffee Warehouse",type:"Quiz",question:"How much tea did the average Londoner drink in Victorian times?",answer:"1 pound/year (~150-250 bags/year) In comparison, modern Londoners will drink about 550 cups of tea a year",choices:["20 pounds/year","5 pounds/year","1 pound/year"],answerIndex:2),
-        ],
-        5:[
-            TextActivity(name:"Glass Showroom",type:"Search",text:"How many different colored glasses can you spot?"),
-            TextActivity(name:"Glass Showroom",type:"Imagine",text:"What kinds of glasses like these would you find in your own home?"),
         ],
         8:[
             QuizActivity(name:"Engraver",type:"Imagine",question:"Engravers commonly used wood and copper. Is one material better than the other for engraving?",answer:"They each have their purposes. Engravers used copper to make master prints for copying small cards. They used wood to create newspapers and almanacs"),
