@@ -94,13 +94,7 @@ class ActivityViewController: UIViewController {
     func MakeButton(DisplayText: String){
         let button = UIButton(type: .custom)
         
-        button.frame = CGRect(x:100, y:100,width:50,height:50)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.setTitle(DisplayText, for: .normal)
-        button.titleLabel?.font = button.titleLabel?.font.withSize(32)
-        button.titleLabel?.adjustsFontSizeToFitWidth=true
-        
-        button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let button = MakeGenericButton(text: DisplayText)
         button.addTarget(self, action: #selector(DisplayActivity(sender:)), for: .touchUpInside)
         
         //Add button to stackView
@@ -162,12 +156,7 @@ class ActivityViewController: UIViewController {
     
     func MakeMultiChoiceButtons(choice: String,answer: Bool){
         let button = UIButton(type:.custom)
-        button.frame = CGRect(x:100, y:100,width:50,height:50)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.setTitle(choice, for: .normal)
-        button.titleLabel?.font = button.titleLabel?.font.withSize(32)
-
-        button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let button = MakeGenericButton(text: choice)
         
         if(answer){
           //if the answer is correct then...
@@ -201,13 +190,7 @@ class ActivityViewController: UIViewController {
     //This makes a simple "Show Answer Button on a quiz"
     func MakeShowButton(answer:String){
         ClearButtonStack()
-        let button = UIButton(type:.custom)
-        button.frame = CGRect(x:100, y:100,width:50,height:50)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.setTitle("Show Answer", for: .normal)
-        button.titleLabel?.font = button.titleLabel?.font.withSize(42)
-        
-        button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        let button = MakeGenericButton(text: answer)
         button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
         tempAnswer = answer
         ButtonStack.addArrangedSubview(button)
@@ -236,5 +219,19 @@ class ActivityViewController: UIViewController {
     override var shouldAutorotate: Bool {
         return true
     }
+    
+    
+    func MakeGenericButton(text: String) -> UIButton{
+        let button = UIButton(type:.custom)
+        button.frame = CGRect(x:100, y:100,width:50,height:50)
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.setTitle(text, for: .normal)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(42)
+        button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        return button
+    }
+    
+    
+    
 }
 
