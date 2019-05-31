@@ -92,8 +92,7 @@ class ActivityViewController: UIViewController {
     
     //This makes a Choose Activity button
     func MakeButton(DisplayText: String){
-        let button = UIButton(type: .custom)
-        
+   
         let button = MakeGenericButton(text: DisplayText)
         button.addTarget(self, action: #selector(DisplayActivity(sender:)), for: .touchUpInside)
         
@@ -155,7 +154,7 @@ class ActivityViewController: UIViewController {
     }
     
     func MakeMultiChoiceButtons(choice: String,answer: Bool){
-        let button = UIButton(type:.custom)
+      
         let button = MakeGenericButton(text: choice)
         
         if(answer){
