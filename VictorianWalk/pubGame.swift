@@ -11,27 +11,34 @@ import SpriteKit
 
 class pubGame{
     
-
+    var numberOfRounds:Int
+    var numberOfPlayers:Int
+    var numberOfPennies:Int
     var currentTurn:Int
     var numberOfTurns:Int
-    
-    var playerOne:player
-    var playerTwo:player
+    var PlayersArray = [player]()
+ 
    
-    init(numberOfTurns: Int){
-        
-        self.numberOfTurns = numberOfTurns
-        
-        playerOne = player()
-        playerTwo = player()
+    init(numberOfRounds:Int, numberOfPennies: Int, numberOfPlayers:Int){
+        self.numberOfPlayers = numberOfPlayers
+        self.numberOfRounds = numberOfRounds
+        self.numberOfPennies = numberOfPennies
         
         currentTurn = 0
         
+        makePlayers(players: numberOfPlayers)
     }
     
-    
+    func makePlayers(players:Int){
+        for _ in 1...players{
+            let newPlayer = player()
+            self.PlayersArray.append(newPlayer)
+        }
+    }
     
 }
+
+
 
 
 class player{

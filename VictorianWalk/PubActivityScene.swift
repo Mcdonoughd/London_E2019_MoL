@@ -12,6 +12,8 @@ import SpriteKit
 
 class PubActivityScene: SKScene {
     
+    
+    var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
     var label:SKLabelNode!
     var penny = Penny()
     
@@ -37,7 +39,7 @@ class PubActivityScene: SKScene {
         
         playArea = self.childNode(withName: "playArea") as? SKShapeNode
         
-        let background = SKSpriteNode(imageNamed: "woodbg.jpg")
+        let background = SKSpriteNode(imageNamed: "woodbg")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.zPosition = -1
         

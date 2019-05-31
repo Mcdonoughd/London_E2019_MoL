@@ -135,7 +135,9 @@ class ActivityViewController: UIViewController {
                 break;
             case is GameActivity:
                 print("Loading Game...")
-                _ = Activity as! GameActivity
+                let newActivity = Activity as! GameActivity
+                ActivityText.text = newActivity.name
+                
                 //Load the segue to the game
                 break
             default:
