@@ -16,10 +16,12 @@ class Penny: SKSpriteNode{
         super.init(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: texture.size())
         self.name = "penny"
         
-        self.physicsBody = SKPhysicsBody(rectangleOf: texture.size())
+        self.physicsBody = SKPhysicsBody(texture: self.texture!,size: self.texture!.size())
         self.physicsBody?.isDynamic = true
         self.physicsBody?.velocity = CGVector(dx: 10.0,dy: 10.0)
         self.zPosition = 1
+        self.xScale = 0.3
+        self.yScale = 0.3
     }
     
     required init?(coder aDecoder: NSCoder) {
