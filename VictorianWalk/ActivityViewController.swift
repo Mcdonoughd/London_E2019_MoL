@@ -70,6 +70,7 @@ class ActivityViewController: UIViewController {
         print("Reloading Stack Array")
         for button in tempButtonStack{
             ButtonStack.addArrangedSubview(button)
+            ButtonStack.setCustomSpacing(20,after: button)
         }
     }
     
@@ -172,16 +173,16 @@ class ActivityViewController: UIViewController {
             button.addTarget(self, action: #selector(WrongAnswer(sender:)), for: .touchUpInside)
             
         }
+        
         ButtonStack.addArrangedSubview(button)
         ButtonStack.setCustomSpacing(20,after: button)
-        
     }
     
     @objc func WrongAnswer(sender: UIButton){
         print("Wrong Answer! >:( ")
         sender.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        sender.setTitle("Try Again", for: .normal)
     }
-    
     
     var tempAnswer = ""
     
