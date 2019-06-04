@@ -37,12 +37,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You and your family have just moved to Victorian London! Take a walk through the streets and see what the city has the offer!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
-                                <rect key="frame" x="82" y="185" width="400" height="303"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You and your family have just moved to Victorian London! Take a walk through the streets and see what the city has to offer!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
+                                <rect key="frame" x="82" y="185" width="416" height="303"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="fJj-5e-LXX" secondAttribute="height" multiplier="400:239" constant="-107.11297071129707" id="8Yr-IR-xzk"/>
+                                    <constraint firstAttribute="width" secondItem="fJj-5e-LXX" secondAttribute="height" multiplier="400:239" constant="-91.112970711297066" id="8Yr-IR-xzk"/>
                                     <constraint firstAttribute="height" constant="303" id="Vg6-X4-1Sp"/>
-                                    <constraint firstAttribute="width" constant="400" id="WAC-Sp-GUv"/>
+                                    <constraint firstAttribute="width" constant="416" id="WAC-Sp-GUv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -69,9 +69,11 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="ee1-Vo-OkO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is a self guided experience and you do not have to follow the order of the numbers on the exhibits" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-Rz-13C">
-                                <rect key="frame" x="82" y="402" width="400" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a self guided experience and you do not have to follow the order of the numbers on the displays" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcS-Rz-13C">
+                                <rect key="frame" x="82" y="402" width="416" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="FN0-d6-h5k"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,8 +88,10 @@
                             <constraint firstAttribute="bottom" secondItem="Chr-YQ-u5S" secondAttribute="bottom" constant="20" symbolic="YES" id="7TL-lg-Uem"/>
                             <constraint firstItem="Chr-YQ-u5S" firstAttribute="trailing" secondItem="9ct-gM-VYQ" secondAttribute="trailing" id="9CT-5V-cHS"/>
                             <constraint firstItem="9ct-gM-VYQ" firstAttribute="bottom" secondItem="iPe-tG-ruP" secondAttribute="bottom" id="ETr-Pq-JIK"/>
+                            <constraint firstItem="JcS-Rz-13C" firstAttribute="trailing" secondItem="fJj-5e-LXX" secondAttribute="trailing" id="JSj-PR-isE"/>
                             <constraint firstItem="iPe-tG-ruP" firstAttribute="trailing" secondItem="Ks1-3q-sEo" secondAttribute="trailing" constant="98" id="NFG-HJ-10c"/>
                             <constraint firstItem="ing-mc-bFq" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="310" id="W6E-FX-Fzp"/>
+                            <constraint firstItem="JcS-Rz-13C" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="leading" id="YBW-7s-jaL"/>
                             <constraint firstItem="xlh-bO-atx" firstAttribute="centerX" secondItem="a2s-qg-PFN" secondAttribute="centerX" id="Yfi-80-rpz"/>
                             <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="ing-mc-bFq" secondAttribute="trailing" constant="-189.5" id="Z7P-No-Vba"/>
                             <constraint firstItem="Chr-YQ-u5S" firstAttribute="leading" secondItem="a2s-qg-PFN" secondAttribute="leadingMargin" id="ZHj-dl-oJa"/>
@@ -95,12 +99,13 @@
                             <constraint firstItem="xlh-bO-atx" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="396" id="eWW-11-Sja"/>
                             <constraint firstItem="Ks1-3q-sEo" firstAttribute="top" secondItem="iPe-tG-ruP" secondAttribute="top" constant="227" id="gE6-dC-mJ4"/>
                             <constraint firstItem="fJj-5e-LXX" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="82" id="gRM-kd-g0F"/>
-                            <constraint firstItem="fJj-5e-LXX" firstAttribute="top" secondItem="ing-mc-bFq" secondAttribute="bottom" constant="8" id="jvG-Th-6cK"/>
-                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="trailing" constant="43" id="jx0-Pm-9nk"/>
+                            <constraint firstItem="fJj-5e-LXX" firstAttribute="top" secondItem="ing-mc-bFq" secondAttribute="bottom" constant="32" id="jvG-Th-6cK"/>
+                            <constraint firstItem="Ks1-3q-sEo" firstAttribute="leading" secondItem="fJj-5e-LXX" secondAttribute="trailing" constant="27" id="jx0-Pm-9nk"/>
+                            <constraint firstItem="JcS-Rz-13C" firstAttribute="bottom" secondItem="Ks1-3q-sEo" secondAttribute="bottom" id="l3F-Uu-hhc"/>
                             <constraint firstItem="9ct-gM-VYQ" firstAttribute="centerY" secondItem="Ks1-3q-sEo" secondAttribute="centerY" constant="-1.5" id="ljC-Yr-QLR"/>
                             <constraint firstItem="Qfr-LI-kSR" firstAttribute="trailing" secondItem="Chr-YQ-u5S" secondAttribute="trailing" id="nYY-mh-lmd"/>
                             <constraint firstItem="Qfr-LI-kSR" firstAttribute="leading" secondItem="iPe-tG-ruP" secondAttribute="leading" constant="904" id="oTa-Xw-o4E"/>
-                            <constraint firstItem="xlh-bO-atx" firstAttribute="top" secondItem="fJj-5e-LXX" secondAttribute="bottom" constant="103" id="p16-3T-ePo"/>
+                            <constraint firstItem="xlh-bO-atx" firstAttribute="top" secondItem="fJj-5e-LXX" secondAttribute="bottom" constant="79" id="p16-3T-ePo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iPe-tG-ruP"/>
                     </view>
