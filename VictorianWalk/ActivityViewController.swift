@@ -207,7 +207,7 @@ class ActivityViewController: UIViewController {
     //This makes a simple "Show Answer Button on a quiz"
     func MakeShowButton(answer:String){
         ClearButtonStack()
-        let button = MakeGenericButton(text: answer)
+        let button = MakeGenericButton(text: "Show Answer")
         button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
         tempAnswer = answer
         ButtonStack.addArrangedSubview(button)
@@ -243,8 +243,10 @@ class ActivityViewController: UIViewController {
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle(text, for: .normal)
-        button.titleLabel?.font = button.titleLabel?.font.withSize(36)
-        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.font = button.titleLabel?.font.withSize(26)
+        button.titleLabel?.lineBreakMode = .byWordWrapping
+        button.titleLabel?.numberOfLines = 3
+        button.titleLabel?.textAlignment = .center
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return button
     }

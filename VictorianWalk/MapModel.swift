@@ -14,8 +14,8 @@ class MapModel{
     
     
     var TitleDesc:[String : Booth] = [
-        "1":Booth(id:1, desc:"Victorian children saved their money to buy \"penny toys\" from street sellers and dazzling toy arcades such as Lowther’s on the Strand. \n\n Lowther’s was an \"Aladdin fairy palace\" of expensive train sets, dolls, and lead soldiers.",
-            title:"Toy Shop",hasActivity: true),
+
+        "1":Booth(id:1, desc:"Victorian children saved their money to buy \"penny toys\" from street sellers and dazzling toy arcades such as Lowther’s on the Strand. \n\n Lowther’s was an \"Aladdin fairy palace\" of expensive train sets, dolls, and lead soldiers.", title:"Toy Shop",hasActivity: true),
         
         "2":Booth(id:2, desc:"Tobacconists sold blends of loose tobacco. During Victorian times, habits were changing. Rolled cigarettes were available, and wooden smoking pipes replaced clay ones.",
             title:"Tobacconist"),
@@ -26,14 +26,13 @@ class MapModel{
         "4":Booth(id:4, desc:"Working men would relax in the pub, meet with friends, play darts, or attend political meetings. \n\n Children often sat outside, waiting for their parents, or were sent in to buy beer for drinking at home.",
             title:"The Pub", hasActivity: true),
         
-        "5":Booth(id:5, desc:"James Powell & Sons’ showroom was attached to their glasshouse off Fleet Street in Whitefriars. Their table and decorative glass were famous for their high quality, subtle colours, and delicate decoration. \n\n The \"Eve\" mosaic on the wall, is a copy of one Powell’s made for St. Paul’s Cathedral.",
-            title:"Glass Showroom",hasActivity: true),
+        "5":Booth(id:5, desc:"James Powell & Sons’ showroom was attached to their glasshouse off Fleet Street in Whitefriars. Their table and decorative glass were famous for their high quality, subtle colours, and delicate decoration. \n\n The \"Eve\" mosaic on the wall, is a copy of one Powell’s made for St. Paul’s Cathedral.",            title:"Glass Showroom",hasActivity: true),
 
         "6":Booth(id:6, desc:"Introduced by Italian immigrants, barrel organs could play up to 12 popular tunes. \n\n By 1900 there were nearly 500 in London’s noisy streets, competing with bagpipe players, singers, clowns, performing monkeys, and knife swallowers.",
             title:"Barrel Organ"),
         
         "7":Booth(id:7, desc:"Tea from China, India, and Ceylon (now called Sri Lanka) arriving in London was taken from the docks to the city’s many warehouses. \n\n After being weighed, tea was blended and coffee was roasted and ground to send to grocers, tea rooms, and hotels.",title:"Tea & Coffee Warehouse",hasActivity: true),
-        
+       
         "8":Booth(id:8, desc:"Mr. Elkington on Lamb’s Conduit Street made visiting cards, business cards, invitations, and bookplates. Engravers usually worked alone in small workshops that smelt strongly of the inks, acids, and polishes they used.",
             title:"Engraver",hasActivity: true),
         
@@ -60,8 +59,7 @@ class MapModel{
         "16":Booth(id:16,desc:"Many stationers manufactured popular \"fancy stationery\" - handmade Christmas and greeting cards, as well as Valentine's cards. \n\n Their shops were like newsagents today. Daily papers were widely read in London, especially the Daily Telegraph and the Daily Mail.",
             title:"Fancy Stationer"),
         
-        "17":Booth(id:17,desc:"Pawnbrokers, referred to as \"uncle,\" were the poor person’s bank. Clothing and jewellery were handed over in exchange for a loan. \n\n If the loan was not repaid within a year, \"uncle\" could sell the goods. By 1900 there were 700 pawnbrokers in London.",
-            title:"Pawnbroker",hasActivity: true),
+        "17":Booth(id:17,desc:"Pawnbrokers, referred to as \"uncle,\" were the poor person’s bank. Clothing and jewellery were handed over in exchange for a loan. \n\n If the loan was not repaid within a year, \"uncle\" could sell the goods. By 1900 there were 700 pawnbrokers in London.", title:"Pawnbroker",hasActivity: true),
         
         "18":Booth(id:18,desc:"London’s financial services employed thousands of clerks who did bookkeeping, correspondence, and cashier work behind grilles or screens. \n\n In the 1890s the Bank of England for the first time hired women who had passed an exam to count and register banknotes.",
             title:"Bank Clerks' Office"),
@@ -70,7 +68,7 @@ class MapModel{
             title:"Bank Manager's Office",hasActivity: true)
     ]
     
-  let errorBooth = Booth(id:0, desc:"Do not panic!!! The devlopers of this application have not accounted for this to happen. We have trained monkey's working on fixing it right now.            ",title:"404")
+  let errorBooth = Booth(id:0, desc:"Do not panic!!! The developers of this application have not accounted for this to happen. We have trained monkeys working on fixing it right now.",title:"404")
     
     
     func chooseBooth(at: String) -> Booth
