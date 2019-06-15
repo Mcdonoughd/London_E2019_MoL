@@ -123,7 +123,7 @@ class ActivityViewController: UIViewController {
                 print("Loading Quiz...")
                 let newActivity = Activity as! QuizActivity
                 ActivityText.text = newActivity.question
-                
+                ClearButtonStack()
                 if(newActivity.hasChoices()){
                     //make Multiple choice button
                     LoadChoices(quiz: newActivity)
@@ -132,7 +132,9 @@ class ActivityViewController: UIViewController {
                     //make a simple show button
                     MakeShowButton(answer: newActivity.answer)
                 }
+                
                 break;
+            
             case is GameActivity:
                 print("Loading Game...")
                 let newActivity = Activity as! GameActivity
