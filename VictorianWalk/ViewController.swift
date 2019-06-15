@@ -11,6 +11,7 @@ import UIKit
 //View controller for the Home Screen
 class ViewController: UIViewController {
    
+    @IBOutlet weak var BeginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -15,7 +15,6 @@ class PubActivityScene: SKScene {
     
     var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
     var label:SKLabelNode!
-    //var penny = Penny()
     var bars = [SKShapeNode]()
     var playArea:SKShapeNode!
     

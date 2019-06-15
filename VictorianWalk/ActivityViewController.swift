@@ -155,7 +155,6 @@ class ActivityViewController: UIViewController {
         button.addTarget(self, action: #selector(LaunchPubGame(sender:)), for: .touchUpInside)
         ButtonStack.addArrangedSubview(button)
         ButtonStack.setCustomSpacing(20,after: button)
-        
     }
     
     @objc func LaunchPubGame(sender: UIButton){
@@ -244,7 +243,8 @@ class ActivityViewController: UIViewController {
         button.frame = CGRect(x:100, y:100,width:50,height:50)
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.setTitle(text, for: .normal)
-        button.titleLabel?.font = button.titleLabel?.font.withSize(42)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(36)
+        button.titleLabel?.numberOfLines = 0
         button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         return button
     }
