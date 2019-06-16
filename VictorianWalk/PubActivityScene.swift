@@ -22,6 +22,12 @@ class PubActivityScene: SKScene {
     
     var placementPenny:Penny!
     
+    var fireFrom = 0
+    var currentFirePos = 0
+    
+    
+    //var fireFromY = 0
+    
     //Placement buttons
     var buttonBackground:SKSpriteNode!
     var buttonLabel:SKLabelNode!
@@ -35,6 +41,7 @@ class PubActivityScene: SKScene {
 
         
         placementPenny = Penny()
+        placementPenny.name = "placementPenny"
         placing = true
         //Button init
         buttonBackground = self.childNode(withName: "buttonBackground") as? SKSpriteNode
@@ -82,8 +89,9 @@ class PubActivityScene: SKScene {
             let location = touch.location(in: self)
             
             let touchedNode = atPoint(location)
-            if(touchedNode.name == "buttonLabel"){
+            if(touchedNode.name == "buttonLabel" && placing == true){
                 placing = false
+                //firing = true
                 buttonLabel.text = "Placed"
                 powerBar.isHidden = false
                 powerLabel.isHidden = false
@@ -95,6 +103,13 @@ class PubActivityScene: SKScene {
             
                 placementPenny.position.x = location.x
                 placementPenny.position.y = location.y
+            }
+            if(firing == true){
+                if(touchedNode.name == "placementPenny"){
+                    fireFrom = Int(location.x)
+                    currentFirePos = Int(location.x)
+                }
+                
             }
 //            if(PubGame.PlayersArray[0].playerPennies[0].intersects(playArea) == false){
 //                PubGame.PlayersArray[0].playerPennies[0].position.x = old_posX
@@ -115,6 +130,10 @@ class PubActivityScene: SKScene {
                 placementPenny.position.x = location.x
                 placementPenny.position.y = location.y
             }
+            if(firing == true){
+                
+                currentFirePos = Int(location.x)
+            }
 //            if(PubGame.PlayersArray[0].playerPennies[0].intersects(playArea) == false){
 //                PubGame.PlayersArray[0].playerPennies[0].position.x = old_posX
 //                PubGame.PlayersArray[0].playerPennies[0].position.y = old_posY
@@ -123,18 +142,53 @@ class PubActivityScene: SKScene {
         }
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches{
+            let location = touch.location(in: self)
+            let touchedNode = atPoint(location)
+            
+            
+            if(firing == true){
+                currentFirePos = Int(location.x)
+                
+                
+                
+                PubGame.PlayersArray[0].playerPennies[0].position = placementPenny.position
+                self.addChild(PubGame.PlayersArray[0].playerPennies[0])
+                //var velocityOfPenny = CGVector(dx: xScale, dy: 0)
+                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.velocity = CGVector(dx: powerBar.xScale*10, dy: 0)
+                firing = false
+                placementPenny.isHidden = true
+            }
+            
+            if(touchedNode.name == "buttonLabel"){
+                //placing = false
+                firing = true
+//                buttonLabel.text = "Placed"
+//                powerBar.isHidden = false
+//                powerLabel.isHidden = false
+            }
+            
+        }
+    }
+    
 
     override func update(_ currentTime: TimeInterval) {
-        switch PubGame.currentGameState{
-            case pubGame.gamestates.OPENING:
-                var currentTime = CACurrentMediaTime()
-                PubGame.currentGameState = pubGame.gamestates.PLAYING
-                break
-            case pubGame.gamestates.PLAYING:
-                break
-            case pubGame.gamestates.CLOSING:
-                break
+        
+        if(firing){
+            var power = fireFrom - currentFirePos
+            if(power < 0){
+                power = 0
+            }
+            
+            //Not entirely sure how map works but it does kinda...
+            let powerScale = map(minRange: 0, maxRange: 100, minDomain: 0, maxDomain: 180, value: power)
+            powerBar.xScale = CGFloat(powerScale)/100
+            
+            //print("xScale: " + String(Double(powerBar.xScale)) + "powerScale: " + String(Int(powerScale)))
         }
+        
+        //print(fireFrom - currentFirePos)
     }
     
 
@@ -148,6 +202,10 @@ class PubActivityScene: SKScene {
         for testBar in bars{
             print(testBar.name!)
         }
+    }
+    
+    func map(minRange:Int, maxRange:Int, minDomain:Int, maxDomain:Int, value:Int) -> Int {
+        return minDomain + (maxDomain - minDomain) * (value - minRange) / (maxRange - minRange)
     }
     
     //set background
