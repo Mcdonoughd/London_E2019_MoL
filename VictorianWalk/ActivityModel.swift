@@ -14,22 +14,23 @@ class ActivityModel {
  //this is the activity lookup table
     let ActivityLookUp:[Int:[Activity]] = [
         1:[
-            TextActivity(name:"Toy Shop",type:"Search",text: "Can you find the following objects? \n            Skittles \n Two lobsters \n Balancing scale ")],
+            TextActivity(name:"Toy Shop",type:"Search",text: "Can you find the following objects? \n Skittles \n Two lobsters \n Balancing scale ")],
         3:[
             TextActivity(name:"Barber Shop",type:"Act",text: "Play out a scene like you’re inside the barbershop. Act like you’re shaving a family member’s face."),
-            QuizActivity(name:"Barber Shop",type:"Quiz",question:"What do you think the shaving mugs in the cabinet were for?",answer:"The barber would pour shaving cream in the mug and mix it to build up a lather.",choices: ["Feed to the dogs","Build up a lather","Store tea & coffee"],answerIndex:1)
+            QuizActivity(name:"Barber Shop",type:"Quiz",question:"What do you think the shaving mugs in the cabinet were for?",answer:" CORRECT! The barber would pour shaving cream in the mug and mix it to build up a lather.",choices: ["To feed the dogs","Build up a lather","Store tea & coffee"],answerIndex:1)
         ],
         4:[ GameActivity(name:"Pub",type:"Game",segueRef:"PubGameSegue",desc:"Play the traditional Victorian era pub game, shove ha'penny!")],
         5:[
-            TextActivity(name:"Glass Showroom",type:"Search",text:"How many different coloured glasses can you spot?"),
-            TextActivity(name:"Glass Showroom",type:"Imagine",text:"What kinds of glasses like these would you find in your own home?"),
+            TextActivity(name:"Glass Showroom",type:"Search",text:"Can you spot 12 different coloured glasses?"),
+            TextActivity(name:"Glass Showroom",type:"Imagine",text:"Can you spot any types of glasses you might find at home?"),
         ],
+        6:[TextActivity(name:"Barrel Organ",type:"Search",text:"Can you find the blue and red space invaders from 2016? (Hint: Look Up!) You may find similar art across London today!")],
         7:[
             TextActivity(name:"Tea & Coffee Warehouse",type:"Imagine",text:"Look at different shops. Where else might tea be sold around town?"),
-            QuizActivity(name:"Tea & Coffee Warehouse",type:"Quiz",question:"How much tea did the average Londoner drink in Victorian times?",answer:"1 pound/year (~150-250 bags/year) In comparison, modern Londoners will drink about 550 cups of tea a year",choices:["20 pounds/year","5 pounds/year","1 pound/year"],answerIndex:2),
+            QuizActivity(name:"Tea & Coffee Warehouse",type:"Quiz",question:"How much tea did the average Londoner drink in Victorian times?",answer:"Correct! Londers would drink ~300-500 cups/year in Victorian times. In comparison, modern Londoners will drink about 550 cups of tea a year",choices:["~1000-1200 bags/year","~600-800 bags/year","~300-500 bags/year"],answerIndex:2),
         ],
         8:[
-            QuizActivity(name:"Engraver",type:"Imagine",question:"Engravers commonly used wood and copper. Is one material better than the other for engraving?",answer:"They each have their purposes. Engravers used copper to make master prints for copying small cards. They used wood to create newspapers and almanacs"),
+            QuizActivity(name:"Engraver",type:"Imagine",question:"Engravers commonly used wood and copper. Is one material better than the other for engraving? Discuss with your family what the differences might be between wood and copper",answer:"Engravers used copper to make master prints for copying small cards. They used wood to create newspapers and almanacs"),
             QuizActivity(name:"Engraver",type:"Quiz",question:"Based on the description, how might the Engraver help the Fancy Stationer nearby?",answer:"The engraver might make templates for business cards and holiday cards and sell the cards to the Stationer to put in their shop.",choices:["Make Pens","Make a wedding ring","Make templates for cards"],answerIndex:2),
         ],
         12:[

@@ -10,6 +10,7 @@
 		0B2DB78022A16656004AFC2C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DB77F22A16656004AFC2C /* Player.swift */; };
 		0B61DE0E2296B72B001DC9C6 /* TextActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */; };
 		0B61DE102296BD39001DC9C6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE0F2296BD39001DC9C6 /* ActivityViewController.swift */; };
+		0B9CBFFD22B5118600EC27FB /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B9CBFFF22B5118600EC27FB /* Cabin-Regular.ttf */; };
 		0BD794F82292D006004ACC83 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD794F72292D006004ACC83 /* SpriteKit.framework */; };
 		0BE045B9229FE04800E4F256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BE045B8229FE04700E4F256 /* Assets.xcassets */; };
 		0BE045BB229FEC4700E4F256 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE045BA229FEC4700E4F256 /* Activity.swift */; };
@@ -36,6 +37,7 @@
 		0B2DB77F22A16656004AFC2C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextActivity.swift; sourceTree = "<group>"; };
 		0B61DE0F2296BD39001DC9C6 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		0B9CBFFE22B5118600EC27FB /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/Cabin-Regular.ttf"; sourceTree = "<group>"; };
 		0BD794F72292D006004ACC83 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		0BE045B8229FE04700E4F256 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BE045BA229FEC4700E4F256 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B9CBFFC22B5114C00EC27FB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0B9CBFFF22B5118600EC27FB /* Cabin-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0BD794F62292D006004ACC83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +112,7 @@
 		0BE1204F2291D39F0073EBA3 /* VictorianWalk */ = {
 			isa = PBXGroup;
 			children = (
+				0B9CBFFC22B5114C00EC27FB /* Fonts */,
 				0BE045B8229FE04700E4F256 /* Assets.xcassets */,
 				B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */,
 				B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */,
@@ -186,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9CBFFD22B5118600EC27FB /* Cabin-Regular.ttf in Resources */,
 				0BE1205B2291D3A10073EBA3 /* LaunchScreen.storyboard in Resources */,
 				0BE045B9229FE04800E4F256 /* Assets.xcassets in Resources */,
 				B3EF8E262296B76C000D6A8A /* PubActivityScene.sks in Resources */,
@@ -223,6 +235,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0B9CBFFF22B5118600EC27FB /* Cabin-Regular.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B9CBFFE22B5118600EC27FB /* en */,
+			);
+			name = "Cabin-Regular.ttf";
+			sourceTree = "<group>";
+		};
 		0BE120542291D39F0073EBA3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

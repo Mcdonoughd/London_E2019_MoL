@@ -66,14 +66,13 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
         
         let button = Map.chooseBooth(at: key)
         print(button.title)
-        
+   
+        //Show the blue circle and start rotation
         for selectImage in selectors{
             if(selectImage.tag == Int(key)){
                 selectImage.isHidden = false
                 
                 UIImageView.animate(withDuration: 1.0, delay: 0, options: [.repeat, .autoreverse, .beginFromCurrentState], animations: {
-                    //var x = 0.0
-                    //x = x + 15
                     selectImage.transform = CGAffineTransform(rotationAngle: CGFloat(90))
                 }, completion: { finished in
                     print("animation started opened!")
@@ -85,9 +84,9 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
         }
         
         TitleLabel.text = button.title
-        TitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
-        
+        TitleLabel.sizeToFit()
         DesciptionLabel.text = button.desc
+        DesciptionLabel.sizeToFit()
         let showbutton = button.hasActivity
         PlayGameButton.isHidden = showbutton ? false : true
         print("play game button is hidden: \(PlayGameButton.isHidden)")
@@ -97,7 +96,9 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Map View Controller has Loaded")
-        TitleLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
+        TitleLabel.numberOfLines = 0
+        TitleLabel.adjustsFontSizeToFitWidth = true
+        TitleLabel.sizeToFit()
         for button in MapButtons{
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0)
             button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0), for: .normal)
