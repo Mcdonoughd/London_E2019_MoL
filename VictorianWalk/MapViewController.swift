@@ -33,6 +33,7 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     //PlayGameButton refference
     @IBOutlet weak var PlayGameButton: UIButton!
     
+    //current button pressed ID
     var currbutton = "0"
     
     //Function called on "Play" btn press
@@ -48,6 +49,8 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
         print("button pressed was \(String(describing: sender.titleLabel?.text))")
         
         let btnPressed = sender.titleLabel?.text ?? "0"
+        
+        //no need to reupdate the view if its the same
         if btnPressed != currbutton{
             UpdateViewfromModel(key: btnPressed)
         }
