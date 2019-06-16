@@ -78,22 +78,6 @@ class PubActivityScene: SKScene {
     //var touchedGlowNode : SKNode!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first{
-            let touchLocation = touch.location(in: self)
-            let touchedWhere = nodes(at: touchLocation)
-            
-            if !touchedWhere.isEmpty{
-                for node in touchedWhere{
-                    if node is SKSpriteNode{
-                        if node == ActivePenny{
-                            ActivePenny.position = touchLocation
-                        }
-                    }
-                }
-            }
-        }
-        
-        
         for touch in touches{
             let location = touch.location(in: self)
             
