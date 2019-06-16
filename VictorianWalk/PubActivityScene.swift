@@ -16,26 +16,54 @@ class PubActivityScene: SKScene {
     var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
     var label:SKLabelNode!
     var bars = [SKShapeNode]()
-    var playArea:SKShapeNode!
+    var playArea:SKSpriteNode!
+    
+    //State variables
+    var placing = false
+    var firing = false
+    
+    
+    var placementPenny:Penny!
+    
+    //Placement buttons
+    var buttonBackground:SKSpriteNode!
+    var buttonLabel:SKLabelNode!
+    
+    //Power bars
+    var powerBar:SKSpriteNode!
+    var powerLabel:SKLabelNode!
+    
     
     override func didMove(to view: SKView) {
-//        label = SKLabelNode(fontNamed: "Chalkduster")
-//        label.fontSize = 45
-//        label.text = "Shove Ha'penny will be here"
-//        label.fontColor = SKColor.red
-//        label.fontName = "Avenir"
-//        label.position = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
-//        //backgroundColor = UIColor.red
-        //bars = [SKShapeNode]()
 
-        self.addChild(PubGame.PlayersArray[0].playerPennies[0])
+        
+        placementPenny = Penny()
+        placing = true
+        //Button init
+        buttonBackground = self.childNode(withName: "buttonBackground") as? SKSpriteNode
+        buttonLabel = self.childNode(withName: "buttonLabel") as? SKLabelNode
+        buttonLabel.text = "Place!"
+        //Powerbar init
+        powerBar = self.childNode(withName: "powerBar") as? SKSpriteNode
+        powerLabel = self.childNode(withName: "powerLabel") as? SKLabelNode
+        powerBar.isHidden = true
+        powerLabel.isHidden = true
+        
+        
+        placementPenny.zPosition = 2
+        self.addChild(placementPenny)
         loadBars()
         print("We made it")
         
+        let xPlaceRange = SKRange(lowerLimit: 186, upperLimit: 200)
+        let yPlaceRange = SKRange(lowerLimit: 155, upperLimit: 630)
+        
+        let pennyConstraint = SKConstraint.positionX(xPlaceRange, y: yPlaceRange)
         //self.addChild(penny)
         //self.addChild(label)
+        placementPenny.constraints = [pennyConstraint]
         
-        //playArea = self.childNode(withName: "playArea") as? SKShapeNode
+        playArea = self.childNode(withName: "playArea") as? SKSpriteNode
         
         let background = SKSpriteNode(imageNamed: "woodbg")
         background.position = CGPoint(x: size.width/2, y: size.height/2)
@@ -55,8 +83,26 @@ class PubActivityScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches{
             let location = touch.location(in: self)
-            PubGame.PlayersArray[0].playerPennies[0].position.x = location.x
-            PubGame.PlayersArray[0].playerPennies[0].position.y = location.y
+            
+            let touchedNode = atPoint(location)
+            if(touchedNode.name == "buttonLabel"){
+                placing = false
+                buttonLabel.text = "Placed"
+                powerBar.isHidden = false
+                powerLabel.isHidden = false
+            }
+            
+            if(placing == true){
+                //let old_posX = PubGame.PlayersArray[0].playerPennies[0].position.x
+                //let old_posY = PubGame.PlayersArray[0].playerPennies[0].position.y
+            
+                placementPenny.position.x = location.x
+                placementPenny.position.y = location.y
+            }
+//            if(PubGame.PlayersArray[0].playerPennies[0].intersects(playArea) == false){
+//                PubGame.PlayersArray[0].playerPennies[0].position.x = old_posX
+//                PubGame.PlayersArray[0].playerPennies[0].position.y = old_posY
+//            }
         }
     }
     
@@ -65,15 +111,16 @@ class PubActivityScene: SKScene {
         for touch in touches{
             let location = touch.location(in: self)
             
-            let old_posX = PubGame.PlayersArray[0].playerPennies[0].position.x
-            let old_posY = PubGame.PlayersArray[0].playerPennies[0].position.y
-            
-            PubGame.PlayersArray[0].playerPennies[0].position.x = location.x
-            PubGame.PlayersArray[0].playerPennies[0].position.y = location.y
-            
-//            if(penny.intersects(playArea) == false){
-//                penny.position.x = old_posX
-//                penny.position.y = old_posY
+            if(placing == true){
+                //let old_posX = PubGame.PlayersArray[0].playerPennies[0].position.x
+                //let old_posY = PubGame.PlayersArray[0].playerPennies[0].position.y
+                
+                placementPenny.position.x = location.x
+                placementPenny.position.y = location.y
+            }
+//            if(PubGame.PlayersArray[0].playerPennies[0].intersects(playArea) == false){
+//                PubGame.PlayersArray[0].playerPennies[0].position.x = old_posX
+//                PubGame.PlayersArray[0].playerPennies[0].position.y = old_posY
 //            }
             
         }
@@ -84,11 +131,13 @@ class PubActivityScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         switch PubGame.currentGameState{
             case pubGame.gamestates.OPENING:
-                var currentTime = Date().toMillis()
+                var currentTime = CACurrentMediaTime()
                 PubGame.currentGameState = pubGame.gamestates.PLAYING
+                break
             case pubGame.gamestates.PLAYING:
-
+                break
             case pubGame.gamestates.CLOSING:
+                break
         }
     }
     
