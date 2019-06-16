@@ -31,6 +31,7 @@ class PubActivityScene: SKScene {
     //Placement buttons
     var buttonBackground:SKSpriteNode!
     var buttonLabel:SKLabelNode!
+    var buttonPushed = false
     
     //Power bars
     var powerBar:SKSpriteNode!
@@ -53,7 +54,7 @@ class PubActivityScene: SKScene {
         powerBar.isHidden = true
         powerLabel.isHidden = true
         
-        
+        //MAKE PENNIES NOT COLLIDE
         placementPenny.zPosition = 2
         self.addChild(placementPenny)
         loadBars()
@@ -87,14 +88,25 @@ class PubActivityScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches{
             let location = touch.location(in: self)
-            
             let touchedNode = atPoint(location)
+            
+            
+            if(firing == true){
+                if(touchedNode.name == "placementPenny"){
+                    fireFrom = Int(location.x)
+                    currentFirePos = Int(location.x)
+                }
+                
+            }
+            
+            
             if(touchedNode.name == "buttonLabel" && placing == true){
                 placing = false
-                //firing = true
+                firing = true
                 buttonLabel.text = "Placed"
                 powerBar.isHidden = false
                 powerLabel.isHidden = false
+                buttonPushed = true
             }
             
             if(placing == true){
@@ -104,13 +116,7 @@ class PubActivityScene: SKScene {
                 placementPenny.position.x = location.x
                 placementPenny.position.y = location.y
             }
-            if(firing == true){
-                if(touchedNode.name == "placementPenny"){
-                    fireFrom = Int(location.x)
-                    currentFirePos = Int(location.x)
-                }
-                
-            }
+
 //            if(PubGame.PlayersArray[0].playerPennies[0].intersects(playArea) == false){
 //                PubGame.PlayersArray[0].playerPennies[0].position.x = old_posX
 //                PubGame.PlayersArray[0].playerPennies[0].position.y = old_posY
@@ -147,33 +153,48 @@ class PubActivityScene: SKScene {
             let location = touch.location(in: self)
             let touchedNode = atPoint(location)
             
-            
-            if(firing == true){
+            //print("Yeet")
+            if(firing == true && buttonPushed != true ){
                 currentFirePos = Int(location.x)
                 
+                let ppPosition = placementPenny.position
+                //placementPenny.constraints
                 
                 
-                PubGame.PlayersArray[0].playerPennies[0].position = placementPenny.position
+                //placementPenny.isPresent =
+                
                 self.addChild(PubGame.PlayersArray[0].playerPennies[0])
-                //var velocityOfPenny = CGVector(dx: xScale, dy: 0)
-                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.velocity = CGVector(dx: powerBar.xScale*10, dy: 0)
+                
+                PubGame.PlayersArray[0].playerPennies[0].position = ppPosition
+       
+                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.velocity = CGVector(dx: powerBar.xScale*40, dy: 0)
                 firing = false
-                placementPenny.isHidden = true
+                
             }
-            
-            if(touchedNode.name == "buttonLabel"){
-                //placing = false
-                firing = true
-//                buttonLabel.text = "Placed"
-//                powerBar.isHidden = false
-//                powerLabel.isHidden = false
+            if(buttonPushed == true){
+                buttonPushed = false
             }
+//            if(touchedNode.name== "buttonLabel"){
+//                //placing = false
+//                firing = true
+////                buttonLabel.text = "Placed"
+////                powerBar.isHidden = false
+////                powerLabel.isHidden = false
+//            }
             
         }
     }
     
 
     override func update(_ currentTime: TimeInterval) {
+        
+        if(firing){
+            print("Firing is true")
+            
+        }
+        if(placing){
+            print("placing is true")
+        }
         
         if(firing){
             var power = fireFrom - currentFirePos

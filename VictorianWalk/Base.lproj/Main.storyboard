@@ -67,7 +67,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="XVc-59-egQ"/>
                                 </constraints>
-                                <string key="text">This is a self guided experience. You do not have to follow the order of the numbers on the exhibits. Not every shop has an activity.</string>
+                                <string key="text">This is a self-guided experience. You do not have to follow the order of the numbers on the exhibits. Not every shop has an activity.</string>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
