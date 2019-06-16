@@ -47,6 +47,7 @@ class PubActivityScene: SKScene {
         addChild(background)
         //addChild(penny)
         //penny = self.childNodeWithName("penny") as? SKSpriteNode
+        PubGame.currentGameState = pubGame.gamestates.OPENING
     }
     
     //var isFingerOnPenny = false
@@ -82,13 +83,14 @@ class PubActivityScene: SKScene {
     //186!
     
     override func update(_ currentTime: TimeInterval) {
-//        switch PubGame.currentGameState{
-//            case pubGame.gamestates.OPENING:
-//                PubGame.currentGameState = pubGame.gamestates.PLAYING
-//            case pubGame.gamestates.PLAYING:
-//
-//            case pubGame.gamestates.CLOSING:
-//        }
+        switch PubGame.currentGameState{
+            case pubGame.gamestates.OPENING:
+                var currentTime = Date().toMillis()
+                PubGame.currentGameState = pubGame.gamestates.PLAYING
+            case pubGame.gamestates.PLAYING:
+
+            case pubGame.gamestates.CLOSING:
+        }
     }
     
     func loadBars(){
