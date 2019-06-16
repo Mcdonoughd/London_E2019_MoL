@@ -78,7 +78,7 @@
                                     <constraint firstAttribute="height" constant="283" id="x28-Wd-hs8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You and your family have just moved to Victorian London! Take a walk through the streets and see what the city has the offer!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You and your family have just moved to Victorian London! Take a walk through the streets and see what the city has to offer!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-5e-LXX">
                                 <rect key="frame" x="82" y="167" width="400" height="301.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="CfF-Ca-C6R"/>
@@ -1031,8 +1031,7 @@
         <image name="woodbg" width="2560" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M3Q-n7-XCj"/>
-        <segue reference="GeS-UN-YN8"/>
-        <segue reference="c6c-Q7-I3c"/>
+        <segue reference="ee1-Vo-OkO"/>
+        <segue reference="ihq-QR-gMi"/>
     </inferredMetricsTieBreakers>
 </document>

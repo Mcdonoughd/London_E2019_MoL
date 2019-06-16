@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class Penny: SKSpriteNode{
-    
+    var hasGone = false
     var isPresent:Int
     
     init(){
@@ -20,7 +20,6 @@ class Penny: SKSpriteNode{
         self.name = "penny"
         self.physicsBody = SKPhysicsBody(texture: self.texture!,size: self.texture!.size())
         self.physicsBody?.isDynamic = true
-        //self.physicsBody?.velocity = CGVector(dx: 10.0,dy: 10.0)
         self.physicsBody?.affectedByGravity = false
         self.zPosition = 1
         self.xScale = 0.5

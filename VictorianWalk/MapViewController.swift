@@ -20,7 +20,6 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     
     lazy var controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
     
- 
     //Array of all buttons
     @IBOutlet var MapButtons: [UIButton]!
     
@@ -34,12 +33,13 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     //PlayGameButton refference
     @IBOutlet weak var PlayGameButton: UIButton!
     
-
+    //current button pressed ID
+    var currbutton = "0"
+    
     //Function called on "Play" btn press
     // it launches the choose activity segue
     @IBAction func LaunchTextActivity(_ sender: UIButton) {
          print("Performing segue")
-        
          self.performSegue(withIdentifier: "ActivitySegue", sender: self)
     }
     
@@ -49,7 +49,11 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
         print("button pressed was \(String(describing: sender.titleLabel?.text))")
         
         let btnPressed = sender.titleLabel?.text ?? "0"
-        UpdateViewfromModel(key: btnPressed)
+        
+        //no need to reupdate the view if its the same
+        if btnPressed != currbutton{
+            UpdateViewfromModel(key: btnPressed)
+        }
     }
     
     //This passes the data if the segue is to Activitychooser
@@ -82,14 +86,14 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
                 selectImage.isHidden = true
             }
         }
-        
+        currbutton = key
         TitleLabel.text = button.title
         TitleLabel.sizeToFit()
         DesciptionLabel.text = button.desc
         DesciptionLabel.sizeToFit()
         let showbutton = button.hasActivity
         PlayGameButton.isHidden = showbutton ? false : true
-        print("play game button is hidden: \(PlayGameButton.isHidden)")
+        print("Play game button is hidden: \(PlayGameButton.isHidden)")
     }
     
     //fucntion called when app loads

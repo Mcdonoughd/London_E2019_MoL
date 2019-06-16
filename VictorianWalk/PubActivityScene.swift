@@ -5,14 +5,11 @@
 
 //  Created by Museum of London on 21/05/2019.
 //  Copyright © 2019 Daniel McDonough. All rights reserved.
-//
 
 
 import SpriteKit
 
 class PubActivityScene: SKScene {
-    
-    
     var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
     var label:SKLabelNode!
     var bars = [SKShapeNode]()
@@ -81,6 +78,22 @@ class PubActivityScene: SKScene {
     //var touchedGlowNode : SKNode!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first{
+            let touchLocation = touch.location(in: self)
+            let touchedWhere = nodes(at: touchLocation)
+            
+            if !touchedWhere.isEmpty{
+                for node in touchedWhere{
+                    if node is SKSpriteNode{
+                        if node == ActivePenny{
+                            ActivePenny.position = touchLocation
+                        }
+                    }
+                }
+            }
+        }
+        
+        
         for touch in touches{
             let location = touch.location(in: self)
             
@@ -126,8 +139,7 @@ class PubActivityScene: SKScene {
         }
     }
     
-    //186!
-    
+
     override func update(_ currentTime: TimeInterval) {
         switch PubGame.currentGameState{
             case pubGame.gamestates.OPENING:
@@ -141,20 +153,29 @@ class PubActivityScene: SKScene {
         }
     }
     
+
+    //Load the bars into the scene
     func loadBars(){
-        
         var bar:SKShapeNode!
-        
         for index in 1...10{
             bar = self.childNode(withName: "Bed Line " + String(index)) as? SKShapeNode
             bars.append(bar);
-            
         }
-        
-        
         for testBar in bars{
             print(testBar.name!)
         }
+    }
+    
+    //set background
+    func setBackground(){
+        //set Wood image to the background
+        let background = SKSpriteNode(imageNamed: "woodbg")
+        background.position = CGPoint(x: size.width/2, y: size.height/2)
+        background.zPosition = -1
+        
+        let canvasSize = CGSize(width: size.width, height: size.height)
+        background.scale(to: canvasSize)
+        addChild(background)
     }
     
 }
