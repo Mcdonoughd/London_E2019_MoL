@@ -29,7 +29,7 @@ class MapModel{
         "5":Booth(id:5, desc:"James Powell & Sons’ showroom was attached to their glasshouse off Fleet Street in Whitefriars. Their table and decorative glass were famous for their high quality, subtle colours, and delicate decoration. \n\n The \"Eve\" mosaic on the wall, is a copy of one Powell’s made for St. Paul’s Cathedral.",            title:"Glass Showroom",hasActivity: true),
 
         "6":Booth(id:6, desc:"Introduced by Italian immigrants, barrel organs could play up to 12 popular tunes. \n\n By 1900 there were nearly 500 in London’s noisy streets, competing with bagpipe players, singers, clowns, performing monkeys, and knife swallowers.",
-            title:"Barrel Organ"),
+                  title:"Barrel Organ",hasActivity: true),
         
         "7":Booth(id:7, desc:"Tea from China, India, and Ceylon (now called Sri Lanka) arriving in London was taken from the docks to the city’s many warehouses. \n\n After being weighed, tea was blended and coffee was roasted and ground to send to grocers, tea rooms, and hotels.",title:"Tea & Coffee Warehouse",hasActivity: true),
        
@@ -65,7 +65,9 @@ class MapModel{
             title:"Bank Clerks' Office"),
         
         "19":Booth(id:19,desc:"Bank accounts were primarily for businesses and the rich. The poor were paid weekly in cash that barely lasted seven days. \n\n Small savings for Christmas or weddings could be placed in a Post Office Savings or National Penny bank. They accepted deposits from a penny upwards.",
-            title:"Bank Manager's Office",hasActivity: true)
+            title:"Bank Manager's Office",hasActivity: true),
+        
+        "20":Booth(id:20,desc:"Maybe something should go here at some point?",title:"Victorian Lamppost"),
     ]
     
   let errorBooth = Booth(id:0, desc:"Do not panic!!! The developers of this application have not accounted for this to happen. We have trained monkeys working on fixing it right now.",title:"404")
