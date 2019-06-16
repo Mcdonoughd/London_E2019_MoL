@@ -115,7 +115,6 @@
 				0B9CBFFC22B5114C00EC27FB /* Fonts */,
 				0BE045B8229FE04700E4F256 /* Assets.xcassets */,
 				B3EF8E282296B7F5000D6A8A /* PubActivityScene.swift */,
-				B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */,
 				0BE4B94822A14ADC00FE4406 /* Penny.swift */,
 				0B2DB77F22A16656004AFC2C /* Player.swift */,
 				B372090B22A131ED009ADD69 /* pubGame.swift */,
@@ -135,6 +134,7 @@
 				0B61DE0D2296B72B001DC9C6 /* TextActivity.swift */,
 				0BE045BC229FECCA00E4F256 /* QuizActivity.swift */,
 				0BE045BE229FED0200E4F256 /* GameActivity.swift */,
+				B3EF8E232296B76C000D6A8A /* PubActivityScene.sks */,
 			);
 			path = VictorianWalk;
 			sourceTree = "<group>";

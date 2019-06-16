@@ -9,15 +9,15 @@
 import Foundation
 import SpriteKit
 
+
+//this is the Pub Game model. This keeps track of the game states and data
 class pubGame{
-    
+   
     var numberOfRounds:Int
     var numberOfPlayers:Int
     var numberOfPennies:Int
     var currentRound:Int
     var PlayersArray = [player]()
-    
-    
     
     enum gamestates {
         case OPENING
@@ -35,7 +35,6 @@ class pubGame{
         
         currentRound = 1
         currentGameState = gamestates.OPENING
-        
         makePlayers(players: numberOfPlayers)
     }
     
