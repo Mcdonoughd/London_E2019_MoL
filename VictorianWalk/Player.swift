@@ -27,6 +27,7 @@ class player{
         }
     }
     func getPennyFromPlayer()->Penny{
+        print("Current Penny: " + String(currentPenny))
        return playerPennies[currentPenny]
     }
     
