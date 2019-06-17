@@ -14,6 +14,7 @@ class Penny: SKSpriteNode{
     var isPresent:Int
     
     init(){
+        
         let texture = SKTexture(imageNamed: "hapenny")
         self.isPresent = 0
         super.init(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: texture.size())

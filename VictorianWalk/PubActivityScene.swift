@@ -47,7 +47,7 @@ class PubActivityScene: SKScene {
     
     override func didMove(to view: SKView) {
 
-        
+        print("Scene Loaded")
         placementPenny = Penny()
         placementPenny.name = "placementPenny"
         placing = true
@@ -229,6 +229,7 @@ class PubActivityScene: SKScene {
             PubGame.nextTurn() // doesnt check that its still in the amount of pennies there
         }
         
+        
 
     }
     
@@ -275,7 +276,7 @@ class PubActivityScene: SKScene {
     }
     
     override func willMove(from view: SKView) {
-        self.view?.presentScene(nil)
+        //self.isPaused = true
     }
     
 }
