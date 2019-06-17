@@ -19,6 +19,9 @@ class pubGame{
     var currentRound:Int
     var PlayersArray = [player]()
     
+    var currPennyHasGone = false
+    
+    
     enum gamestates {
         case OPENING
         case PLAYING

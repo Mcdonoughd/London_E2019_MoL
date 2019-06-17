@@ -35,35 +35,62 @@ class PubActivityScene: SKScene {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first{
-            let touchLocation = touch.location(in: self)
-            let touchedWhere = nodes(at: touchLocation)
-            
-            if !touchedWhere.isEmpty{
-                for node in touchedWhere{
-                    if node is SKSpriteNode{
-                        if node == ActivePenny{
-                            ActivePenny.position = touchLocation
+        if !PubGame.currPennyHasGone{
+            if let touch = touches.first{
+                let touchLocation = touch.location(in: self)
+                let touchedWhere = nodes(at: touchLocation)
+                
+                if !touchedWhere.isEmpty{
+                    for node in touchedWhere{
+                        if node is SKSpriteNode{
+                            if node == ActivePenny{
+                                ActivePenny.position = touchLocation
+                            }
                         }
                     }
                 }
             }
         }
-        
-        
-        for touch in touches{
-            let location = touch.location(in: self)
-            PubGame.PlayersArray[0].playerPennies[0].position.x = location.x
-            PubGame.PlayersArray[0].playerPennies[0].position.y = location.y
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !PubGame.currPennyHasGone{
+            if let touch = touches.first{
+                let touchLocation = touch.location(in: self)
+                let touchedWhere = nodes(at: touchLocation)
+                
+                if !touchedWhere.isEmpty{
+                    for node in touchedWhere{
+                        if node is SKSpriteNode{
+                            if node == ActivePenny{
+                                ActivePenny.position = touchLocation
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
- 
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !PubGame.currPennyHasGone{
+            if let touch = touches.first{
+                let touchLocation = touch.location(in: self)
+                let touchedWhere = nodes(at: touchLocation)
+                
+                if !touchedWhere.isEmpty{
+                    for node in touchedWhere{
+                        if node is SKSpriteNode{
+                            if node == ActivePenny{
+                                ActivePenny.position = touchLocation
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
-
     override func update(_ currentTime: TimeInterval) {
 
     }
