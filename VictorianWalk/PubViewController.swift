@@ -25,10 +25,9 @@ class PubViewController: UIViewController {
         //PubGame.delete(PubGame)
         //PubGame = SKView()
         
-        
+        PubGame = nil
         self.performSegue(withIdentifier: "PubToActivity", sender: self)
         //self.PubGame.
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,21 +41,21 @@ class PubViewController: UIViewController {
                 // animation
             })
             
-            navigationController?.popViewController(animated: true)
             didReceiveMemoryWarning()
             viewWillDisappear(true)
             dismiss(animated: true, completion: nil)
         }
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
-        self.PubGame.scene?.removeAllChildren()
-        PubGame.scene?.removeAllActions()
-        PubGame.scene?.removeFromParent()
-      //  PubGame.scene?.set
         self.PubGame.presentScene(nil)
+        self.PubGame.scene?.removeAllChildren()
+        self.PubGame.scene?.removeAllActions()
+        self.PubGame.scene?.removeFromParent()
+      //  PubGame.scene?.set
         
-
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
