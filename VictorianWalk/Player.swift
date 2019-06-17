@@ -26,6 +26,8 @@ class player{
             playerPennies.append(Penny())
         }
     }
+    
+    
     func getPennyFromPlayer()->Penny{
         print("Current Penny: " + String(currentPenny))
        return playerPennies[currentPenny]
