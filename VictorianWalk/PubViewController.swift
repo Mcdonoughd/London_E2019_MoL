@@ -23,7 +23,7 @@ class PubViewController: UIViewController {
     @IBAction func backFunc(_ sender: UIButton) {
         print("Going back to pub activity selection")
         self.performSegue(withIdentifier: "PubToActivity", sender: self)
-        
+        PubGame.removeFromSuperview()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
