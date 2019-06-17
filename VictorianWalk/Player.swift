@@ -36,4 +36,9 @@ class player{
     func runTurn(){
         currentPenny = currentPenny + 1
     }
+    
+    deinit{
+        //playerPennies = nil
+        print("Player as been deinit")
+    }
 }

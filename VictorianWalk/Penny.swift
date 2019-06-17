@@ -30,5 +30,10 @@ class Penny: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit{
+        texture = nil
+        physicsBody = nil
+        print("Penny has been de allocated")
+    }
     
 }
