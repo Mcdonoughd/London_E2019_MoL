@@ -24,7 +24,7 @@ class MapModel{
                   title:"Barber Shop",hasActivity:true),
         
         "4":Booth(id:4, desc:"Working men would relax in the pub, meet with friends, play darts, or attend political meetings. \n\n Children often sat outside, waiting for their parents, or were sent in to buy beer for drinking at home.",
-            title:"The Pub", hasActivity: true),
+            title:"Public House", hasActivity: true),
         
         "5":Booth(id:5, desc:"James Powell & Sons’ showroom was attached to their glasshouse off Fleet Street in Whitefriars. Their table and decorative glass were famous for their high quality, subtle colours, and delicate decoration. \n\n The \"Eve\" mosaic on the wall, is a copy of one Powell’s made for St. Paul’s Cathedral.",            title:"Glass Showroom",hasActivity: true),
 

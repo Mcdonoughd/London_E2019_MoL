@@ -19,12 +19,12 @@ class ActivityModel {
             TextActivity(name:"Barber Shop",type:"Act",text: "Play out a scene like you’re inside the barbershop. Act like you’re shaving a family member’s face."),
             QuizActivity(name:"Barber Shop",type:"Quiz",question:"What do you think the shaving mugs in the cabinet were for?",answer:" CORRECT! The barber would pour shaving cream in the mug and mix it to build up a lather.",choices: ["To feed the dogs","Build up a lather","Store tea & coffee"],answerIndex:1)
         ],
-        4:[ GameActivity(name:"Pub",type:"Game",segueRef:"PubGameSegue",desc:"Description of How to Play")],
+        4:[ GameActivity(name:"Public House",type:"Game",segueRef:"PubGameSegue",desc:"Play the traditional Victorian era pub game, shove ha'penny!")],
         5:[
             TextActivity(name:"Glass Showroom",type:"Search",text:"Can you spot 12 different coloured glasses?"),
             TextActivity(name:"Glass Showroom",type:"Imagine",text:"Can you spot any types of glasses you might find at home?"),
         ],
-        6:[TextActivity(name:"Barrel Organ",type:"Search",text:"Can you find the blue and red space invaders from 2016? (Hint: Look Up!) You may find similar art across London today!")],
+        6:[TextActivity(name:"Barrel Organ",type:"Search",text:"Can you find the blue and red space invaders from 2016? (Hint: Turn around and look up!) You may find similar art across London today!")],
         7:[
             TextActivity(name:"Tea & Coffee Warehouse",type:"Imagine",text:"Look at different shops. Where else might tea be sold around town?"),
             QuizActivity(name:"Tea & Coffee Warehouse",type:"Quiz",question:"How much tea did the average Londoner drink in Victorian times?",answer:"Correct! Londers would drink ~300-500 cups/year in Victorian times. In comparison, modern Londoners will drink about 550 cups of tea a year",choices:["~1000-1200 bags/year","~600-800 bags/year","~300-500 bags/year"],answerIndex:2),
