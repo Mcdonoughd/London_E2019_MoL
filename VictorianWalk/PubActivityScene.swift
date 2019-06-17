@@ -275,7 +275,7 @@ class PubActivityScene: SKScene {
     }
     
     override func willMove(from view: SKView) {
-        
+        self.view?.presentScene(nil)
     }
     
 }
