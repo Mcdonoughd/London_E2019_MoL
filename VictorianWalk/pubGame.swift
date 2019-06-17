@@ -49,20 +49,22 @@ class pubGame{
     func nextTurn(){
         
         if(PlayersArray[currentPlayersTurn].currentPenny == numberOfPennies-1){
+            if(currentPlayersTurn+1 == numberOfPlayers){
+                currentPlayersTurn = 0
+                currentRound = currentRound + 1
+                if(currentRound > numberOfRounds){
+                    currentRound = -1 //Indicates game is over
+                }
+            }else{
+                //PlayersArray[currentPlayersTurn].runTurn()
+                currentPlayersTurn = currentPlayersTurn + 1
+            }
             
-            
+        }else{
+            PlayersArray[currentPlayersTurn].currentPenny+=1
         }
         
-        if(currentPlayersTurn+1 == numberOfPlayers){
-            currentPlayersTurn = 0
-            currentRound = currentRound + 1
-            if(currentRound > numberOfRounds){
-                currentRound = -1 //Indicates game is over
-            }
-        }else{
-            PlayersArray[currentPlayersTurn].runTurn()
-            currentPlayersTurn = currentPlayersTurn + 1
-        }
+
     }
     
     

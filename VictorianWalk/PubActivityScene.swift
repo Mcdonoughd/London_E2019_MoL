@@ -274,6 +274,10 @@ class PubActivityScene: SKScene {
         return CGFloat(powerScale)/100
     }
     
+    override func willMove(from view: SKView) {
+        
+    }
+    
 }
 
 

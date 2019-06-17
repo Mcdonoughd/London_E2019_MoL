@@ -25,7 +25,7 @@ class PubViewController: UIViewController {
         //PubGame.delete(PubGame)
         //PubGame = SKView()
         
-        
+        //PubGame.presentScene(nil)
         self.performSegue(withIdentifier: "PubToActivity", sender: self)
         //self.PubGame.
         
@@ -49,11 +49,15 @@ class PubViewController: UIViewController {
         }
     }
     override func viewDidDisappear(_ animated: Bool) {
-        self.PubGame.scene?.removeAllChildren()
-        PubGame.scene?.removeAllActions()
-        PubGame.scene?.removeFromParent()
+        //print("KEVDOG WAS HERE")
+        PubGame.presentScene(nil)
+        //self.PubGame.scene?.removeAllChildren()
+        //PubGame.scene?.removeAllActions()
+        //PubGame.scene?.removeFromParent()
+        //self.removeFromParent()
+        //self.dismiss(animated: true, completion: nil)
       //  PubGame.scene?.set
-        self.PubGame.presentScene(nil)
+        //self.PubGame.presentScene(nil)
         
 
     }
