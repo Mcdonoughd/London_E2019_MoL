@@ -18,6 +18,22 @@ class PubViewController: UIViewController {
     
     @IBOutlet var PubGame: SKView!
     
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBAction func backFunc(_ sender: UIButton) {
+        print("Going back to pub activity selection")
+        self.performSegue(withIdentifier: "PubToActivity", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "PubToActivity"){
+            print("preparing...")
+            let vc = segue.destination as! ActivityViewController
+            vc.passedBooth = 4
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
