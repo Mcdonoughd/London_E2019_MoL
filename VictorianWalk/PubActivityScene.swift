@@ -37,6 +37,9 @@ class PubActivityScene: SKScene {
     var powerBar:SKSpriteNode!
     var powerLabel:SKLabelNode!
     
+    //Back button
+    var backButtonLabel:SKLabelNode!
+    var backButtonBackground:SKSpriteNode!
     
     override func didMove(to view: SKView) {
 
@@ -51,10 +54,17 @@ class PubActivityScene: SKScene {
         //Powerbar init
         powerBar = self.childNode(withName: "powerBar") as? SKSpriteNode
         powerLabel = self.childNode(withName: "powerLabel") as? SKLabelNode
+        
+        backButtonLabel = self.childNode(withName: "backButtonLabel") as? SKLabelNode
+        backButtonBackground = self.childNode(withName: "backButtonBackground") as? SKSpriteNode
+        
         powerBar.isHidden = true
         powerLabel.isHidden = true
         
         //MAKE PENNIES NOT COLLIDE
+        placementPenny.physicsBody?.categoryBitMask = 0
+        placementPenny.physicsBody?.collisionBitMask = 0
+        
         placementPenny.zPosition = 2
         self.addChild(placementPenny)
         loadBars()
@@ -109,6 +119,13 @@ class PubActivityScene: SKScene {
                 buttonPushed = true
             }
             
+            if(touchedNode.name == "backButtonLabel"){
+                //print("REEEEEEE")
+                //self.view?.window?.rootViewController?.present(ActivityViewController(), animated: true, completion: nil)
+        
+            }
+            
+            
             if(placing == true){
                 //let old_posX = PubGame.PlayersArray[0].playerPennies[0].position.x
                 //let old_posY = PubGame.PlayersArray[0].playerPennies[0].position.y
@@ -161,13 +178,18 @@ class PubActivityScene: SKScene {
                 //placementPenny.constraints
                 
                 
-                //placementPenny.isPresent =
+                placementPenny.isHidden = true
                 
                 self.addChild(PubGame.PlayersArray[0].playerPennies[0])
                 
+                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.contactTestBitMask = 1
+                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.collisionBitMask = 1
+                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.linearDamping = 0.99
                 PubGame.PlayersArray[0].playerPennies[0].position = ppPosition
        
-                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.velocity = CGVector(dx: powerBar.xScale*40, dy: 0)
+                
+                
+                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.velocity = CGVector(dx: calcScaledSpeed()*250, dy: 0)
                 firing = false
                 
             }
@@ -197,14 +219,8 @@ class PubActivityScene: SKScene {
         }
         
         if(firing){
-            var power = fireFrom - currentFirePos
-            if(power < 0){
-                power = 0
-            }
-            
-            //Not entirely sure how map works but it does kinda...
-            let powerScale = map(minRange: 0, maxRange: 100, minDomain: 0, maxDomain: 180, value: power)
-            powerBar.xScale = CGFloat(powerScale)/100
+
+            powerBar.xScale = calcScaledSpeed()
             
             //print("xScale: " + String(Double(powerBar.xScale)) + "powerScale: " + String(Int(powerScale)))
         }
@@ -239,6 +255,19 @@ class PubActivityScene: SKScene {
         let canvasSize = CGSize(width: size.width, height: size.height)
         background.scale(to: canvasSize)
         addChild(background)
+    }
+    
+    func calcScaledSpeed()->CGFloat{
+        var power = fireFrom - currentFirePos
+        if(power < 0){
+            power = 0
+        }
+        
+        //Not entirely sure how map works but it does kinda...
+        let powerScale = map(minRange: 0, maxRange: 100, minDomain: 0, maxDomain: 180, value: power)
+        
+        
+        return CGFloat(powerScale)/100
     }
     
 }
