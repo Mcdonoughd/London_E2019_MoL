@@ -44,6 +44,7 @@ class PubViewController: UIViewController {
             
             navigationController?.popViewController(animated: true)
             didReceiveMemoryWarning()
+            viewWillDisappear(true)
             dismiss(animated: true, completion: nil)
         }
     }
