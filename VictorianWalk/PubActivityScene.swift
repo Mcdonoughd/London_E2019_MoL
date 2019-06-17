@@ -240,9 +240,9 @@ class PubActivityScene: SKScene {
             bar = self.childNode(withName: "Bed Line " + String(index)) as? SKShapeNode
             bars.append(bar);
         }
-        for testBar in bars{
-            print(testBar.name!)
-        }
+//        for testBar in bars{
+//            print(testBar.name!)
+//        }
     }
     
     func map(minRange:Int, maxRange:Int, minDomain:Int, maxDomain:Int, value:Int) -> Int {
