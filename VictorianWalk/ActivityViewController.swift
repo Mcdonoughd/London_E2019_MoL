@@ -10,7 +10,7 @@ import UIKit
 
 //This is the controller for the Map View
 class ActivityViewController: UIViewController {
-
+    
     let ChooseAnActivity = "Choose An Activity"
     //has an activity been chosen
     var ActivityChosen = false
@@ -62,8 +62,23 @@ class ActivityViewController: UIViewController {
         //if no activity is chosen then launch the map
         else{
              self.performSegue(withIdentifier: "MapSegue", sender: self)
+            
+            
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "MapSegue"){
+            print("preparing...")
+            _ = segue.destination as! MapViewController
+            
+            UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromTop, animations: {
+                
+                // animation
+                
+            })
+        }
+    }
+    
     
     //Removes all buttons on the Current Stack and replaces them with the Activity Buttons
     func reloadStackArray(){
@@ -223,7 +238,7 @@ class ActivityViewController: UIViewController {
     
     //Help Button Action
     @IBAction func HelpButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottum of the screen!\n\nAct: Live life as a Victorian through your actions!\n\nSearch: Find Victorian artifacts in the shops\n\nImagine: Use your imagination to live back in Victorian London\n\nDiscuss: Talk about topics and questions from the shop with your family\n\nPress back when you are finished", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottum of the screen!\n\nAct: Live life as a Victorian through your actions!\n\nSearch: Find Victorian artifacts in the shops\n\nImagine: Use your imagination to live back in Victorian London\n\nPress back when you are finished", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
         

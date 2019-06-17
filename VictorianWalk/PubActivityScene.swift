@@ -96,6 +96,7 @@ class PubActivityScene: SKScene {
     //var touchedGlowNode : SKNode!
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
         for touch in touches{
             let location = touch.location(in: self)
             let touchedNode = atPoint(location)
@@ -105,6 +106,7 @@ class PubActivityScene: SKScene {
                 if(touchedNode.name == "placementPenny"){
                     fireFrom = Int(location.x)
                     currentFirePos = Int(location.x)
+
                 }
                 
             }
@@ -203,11 +205,9 @@ class PubActivityScene: SKScene {
 ////                powerBar.isHidden = false
 ////                powerLabel.isHidden = false
 //            }
-            
         }
     }
     
-
     override func update(_ currentTime: TimeInterval) {
         
         if(firing){
