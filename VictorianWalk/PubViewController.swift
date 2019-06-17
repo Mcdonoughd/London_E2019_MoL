@@ -37,23 +37,21 @@ class PubViewController: UIViewController {
             let vc = segue.destination as! ActivityViewController
             vc.passedBooth = 4
             
-            
-            
             UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromTop, animations: {
                 
                 // animation
             })
             
             navigationController?.popViewController(animated: true)
-            
+            didReceiveMemoryWarning()
             dismiss(animated: true, completion: nil)
         }
     }
     override func viewDidDisappear(_ animated: Bool) {
         self.PubGame.scene?.removeAllChildren()
-        //PubGame.scene?.removeAllActions()
-        //PubGame.scene?.removeFromParent()
-        //PubGame.scene?.set
+        PubGame.scene?.removeAllActions()
+        PubGame.scene?.removeFromParent()
+      //  PubGame.scene?.set
         self.PubGame.presentScene(nil)
         
 
@@ -76,8 +74,6 @@ class PubViewController: UIViewController {
                 PubGame.showsNodeCount = true
                 PubGame.presentScene(scene)
             
-            
-
         }
         
 //        if let scene = SKScene(fileNamed: "PubGameScene"){
