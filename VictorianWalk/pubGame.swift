@@ -47,6 +47,9 @@ class pubGame{
     }
     
     func nextTurn(){
+        
+        //if(PlayersArray[currentPlayersTurn].currentPenny > )
+        
         if(currentPlayersTurn+1 == numberOfPlayers){
             currentPlayersTurn = 0
             currentRound = currentRound + 1

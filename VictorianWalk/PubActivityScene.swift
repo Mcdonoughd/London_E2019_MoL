@@ -72,7 +72,7 @@ class PubActivityScene: SKScene {
         placementPenny.zPosition = 2
         self.addChild(placementPenny)
         loadBars()
-        print("We made it")
+        
         
         let xPlaceRange = SKRange(lowerLimit: 186, upperLimit: 200)
         let yPlaceRange = SKRange(lowerLimit: 155, upperLimit: 630)
@@ -183,7 +183,6 @@ class PubActivityScene: SKScene {
                 
                 
                 placementPenny.isHidden = true
-                //I am so sorry about this next line of code. It gets the current penny of the current player of the pub game class
                 movingPenny = PubGame.getCurrentPenny()
                 
                 
@@ -192,6 +191,7 @@ class PubActivityScene: SKScene {
                 movingPenny.physicsBody?.contactTestBitMask = 1
                 movingPenny.physicsBody?.collisionBitMask = 1
                 movingPenny.physicsBody?.linearDamping = 0.99
+                movingPenny.physicsBody?.angularDamping = 0.9
                 movingPenny.position = ppPosition
        
                 
@@ -215,20 +215,13 @@ class PubActivityScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        
-//        if(firing){
-//            print("Firing is true")
-//            
-//        }
-//        if(placing){
-//            print("placing is true")
-//        }
-        
+                
         if(firing){
             powerBar.xScale = calcScaledSpeed()
         }
         if(pennyInFlight == true && movingPenny.physicsBody?.velocity.dx == 0 && movingPenny.physicsBody?.velocity.dy == 0){
             placing = true
+            pennyInFlight = false
             placementPenny.isHidden = false
             powerBar.isHidden = true
             powerLabel.isHidden = true
