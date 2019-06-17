@@ -36,7 +36,17 @@ class PubViewController: UIViewController {
             print("preparing...")
             let vc = segue.destination as! ActivityViewController
             vc.passedBooth = 4
-            //PubGame.removeFromSuperview()
+            
+            
+            
+            UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromTop, animations: {
+                
+                // animation
+            })
+            
+            navigationController?.popViewController(animated: true)
+            
+            dismiss(animated: true, completion: nil)
         }
     }
     override func viewDidDisappear(_ animated: Bool) {

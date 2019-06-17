@@ -62,6 +62,11 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
             print("preparing...")
             let vc = segue.destination as! ActivityViewController
             vc.passedBooth = Map.currentBooth.id
+            UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromBottom, animations: {
+                
+                // animation
+                
+            })
         }
     }
     

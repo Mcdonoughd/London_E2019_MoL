@@ -17,6 +17,11 @@ class TutViewController: UIViewController {
         // Do any additional setup after loading the view.
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
+        UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromBottom, animations: {
+            
+            // animation
+            
+        })
     }
     
     //Force Landscape Orientation
