@@ -17,18 +17,12 @@ class pubGame{
     var numberOfPlayers:Int
     var numberOfPennies:Int
     var currentRound:Int
+    var currentPlayersTurn:Int
     var PlayersArray = [player]()
     
     var currPennyHasGone = false
     
     
-    enum gamestates {
-        case OPENING
-        case PLAYING
-        case CLOSING
-    }
-    
-    var currentGameState:gamestates
  
    
     init(numberOfRounds:Int, numberOfPennies: Int, numberOfPlayers:Int){
@@ -36,8 +30,8 @@ class pubGame{
         self.numberOfRounds = numberOfRounds
         self.numberOfPennies = numberOfPennies
         
-        currentRound = 1
-        currentGameState = gamestates.OPENING
+        currentRound = 0
+        currentPlayersTurn = 0
         makePlayers(players: numberOfPlayers)
     }
     
@@ -47,6 +41,25 @@ class pubGame{
             self.PlayersArray.append(newPlayer)
         }
     }
+    
+    func getCurrentPenny() -> Penny{
+       return PlayersArray[currentPlayersTurn].getPennyFromPlayer()
+    }
+    
+    func nextTurn(){
+        if(currentPlayersTurn+1 == numberOfPlayers){
+            currentPlayersTurn = 0
+            currentRound = currentRound + 1
+            if(currentRound > numberOfRounds){
+                currentRound = -1 //Indicates game is over
+            }
+        }else{
+            PlayersArray[currentPlayersTurn].runTurn()
+            currentPlayersTurn = currentPlayersTurn + 1
+        }
+    }
+    
+    
     
 }
 

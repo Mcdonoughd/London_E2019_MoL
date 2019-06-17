@@ -16,14 +16,19 @@ class PubViewController: UIViewController {
     
     //@IBOutlet var PubActivity: SKView!
     
-    @IBOutlet var PubGame: SKView!
+    @IBOutlet weak var PubGame: SKView!
     
     @IBOutlet weak var backButton: UIButton!
     
     @IBAction func backFunc(_ sender: UIButton) {
         print("Going back to pub activity selection")
+        //PubGame.delete(PubGame)
+        //PubGame = SKView()
+        
+        
         self.performSegue(withIdentifier: "PubToActivity", sender: self)
-        PubGame.removeFromSuperview()
+        //self.PubGame.
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,9 +36,18 @@ class PubViewController: UIViewController {
             print("preparing...")
             let vc = segue.destination as! ActivityViewController
             vc.passedBooth = 4
+            //PubGame.removeFromSuperview()
         }
     }
-    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.PubGame.scene?.removeAllChildren()
+        //PubGame.scene?.removeAllActions()
+        //PubGame.scene?.removeFromParent()
+        //PubGame.scene?.set
+        self.PubGame.presentScene(nil)
+        
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

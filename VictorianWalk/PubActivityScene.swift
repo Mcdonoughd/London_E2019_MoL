@@ -19,7 +19,7 @@ class PubActivityScene: SKScene {
     var placing = false
     var firing = false
     
-    
+    weak var movingPenny:Penny!
     var placementPenny:Penny!
     
     var fireFrom = 0
@@ -40,6 +40,10 @@ class PubActivityScene: SKScene {
     //Back button
     var backButtonLabel:SKLabelNode!
     var backButtonBackground:SKSpriteNode!
+    
+    var pullingBack = false
+    var pennyInFlight = false
+    
     
     override func didMove(to view: SKView) {
 
@@ -74,8 +78,7 @@ class PubActivityScene: SKScene {
         let yPlaceRange = SKRange(lowerLimit: 155, upperLimit: 630)
         
         let pennyConstraint = SKConstraint.positionX(xPlaceRange, y: yPlaceRange)
-        //self.addChild(penny)
-        //self.addChild(label)
+
         placementPenny.constraints = [pennyConstraint]
         
         playArea = self.childNode(withName: "playArea") as? SKSpriteNode
@@ -87,9 +90,8 @@ class PubActivityScene: SKScene {
         let canvasSize = CGSize(width: size.width, height: size.height)
         background.scale(to: canvasSize)
         addChild(background)
-        //addChild(penny)
-        //penny = self.childNodeWithName("penny") as? SKSpriteNode
-        PubGame.currentGameState = pubGame.gamestates.OPENING
+
+        
     }
     
     //var isFingerOnPenny = false
@@ -106,7 +108,7 @@ class PubActivityScene: SKScene {
                 if(touchedNode.name == "placementPenny"){
                     fireFrom = Int(location.x)
                     currentFirePos = Int(location.x)
-
+                    pullingBack = true
                 }
                 
             }
@@ -173,7 +175,7 @@ class PubActivityScene: SKScene {
             let touchedNode = atPoint(location)
             
             //print("Yeet")
-            if(firing == true && buttonPushed != true ){
+            if(firing == true && buttonPushed != true && pullingBack == true){
                 currentFirePos = Int(location.x)
                 
                 let ppPosition = placementPenny.position
@@ -181,19 +183,23 @@ class PubActivityScene: SKScene {
                 
                 
                 placementPenny.isHidden = true
+                //I am so sorry about this next line of code. It gets the current penny of the current player of the pub game class
+                movingPenny = PubGame.getCurrentPenny()
                 
-                self.addChild(PubGame.PlayersArray[0].playerPennies[0])
                 
-                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.contactTestBitMask = 1
-                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.collisionBitMask = 1
-                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.linearDamping = 0.99
-                PubGame.PlayersArray[0].playerPennies[0].position = ppPosition
+                self.addChild(movingPenny)
+                
+                movingPenny.physicsBody?.contactTestBitMask = 1
+                movingPenny.physicsBody?.collisionBitMask = 1
+                movingPenny.physicsBody?.linearDamping = 0.99
+                movingPenny.position = ppPosition
        
                 
                 
-                PubGame.PlayersArray[0].playerPennies[0].physicsBody?.velocity = CGVector(dx: calcScaledSpeed()*250, dy: 0)
+                movingPenny.physicsBody?.velocity = CGVector(dx: calcScaledSpeed()*250, dy: 0)
                 firing = false
-                
+                pullingBack = false
+                pennyInFlight = true
             }
             if(buttonPushed == true){
                 buttonPushed = false
@@ -210,22 +216,27 @@ class PubActivityScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         
-        if(firing){
-            print("Firing is true")
-            
-        }
-        if(placing){
-            print("placing is true")
-        }
+//        if(firing){
+//            print("Firing is true")
+//            
+//        }
+//        if(placing){
+//            print("placing is true")
+//        }
         
         if(firing){
-
             powerBar.xScale = calcScaledSpeed()
-            
-            //print("xScale: " + String(Double(powerBar.xScale)) + "powerScale: " + String(Int(powerScale)))
+        }
+        if(pennyInFlight == true && movingPenny.physicsBody?.velocity.dx == 0 && movingPenny.physicsBody?.velocity.dy == 0){
+            placing = true
+            placementPenny.isHidden = false
+            powerBar.isHidden = true
+            powerLabel.isHidden = true
+            buttonLabel.text = "Place!"
+            PubGame.nextTurn() // doesnt check that its still in the amount of pennies there
         }
         
-        //print(fireFrom - currentFirePos)
+
     }
     
 
