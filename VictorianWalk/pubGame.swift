@@ -67,6 +67,9 @@ class pubGame{
 
     }
     
+    deinit{
+        print("Deallocated pubGame Model")
+    }
     
     
 }

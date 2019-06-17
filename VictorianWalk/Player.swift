@@ -26,6 +26,8 @@ class player{
             playerPennies.append(Penny())
         }
     }
+    
+    
     func getPennyFromPlayer()->Penny{
         print("Current Penny: " + String(currentPenny))
        return playerPennies[currentPenny]
@@ -33,5 +35,10 @@ class player{
     
     func runTurn(){
         currentPenny = currentPenny + 1
+    }
+    
+    deinit{
+        //playerPennies = nil
+        print("Player as been deinit")
     }
 }

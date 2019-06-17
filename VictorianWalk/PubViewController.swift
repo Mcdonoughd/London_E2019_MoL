@@ -54,9 +54,8 @@ class PubViewController: UIViewController {
 //        self.PubGame.scene?.removeAllChildren()
 //        self.PubGame.scene?.removeAllActions()
 //        self.PubGame.scene?.removeFromParent()
-      //  PubGame.scene?.set
-        //self.PubGame.presentScene(nil)
-        
+//      //  PubGame.scene?.set
+//
     }
     
     override func viewDidLoad() {

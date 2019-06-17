@@ -44,6 +44,9 @@ class PubActivityScene: SKScene {
     var pullingBack = false
     var pennyInFlight = false
     
+    deinit{
+        print("De allocating PubActivityScene")
+    }
     
     override func didMove(to view: SKView) {
 
