@@ -67,7 +67,7 @@ class MapModel{
         "19":Booth(id:19,desc:"Bank accounts were primarily for businesses and the rich. The poor were paid weekly in cash that barely lasted seven days. \n\n Small savings for Christmas or weddings could be placed in a Post Office Savings or National Penny bank. They accepted deposits from a penny upwards.",
             title:"Bank Manager's Office",hasActivity: true),
         
-        "20":Booth(id:20,desc:"Maybe something should go here at some point?",title:"Victorian Lamppost"),
+        "20":Booth(id:20,desc:"Look outside the window and see the London Wall",title:"Victorian Lamppost"),
     ]
     
   let errorBooth = Booth(id:0, desc:"Do not panic!!! The developers of this application have not accounted for this to happen. We have trained monkeys working on fixing it right now.",title:"404")

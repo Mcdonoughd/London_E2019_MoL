@@ -238,7 +238,7 @@ class ActivityViewController: UIViewController {
     
     //Help Button Action
     @IBAction func HelpButton(_ sender: Any) {
-        let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottum of the screen!\n\nAct: Live life as a Victorian through your actions!\n\nSearch: Find Victorian artifacts in the shops\n\nImagine: Use your imagination to live back in Victorian London\n\nPress back when you are finished", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Need help?", message: "Select an activity at the bottom of the screen!\n\nAct: Live life as a Victorian through your actions!\n\nSearch: Find Victorian artefacts in the shops!\n\nImagine: Use your imagination to live back in Victorian London!\n\nQuiz: Test your knowledge of the Victorian era!\n\nPress back when you are finished", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Got it!", style: .default, handler: nil))
         
