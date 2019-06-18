@@ -43,7 +43,7 @@ class PubViewController: UIViewController {
             
             didReceiveMemoryWarning()
             viewWillDisappear(true)
-            dismiss(animated: true, completion: nil)
+            //dismiss(animated: true, completion: nil)
         }
     }
     
