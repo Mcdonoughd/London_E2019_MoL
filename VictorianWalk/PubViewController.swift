@@ -18,6 +18,8 @@ class PubViewController: UIViewController {
     
     @IBOutlet weak var PubGame: SKView!
     
+    var testView: SKView!
+    
     @IBOutlet weak var backButton: UIButton!
     
     @IBAction func backFunc(_ sender: UIButton) {
@@ -25,7 +27,7 @@ class PubViewController: UIViewController {
         //PubGame.delete(PubGame)
         //PubGame = SKView()
         
-        PubGame = nil
+        //PubGame = nil
         self.performSegue(withIdentifier: "PubToActivity", sender: self)
         //self.PubGame.
     }
@@ -68,11 +70,20 @@ class PubViewController: UIViewController {
                 scene.scaleMode = .aspectFill
                 print("Loaded scene PubActivityScenes")
                 // Present the scene
-                PubGame.ignoresSiblingOrder = true
+            
                 
+                PubGame.ignoresSiblingOrder = true
                 PubGame.showsFPS = true
                 PubGame.showsNodeCount = true
                 PubGame.presentScene(scene)
+                
+                
+//                testView = SKView()
+//                testView.ignoresSiblingOrder = true
+//                
+//                testView.showsFPS = true
+//                testView.showsNodeCount = true
+//                testView.presentScene(scene)
             
         }
         

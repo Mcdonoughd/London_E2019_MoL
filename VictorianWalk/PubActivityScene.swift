@@ -41,6 +41,13 @@ class PubActivityScene: SKScene {
     var backButtonLabel:SKLabelNode!
     var backButtonBackground:SKSpriteNode!
     
+    //HUDisplay
+    var playerDisplay:SKLabelNode!
+    var pennyDisplay:SKLabelNode!
+    var roundDisplay:SKLabelNode!
+    
+    
+    //State Variables
     var pullingBack = false
     var pennyInFlight = false
     
@@ -50,20 +57,29 @@ class PubActivityScene: SKScene {
     
     override func didMove(to view: SKView) {
 
-        
+        print("Scene Loaded")
         placementPenny = Penny()
         placementPenny.name = "placementPenny"
         placing = true
-        //Button init
+        
+        //Placing Button init
         buttonBackground = self.childNode(withName: "buttonBackground") as? SKSpriteNode
         buttonLabel = self.childNode(withName: "buttonLabel") as? SKLabelNode
         buttonLabel.text = "Place!"
+        
         //Powerbar init
         powerBar = self.childNode(withName: "powerBar") as? SKSpriteNode
         powerLabel = self.childNode(withName: "powerLabel") as? SKLabelNode
         
+        //Back Button Init
         backButtonLabel = self.childNode(withName: "backButtonLabel") as? SKLabelNode
         backButtonBackground = self.childNode(withName: "backButtonBackground") as? SKSpriteNode
+        
+        //HUD Labels
+        playerDisplay = self.childNode(withName: "playerDisplay") as? SKLabelNode
+        pennyDisplay = self.childNode(withName: "pennyDisplay") as? SKLabelNode
+        roundDisplay = self.childNode(withName: "roundDisplay") as? SKLabelNode
+        
         
         powerBar.isHidden = true
         powerLabel.isHidden = true
@@ -232,6 +248,11 @@ class PubActivityScene: SKScene {
             PubGame.nextTurn() // doesnt check that its still in the amount of pennies there
         }
         
+        playerDisplay.text = String(PubGame.currentPlayersTurn)
+        pennyDisplay.text = String(PubGame.PlayersArray[PubGame.currentPlayersTurn].currentPenny)
+        roundDisplay.text = String(PubGame.currentRound)
+        
+        
 
     }
     
@@ -278,7 +299,7 @@ class PubActivityScene: SKScene {
     }
     
     override func willMove(from view: SKView) {
-        self.view?.presentScene(nil)
+        //self.isPaused = true
     }
     
 }
