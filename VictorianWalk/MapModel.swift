@@ -12,7 +12,6 @@ import Foundation
 class MapModel{
     var currentBooth = Booth(id:0,desc:"",title:"")
     
-    
     var TitleDesc:[String : Booth] = [
 
         "1":Booth(id:1, desc:"Victorian children saved their money to buy \"penny toys\" from street sellers and dazzling toy arcades such as Lowther’s on the Strand. \n\n Lowther’s was an \"Aladdin fairy palace\" of expensive train sets, dolls, and lead soldiers.", title:"Toy Shop",hasActivity: true),
@@ -33,7 +32,7 @@ class MapModel{
         
         "7":Booth(id:7, desc:"Tea from China, India, and Ceylon (now called Sri Lanka) arriving in London was taken from the docks to the city’s many warehouses. \n\n After being weighed, tea was blended and coffee was roasted and ground to send to grocers, tea rooms, and hotels.",title:"Tea & Coffee Warehouse",hasActivity: true),
        
-        "8":Booth(id:8, desc:"Mr. Elkington on Lamb’s Conduit Street made visiting cards, business cards, invitations, and bookplates. Engravers usually worked alone in small workshops that smelt strongly of the inks, acids, and polishes they used.",
+        "8":Booth(id:8, desc:"Engravers made visiting cards, business cards, invitations, and bookplates. They usually worked alone in small workshops that smelt strongly of the inks, acids, and polishes they used.",
             title:"Engraver",hasActivity: true),
         
         "9":Booth(id:9, desc:"London’s watchmakers produced expensive watches for sale around the world. Their intricate work required strong light, so they often placed their workbenches near a window. \n\n Specialist skills included hinge-making, dial-painting, and watch case-making.",
@@ -45,7 +44,7 @@ class MapModel{
         "11":Booth(id:11, desc:"The cries of bakers and dairymen were a familiar sound on London’s streets. They pushed handcarts, sold bread and milk, and delivered their goods to private homes.",
             title:"Baker's Cart"),
         
-        "12":Booth(id:12, desc:"Grocers like Fred Bugg in Bayswater sold the essentials of daily life. Tea, flour, sugar, and rice were drawn from larger containers, then weighed and wrapped for customers. Grocers often lived above their shops.",
+        "12":Booth(id:12, desc:"Grocers like in Bayswater sold the essentials of daily life. Tea, flour, sugar, and rice were drawn from larger containers, then weighed and wrapped for customers. Grocers often lived above their shops.",
             title:"Grocer",hasActivity: true),
         
         "13":Booth(id:13, desc:"The pharmacist was where you could go to get medicines. Poisonous liquids were kept in dark green or blue glass bottles with fluted sides to distinguish them from harmless fluids.",
@@ -67,7 +66,7 @@ class MapModel{
         "19":Booth(id:19,desc:"Bank accounts were primarily for businesses and the rich. The poor were paid weekly in cash that barely lasted seven days. \n\n Small savings for Christmas or weddings could be placed in a Post Office Savings or National Penny bank. They accepted deposits from a penny upwards.",
             title:"Bank Manager's Office",hasActivity: true),
         
-        "20":Booth(id:20,desc:"Look outside the window and see the London Wall",title:"Victorian Lamppost"),
+        "20":Booth(id:20,desc:"Look outside the window and see the London Wall. The wall appears to have been built in the late 2nd or early 3rd century, and finished around the end of the 4th century. \n\n This makes it one of the last major building projects undertaken by the Romans before their departure from Britain in 410. ",title:"Victorian Lamppost"),
     ]
     
   let errorBooth = Booth(id:0, desc:"Do not panic!!! The developers of this application have not accounted for this to happen. We have trained monkeys working on fixing it right now.",title:"404")

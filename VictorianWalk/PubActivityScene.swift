@@ -223,13 +223,6 @@ class PubActivityScene: SKScene {
             if(buttonPushed == true){
                 buttonPushed = false
             }
-//            if(touchedNode.name== "buttonLabel"){
-//                //placing = false
-//                firing = true
-////                buttonLabel.text = "Placed"
-////                powerBar.isHidden = false
-////                powerLabel.isHidden = false
-//            }
         }
     }
     
@@ -301,6 +294,11 @@ class PubActivityScene: SKScene {
     override func willMove(from view: SKView) {
         //self.isPaused = true
     }
+    
+    
+
+    
+    
     
 }
 
