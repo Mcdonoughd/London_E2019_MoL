@@ -833,7 +833,6 @@
                         <viewLayoutGuide key="safeArea" id="gas-aE-65r"/>
                     </view>
                     <connections>
-                        <outlet property="PubGame" destination="S2i-LV-rgu" id="bwc-WV-AgF"/>
                         <outlet property="backButton" destination="C2i-ft-bqw" id="CWu-nw-l7Q"/>
                         <segue destination="3C6-dH-pMI" kind="show" identifier="PubToActivity" id="UmU-Uf-Nd2"/>
                     </connections>

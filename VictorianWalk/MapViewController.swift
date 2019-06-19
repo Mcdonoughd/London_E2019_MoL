@@ -65,7 +65,6 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
             UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromBottom, animations: {
                 
                 // animation
-                
             })
         }
     }

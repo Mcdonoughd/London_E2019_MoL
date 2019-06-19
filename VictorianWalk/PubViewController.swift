@@ -15,7 +15,6 @@ class PubViewController: UIViewController, GameViewControllerDelegate {
     
     
     //@IBOutlet var PubActivity: SKView!
-    
     weak var MyView: SKView?
     
     @IBOutlet weak var backButton: UIButton!
@@ -31,17 +30,24 @@ class PubViewController: UIViewController, GameViewControllerDelegate {
     }
     
     func funcGoBack(){
-        MyView?.presentScene(nil)
+        //MyView?.presentScene(nil)
+        //nukeAllAnimations()
         self.performSegue(withIdentifier: "PubToActivity", sender: self)
     }
     
+    func nukeAllAnimations() {
+        MyView?.subviews.forEach({$0.layer.removeAllAnimations()})
+        MyView?.layer.removeAllAnimations()
+        MyView?.layoutIfNeeded()
+        MyView?.presentScene(nil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "PubToActivity"){
             print("preparing...")
             let vc = segue.destination as! ActivityViewController
             vc.passedBooth = 4
-            
+            nukeAllAnimations()
             UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromTop, animations: {
                 
                 // animation
@@ -64,9 +70,7 @@ class PubViewController: UIViewController, GameViewControllerDelegate {
                     gameScene.scaleMode = .aspectFill
                     print("Loaded scene PubActivityScenes")
                     // Present the scene
-                    
                     MyView = view
-                    
                     view.ignoresSiblingOrder = true
                     //view = true
                     //view = true
