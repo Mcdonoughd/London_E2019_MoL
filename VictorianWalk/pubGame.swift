@@ -23,8 +23,6 @@ class pubGame{
     var currPennyHasGone = false
     
     
- 
-   
     init(numberOfRounds:Int, numberOfPennies: Int, numberOfPlayers:Int){
         self.numberOfPlayers = numberOfPlayers
         self.numberOfRounds = numberOfRounds
@@ -68,6 +66,7 @@ class pubGame{
     }
     
     deinit{
+        PlayersArray.removeAll()
         print("Deallocated pubGame Model")
     }
     

@@ -39,6 +39,8 @@ class player{
     
     deinit{
         //playerPennies = nil
+        playerPennies.removeAll()
+        playerScoredInBars.removeAll()
         print("Player as been deallocated")
     }
 }

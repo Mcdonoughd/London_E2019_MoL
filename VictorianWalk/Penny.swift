@@ -13,13 +13,13 @@ class Penny: SKSpriteNode{
     var hasGone = false
     var isPresent:Int
     
+    
     init(){
-        
         let texture = SKTexture(imageNamed: "hapenny")
         self.isPresent = 0
         super.init(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: texture.size())
         self.name = "penny"
-        self.physicsBody = SKPhysicsBody(texture: self.texture!,size: self.texture!.size())
+        self.physicsBody = SKPhysicsBody(texture: texture,size: texture.size())
         self.physicsBody?.isDynamic = true
         self.physicsBody?.affectedByGravity = false
         self.zPosition = 1
@@ -32,7 +32,11 @@ class Penny: SKSpriteNode{
     }
     
     deinit{
+        //self.physicsBody?.removeObserver(<#T##observer: NSObject##NSObject#>, forKeyPath: <#T##String#>)
+        self.constraints?.removeAll()
         removeAllActions()
+        removeAllChildren()
+        removeFromParent()
         texture = nil
         print("Penny has been deallocated")
     }

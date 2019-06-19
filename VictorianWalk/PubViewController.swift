@@ -38,8 +38,11 @@ class PubViewController: UIViewController, GameViewControllerDelegate {
     func nukeAllAnimations() {
         MyView?.subviews.forEach({$0.layer.removeAllAnimations()})
         MyView?.layer.removeAllAnimations()
+        MyView?.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
         MyView?.layoutIfNeeded()
-        MyView?.presentScene(nil)
+        MyView?.presentScene(nil) // this calls deinit for PubActivityScene
+        MyView = nil
+        self.view = nil
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,16 +50,21 @@ class PubViewController: UIViewController, GameViewControllerDelegate {
             print("preparing...")
             let vc = segue.destination as! ActivityViewController
             vc.passedBooth = 4
-            nukeAllAnimations()
             UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromTop, animations: {
                 
                 // animation
-            })
+            },completion: nil)
             
+            
+            
+            didReceiveMemoryWarning()
             
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        nukeAllAnimations()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

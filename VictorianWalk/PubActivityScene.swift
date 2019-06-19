@@ -6,7 +6,7 @@
 //  Created by Museum of London on 21/05/2019.
 //  Copyright © 2019 Daniel McDonough. All rights reserved.
 
-
+import CoreData
 import SpriteKit
 
 protocol GameViewControllerDelegate: class {
@@ -33,8 +33,6 @@ class PubActivityScene: SKScene {
     var currentFirePos = 0
     
     
-    //var fireFromY = 0
-    
     //Placement buttons
     var buttonBackground:SKSpriteNode!
     var buttonLabel:SKLabelNode!
@@ -58,8 +56,7 @@ class PubActivityScene: SKScene {
     var pullingBack = false
     var pennyInFlight = false
     
-    var texture = SKTexture(imageNamed: "woodbg")
-    
+  
     override func didMove(to view: SKView) {
 
         print("Scene Loaded")
@@ -67,26 +64,7 @@ class PubActivityScene: SKScene {
         placementPenny.name = "placementPenny"
         placing = true
         
-        //Placing Button init
-        buttonBackground = self.childNode(withName: "buttonBackground") as? SKSpriteNode
-        buttonLabel = self.childNode(withName: "buttonLabel") as? SKLabelNode
-        buttonLabel.text = "Place!"
-        
-        //Powerbar init
-        powerBar = self.childNode(withName: "powerBar") as? SKSpriteNode
-        powerLabel = self.childNode(withName: "powerLabel") as? SKLabelNode
-        
-        //Back Button Init
-        backButtonLabel = self.childNode(withName: "backButtonLabel") as? SKLabelNode
-        backButtonBackground = self.childNode(withName: "backButtonBackground") as? SKSpriteNode
-        
-        //HUD Labels
-        playerDisplay = self.childNode(withName: "playerDisplay") as? SKLabelNode
-        pennyDisplay = self.childNode(withName: "pennyDisplay") as? SKLabelNode
-        roundDisplay = self.childNode(withName: "roundDisplay") as? SKLabelNode
-        
-        powerBar.isHidden = true
-        powerLabel.isHidden = true
+        MakeHUD()
         
         //MAKE PENNIES NOT COLLIDE
         placementPenny.physicsBody?.categoryBitMask = 0
@@ -188,7 +166,7 @@ class PubActivityScene: SKScene {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches{
             let location = touch.location(in: self)
-            let touchedNode = atPoint(location)
+            //let touchedNode = atPoint(location)
             
             //print("Yeet")
             if(firing == true && buttonPushed != true && pullingBack == true){
@@ -241,9 +219,6 @@ class PubActivityScene: SKScene {
         playerDisplay.text = String(PubGame.currentPlayersTurn)
         pennyDisplay.text = String(PubGame.PlayersArray[PubGame.currentPlayersTurn].currentPenny)
         roundDisplay.text = String(PubGame.currentRound)
-        
-        
-
     }
     
 
@@ -266,15 +241,19 @@ class PubActivityScene: SKScene {
     //set background
     func setBackground(){
         //set Wood image to the background
+        autoreleasepool {
+            let texture = SKTexture(imageNamed: "woodbg")
+            let canvasSize = CGSize(width: size.width, height: size.height)
+            let background = SKSpriteNode(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: canvasSize)
+           
+            background.position = CGPoint(x: size.width/2, y: size.height/2)
+            background.zPosition = -1
+            
+            addChild(background)
+            
         
-        let canvasSize = CGSize(width: size.width, height: size.height)
-        let background = SKSpriteNode(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: canvasSize)
-       
-        background.position = CGPoint(x: size.width/2, y: size.height/2)
-        background.zPosition = -1
-        
-        addChild(background)
-        gameViewControllerDelegate?.callMethod(inputProperty: "call game view controller method")
+           // gameViewControllerDelegate?.callMethod(inputProperty: "call game view controller method")
+        }
     }
     
     func calcScaledSpeed()->CGFloat{
@@ -296,7 +275,7 @@ class PubActivityScene: SKScene {
     
     
     deinit{
-        texture = SKTexture()
+        
         removeAllActions()
         removeAllChildren()
         removeFromParent()
@@ -305,6 +284,32 @@ class PubActivityScene: SKScene {
     }
     
     
+  
+    
+    func MakeHUD(){
+        //Placing Button init
+        buttonBackground = self.childNode(withName: "buttonBackground") as? SKSpriteNode
+        buttonLabel = self.childNode(withName: "buttonLabel") as? SKLabelNode
+        buttonLabel.text = "Place!"
+        
+        //Powerbar init
+        powerBar = self.childNode(withName: "powerBar") as? SKSpriteNode
+        powerLabel = self.childNode(withName: "powerLabel") as? SKLabelNode
+        
+        //Back Button Init
+        backButtonLabel = self.childNode(withName: "backButtonLabel") as? SKLabelNode
+        backButtonBackground = self.childNode(withName: "backButtonBackground") as? SKSpriteNode
+        
+        //HUD Labels
+        playerDisplay = self.childNode(withName: "playerDisplay") as? SKLabelNode
+        pennyDisplay = self.childNode(withName: "pennyDisplay") as? SKLabelNode
+        roundDisplay = self.childNode(withName: "roundDisplay") as? SKLabelNode
+        
+        powerBar.isHidden = true
+        powerLabel.isHidden = true
+    }
+    
+
     
 }
 
