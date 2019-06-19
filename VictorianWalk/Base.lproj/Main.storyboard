@@ -965,17 +965,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lonMap" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-DP-0Uw">
                                 <rect key="frame" x="-59" y="-7" width="1135" height="788"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WPI_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-HW-te9">
-                                <rect key="frame" x="876" y="640" width="110" height="99"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="110" id="7Sc-4P-lNn"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x2a-MN-VOl" userLabel="wpiBackground">
+                                <rect key="frame" x="710" y="585" width="314" height="183"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoL Logo Proper" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
-                                <rect key="frame" x="47" y="631" width="118" height="117"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="118" id="E87-bT-dG4"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cQt-MT-TqP" userLabel="wpiBackground">
+                                <rect key="frame" x="0.0" y="585" width="314" height="183"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleScreen" translatesAutoresizingMaskIntoConstraints="NO" id="U4K-9a-Oop">
                                 <rect key="frame" x="232" y="-16" width="560" height="515"/>
@@ -993,24 +989,44 @@
                                     <segue destination="51k-bE-CvS" kind="show" id="yZq-Ld-LOg"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wpiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-HW-te9">
+                                <rect key="frame" x="762" y="585" width="211" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="7Sc-4P-lNn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoL Logo Proper" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
+                                <rect key="frame" x="98" y="618" width="118" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="E87-bT-dG4"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="2YG-DP-0Uw" secondAttribute="bottom" constant="-13" id="0Sg-XB-T0W"/>
-                            <constraint firstAttribute="bottom" secondItem="b4X-Ki-z6Z" secondAttribute="bottom" constant="20" symbolic="YES" id="2GX-kT-YQH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rj4-HW-te9" secondAttribute="trailing" constant="38" id="2t3-Zh-Nwb"/>
+                            <constraint firstAttribute="bottom" secondItem="b4X-Ki-z6Z" secondAttribute="bottom" constant="33" id="2GX-kT-YQH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rj4-HW-te9" secondAttribute="trailing" constant="51" id="2t3-Zh-Nwb"/>
                             <constraint firstItem="Ygk-Vo-1t2" firstAttribute="top" secondItem="U4K-9a-Oop" secondAttribute="bottom" constant="21" id="3Pz-Dy-FzX"/>
+                            <constraint firstItem="cQt-MT-TqP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Ef-ho-WMV"/>
                             <constraint firstItem="U4K-9a-Oop" firstAttribute="centerX" secondItem="Ygk-Vo-1t2" secondAttribute="centerX" id="66H-5B-IC2"/>
                             <constraint firstItem="b4X-Ki-z6Z" firstAttribute="centerY" secondItem="rj4-HW-te9" secondAttribute="centerY" id="7gi-0W-PCF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ygk-Vo-1t2" secondAttribute="trailing" constant="362" id="Eg5-vT-tt2"/>
+                            <constraint firstItem="x2a-MN-VOl" firstAttribute="bottom" secondItem="rj4-HW-te9" secondAttribute="bottom" id="FVw-0n-On3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ygk-Vo-1t2" secondAttribute="bottom" constant="97" id="Hc4-q6-wuw"/>
                             <constraint firstItem="U4K-9a-Oop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="232" id="IGC-0q-UxG"/>
-                            <constraint firstItem="b4X-Ki-z6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="MBw-hL-lQw"/>
+                            <constraint firstItem="b4X-Ki-z6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="MBw-hL-lQw"/>
                             <constraint firstItem="Ygk-Vo-1t2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="362" id="Mdf-h5-DM1"/>
-                            <constraint firstItem="b4X-Ki-z6Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="611" id="Nix-Lw-TJd"/>
-                            <constraint firstItem="rj4-HW-te9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="620" id="TnY-B3-Lwx"/>
+                            <constraint firstItem="b4X-Ki-z6Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="598" id="Nix-Lw-TJd"/>
+                            <constraint firstItem="x2a-MN-VOl" firstAttribute="centerX" secondItem="rj4-HW-te9" secondAttribute="centerX" id="Otb-eK-JlV"/>
+                            <constraint firstItem="rj4-HW-te9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="565" id="TnY-B3-Lwx"/>
+                            <constraint firstItem="cQt-MT-TqP" firstAttribute="centerY" secondItem="b4X-Ki-z6Z" secondAttribute="centerY" id="VTI-gc-Ctt"/>
+                            <constraint firstItem="x2a-MN-VOl" firstAttribute="top" secondItem="rj4-HW-te9" secondAttribute="top" id="VwU-oI-3Kj"/>
                             <constraint firstItem="U4K-9a-Oop" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-36" id="WdS-vg-iev"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2YG-DP-0Uw" secondAttribute="trailing" constant="-72" id="g9V-EJ-E24"/>
+                            <constraint firstItem="cQt-MT-TqP" firstAttribute="centerX" secondItem="b4X-Ki-z6Z" secondAttribute="centerX" id="ke1-VV-oo3"/>
+                            <constraint firstAttribute="trailing" secondItem="x2a-MN-VOl" secondAttribute="trailing" id="nSm-HE-Vbh"/>
+                            <constraint firstItem="cQt-MT-TqP" firstAttribute="bottom" secondItem="rj4-HW-te9" secondAttribute="bottom" id="sc0-qg-BAv"/>
                             <constraint firstItem="2YG-DP-0Uw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-27" id="yrV-7P-T92"/>
                             <constraint firstItem="2YG-DP-0Uw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-79" id="z6U-Gt-rKt"/>
                         </constraints>
@@ -1032,7 +1048,6 @@
         <image name="TexturedVWMapTrans" width="1030" height="1030"/>
         <image name="TitleScreen" width="512" height="384"/>
         <image name="Victorian_Styling" width="512" height="288"/>
-        <image name="WPI_logo" width="120" height="120"/>
         <image name="backButton" width="1000" height="500"/>
         <image name="beginButton" width="1000" height="500"/>
         <image name="exploreButton" width="1000" height="500"/>
@@ -1041,6 +1056,7 @@
         <image name="lonMap" width="6000" height="4598"/>
         <image name="selectionHighlight2" width="200" height="200"/>
         <image name="woodbg" width="2560" height="1600"/>
+        <image name="wpiLogo" width="1650" height="533"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GeS-UN-YN8"/>
