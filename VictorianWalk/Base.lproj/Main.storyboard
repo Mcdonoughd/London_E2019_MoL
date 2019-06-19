@@ -857,7 +857,7 @@
                                 <rect key="frame" x="20" y="37" width="1020" height="711"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose an Activity" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-h3-h91">
-                                <rect key="frame" x="223" y="142" width="574" height="352"/>
+                                <rect key="frame" x="223" y="144" width="574" height="352"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="352" id="xva-p5-t7N"/>
                                 </constraints>
@@ -877,7 +877,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vt5-np-chW">
-                                <rect key="frame" x="408.5" y="67" width="223.5" height="42"/>
+                                <rect key="frame" x="414" y="67" width="212.5" height="44"/>
                                 <fontDescription key="fontDescription" name="Cabin-Regular" family="Cabin" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -894,7 +894,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sd4-Q5-aIh">
-                                <rect key="frame" x="92" y="502" width="840" height="166"/>
+                                <rect key="frame" x="92" y="504" width="840" height="164"/>
                             </stackView>
                             <button opaque="NO" alpha="0.10000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0WT-ii-2xw">
                                 <rect key="frame" x="886" y="716" width="138" height="52"/>

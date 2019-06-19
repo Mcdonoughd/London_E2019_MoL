@@ -9,8 +9,15 @@
 
 import SpriteKit
 
+protocol GameViewControllerDelegate: class {
+    func callMethod(inputProperty:String)
+}
+
+
 class PubActivityScene: SKScene {
+    weak var gameViewControllerDelegate:GameViewControllerDelegate?
     var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
+    
     var label:SKLabelNode!
     var bars = [SKShapeNode]()
     var playArea:SKSpriteNode!
@@ -51,9 +58,7 @@ class PubActivityScene: SKScene {
     var pullingBack = false
     var pennyInFlight = false
     
-    deinit{
-        print("De allocating PubActivityScene")
-    }
+    var texture = SKTexture(imageNamed: "woodbg")
     
     override func didMove(to view: SKView) {
 
@@ -80,7 +85,6 @@ class PubActivityScene: SKScene {
         pennyDisplay = self.childNode(withName: "pennyDisplay") as? SKLabelNode
         roundDisplay = self.childNode(withName: "roundDisplay") as? SKLabelNode
         
-        
         powerBar.isHidden = true
         powerLabel.isHidden = true
         
@@ -102,15 +106,8 @@ class PubActivityScene: SKScene {
         
         playArea = self.childNode(withName: "playArea") as? SKSpriteNode
         
-        let background = SKSpriteNode(imageNamed: "woodbg")
-        background.position = CGPoint(x: size.width/2, y: size.height/2)
-        background.zPosition = -1
-        
-        let canvasSize = CGSize(width: size.width, height: size.height)
-        background.scale(to: canvasSize)
-        addChild(background)
+        setBackground()
 
-        
     }
     
     //var isFingerOnPenny = false
@@ -145,7 +142,7 @@ class PubActivityScene: SKScene {
             if(touchedNode.name == "backButtonLabel"){
                 //print("REEEEEEE")
                 //self.view?.window?.rootViewController?.present(ActivityViewController(), animated: true, completion: nil)
-        
+                
             }
             
             
@@ -269,13 +266,15 @@ class PubActivityScene: SKScene {
     //set background
     func setBackground(){
         //set Wood image to the background
-        let background = SKSpriteNode(imageNamed: "woodbg")
+        
+        let canvasSize = CGSize(width: size.width, height: size.height)
+        let background = SKSpriteNode(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: canvasSize)
+       
         background.position = CGPoint(x: size.width/2, y: size.height/2)
         background.zPosition = -1
         
-        let canvasSize = CGSize(width: size.width, height: size.height)
-        background.scale(to: canvasSize)
         addChild(background)
+        gameViewControllerDelegate?.callMethod(inputProperty: "call game view controller method")
     }
     
     func calcScaledSpeed()->CGFloat{
@@ -296,7 +295,14 @@ class PubActivityScene: SKScene {
     }
     
     
-
+    deinit{
+        texture = SKTexture()
+        removeAllActions()
+        removeAllChildren()
+        removeFromParent()
+        
+        print("Pub Activity Scene has been deallocated")
+    }
     
     
     

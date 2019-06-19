@@ -39,6 +39,6 @@ class player{
     
     deinit{
         //playerPennies = nil
-        print("Player as been deinit")
+        print("Player as been deallocated")
     }
 }

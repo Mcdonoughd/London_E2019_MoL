@@ -34,7 +34,7 @@ class Penny: SKSpriteNode{
     deinit{
         removeAllActions()
         texture = nil
-        print("Penny has been de allocated")
+        print("Penny has been deallocated")
     }
     
 }

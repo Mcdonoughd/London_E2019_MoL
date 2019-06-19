@@ -11,14 +11,12 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class PubViewController: UIViewController {
+class PubViewController: UIViewController, GameViewControllerDelegate {
     
     
     //@IBOutlet var PubActivity: SKView!
     
-    @IBOutlet weak var PubGame: SKView!
-    
-    var testView: SKView!
+    weak var MyView: SKView?
     
     @IBOutlet weak var backButton: UIButton!
     
@@ -28,9 +26,15 @@ class PubViewController: UIViewController {
         //PubGame = SKView()
         
         //PubGame = nil
-        self.performSegue(withIdentifier: "PubToActivity", sender: self)
+        funcGoBack()
         //self.PubGame.
     }
+    
+    func funcGoBack(){
+        MyView?.presentScene(nil)
+        self.performSegue(withIdentifier: "PubToActivity", sender: self)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "PubToActivity"){
@@ -44,58 +48,32 @@ class PubViewController: UIViewController {
             })
             
             
-            viewWillDisappear(true)
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-    
-        self.PubGame.scene?.removeAllActions()
-        self.PubGame.scene?.removeAllChildren()
-        self.PubGame.presentScene(nil)
-        self.PubGame.scene?.removeFromParent()
-        viewDidDisappear(false)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
             // Load the SKScene from 'GameScene.sks'
             print("trying to load PubGameScene")
-            if let scene = SKScene(fileNamed: "PubActivityScene") {
-                //let scene = SKScene(fileNamed: "PubActivityScene")!
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                print("Loaded scene PubActivityScenes")
-                // Present the scene
-            
-                
-                PubGame.ignoresSiblingOrder = true
-                PubGame.showsFPS = true
-                PubGame.showsNodeCount = true
-                PubGame.presentScene(scene)
-                
-                
-//                testView = SKView()
-//                testView.ignoresSiblingOrder = true
-//                
-//                testView.showsFPS = true
-//                testView.showsNodeCount = true
-//                testView.presentScene(scene)
-            
-        }
-        
-//        if let scene = SKScene(fileNamed: "PubGameScene"){
-//            // Set the scale mode to scale to fit the window
-//            scene.scaleMode = .aspectFill
-//
-//            // Present the scene
-//            print("Trying to present Pub Activity")
-//            PubActivity.presentScene(scene)
-//            print("Pub Activity presented hopefully")
-//        }
+            if let view = self.view as! SKView?{
+                if let scene = SKScene(fileNamed: "PubActivityScene") {
+                    let gameScene = scene as! PubActivityScene
+                    gameScene.gameViewControllerDelegate = self
+                    gameScene.scaleMode = .aspectFill
+                    print("Loaded scene PubActivityScenes")
+                    // Present the scene
+                    
+                    MyView = view
+                    
+                    view.ignoresSiblingOrder = true
+                    //view = true
+                    //view = true
+                    view.presentScene(gameScene)
+                }
+            }
+    
         print("PubViewController has loaded...")
     }
     
@@ -107,6 +85,11 @@ class PubViewController: UIViewController {
     
     override var shouldAutorotate: Bool {
         return true
+    }
+    
+    
+    func callMethod(inputProperty:String) {
+        print("inputProperty is: ",inputProperty)
     }
     
 }
