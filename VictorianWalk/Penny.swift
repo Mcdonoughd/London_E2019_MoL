@@ -32,8 +32,8 @@ class Penny: SKSpriteNode{
     }
     
     deinit{
+        removeAllActions()
         texture = nil
-        physicsBody = nil
         print("Penny has been de allocated")
     }
     

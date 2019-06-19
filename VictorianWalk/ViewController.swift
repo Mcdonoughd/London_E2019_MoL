@@ -18,13 +18,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
-        
-        UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromBottom, animations: {
-            
-            // animation
-            
-        })
+    
     }
+    
+    
+    //This passes the data if the segue is to Activitychooser
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+            print("Transitioning screens...")
+        
+            UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromBottom, animations: {
+                
+                // animation
+                
+            })
+        
+            //didReceiveMemoryWarning()
+//            viewWillDisappear(true)
+//            dismiss(animated: true, completion: nil)
+        
+    }
+    
 
     //force landscape mode
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{

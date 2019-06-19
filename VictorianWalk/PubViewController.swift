@@ -43,19 +43,19 @@ class PubViewController: UIViewController {
                 // animation
             })
             
-            didReceiveMemoryWarning()
+            
             viewWillDisappear(true)
-            //dismiss(animated: true, completion: nil)
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-//        self.PubGame.presentScene(nil)
-//        self.PubGame.scene?.removeAllChildren()
-//        self.PubGame.scene?.removeAllActions()
-//        self.PubGame.scene?.removeFromParent()
-//      //  PubGame.scene?.set
-//
+    override func viewWillDisappear(_ animated: Bool) {
+        
+    
+        self.PubGame.scene?.removeAllActions()
+        self.PubGame.scene?.removeAllChildren()
+        self.PubGame.presentScene(nil)
+        self.PubGame.scene?.removeFromParent()
+        viewDidDisappear(false)
     }
     
     override func viewDidLoad() {

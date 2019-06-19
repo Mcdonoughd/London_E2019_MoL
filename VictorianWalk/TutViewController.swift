@@ -24,6 +24,8 @@ class TutViewController: UIViewController {
         })
     }
     
+  
+    
     //Force Landscape Orientation
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return .landscapeLeft
