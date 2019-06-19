@@ -962,7 +962,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ION_MAP_2" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-DP-0Uw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lonMap" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-DP-0Uw">
                                 <rect key="frame" x="-59" y="-7" width="1135" height="788"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleScreen" translatesAutoresizingMaskIntoConstraints="NO" id="U4K-9a-Oop">
@@ -981,14 +981,8 @@
                                     <segue destination="51k-bE-CvS" kind="show" id="yZq-Ld-LOg"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wpiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="rj4-HW-te9">
-                                <rect key="frame" x="762" y="585" width="211" height="183"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="211" id="7Sc-4P-lNn"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoL Logo Proper" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
-                                <rect key="frame" x="98" y="618" width="118" height="117"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MoL Logo Proper" translatesAutoresizingMaskIntoConstraints="NO" id="b4X-Ki-z6Z">
+                                <rect key="frame" x="50" y="616" width="118" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="E87-bT-dG4"/>
                                 </constraints>
@@ -998,17 +992,14 @@
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="2YG-DP-0Uw" secondAttribute="bottom" constant="-13" id="0Sg-XB-T0W"/>
                             <constraint firstAttribute="bottom" secondItem="b4X-Ki-z6Z" secondAttribute="bottom" constant="33" id="2GX-kT-YQH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rj4-HW-te9" secondAttribute="trailing" constant="51" id="2t3-Zh-Nwb"/>
                             <constraint firstItem="Ygk-Vo-1t2" firstAttribute="top" secondItem="U4K-9a-Oop" secondAttribute="bottom" constant="13" id="3Pz-Dy-FzX"/>
                             <constraint firstItem="U4K-9a-Oop" firstAttribute="centerX" secondItem="Ygk-Vo-1t2" secondAttribute="centerX" id="66H-5B-IC2"/>
-                            <constraint firstItem="b4X-Ki-z6Z" firstAttribute="centerY" secondItem="rj4-HW-te9" secondAttribute="centerY" id="7gi-0W-PCF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ygk-Vo-1t2" secondAttribute="trailing" constant="362" id="Eg5-vT-tt2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ygk-Vo-1t2" secondAttribute="bottom" constant="105" id="Hc4-q6-wuw"/>
                             <constraint firstItem="U4K-9a-Oop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="232" id="IGC-0q-UxG"/>
                             <constraint firstItem="b4X-Ki-z6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="MBw-hL-lQw"/>
                             <constraint firstItem="Ygk-Vo-1t2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="362" id="Mdf-h5-DM1"/>
                             <constraint firstItem="b4X-Ki-z6Z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="598" id="Nix-Lw-TJd"/>
-                            <constraint firstItem="rj4-HW-te9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="565" id="TnY-B3-Lwx"/>
                             <constraint firstItem="U4K-9a-Oop" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-36" id="WdS-vg-iev"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2YG-DP-0Uw" secondAttribute="trailing" constant="-72" id="g9V-EJ-E24"/>
                             <constraint firstItem="2YG-DP-0Uw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-27" id="yrV-7P-T92"/>
@@ -1026,7 +1017,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ION_MAP_2" width="313" height="240"/>
         <image name="London_Street" width="512" height="364"/>
         <image name="MoL Logo Proper" width="921" height="715"/>
         <image name="TextBar" width="430" height="1030"/>
@@ -1038,9 +1028,9 @@
         <image name="exploreButton" width="1000" height="500"/>
         <image name="goButton" width="1000" height="500"/>
         <image name="helpButton" width="1000" height="500"/>
+        <image name="lonMap" width="3000" height="2299"/>
         <image name="selectionHighlight2" width="200" height="200"/>
         <image name="woodbg" width="2560" height="1600"/>
-        <image name="wpiLogo" width="1650" height="533"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GeS-UN-YN8"/>
