@@ -64,6 +64,7 @@ class PubViewController: UIViewController, GameViewControllerDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         nukeAllAnimations()
+        //dissapear()
     }
     
     override func viewDidLoad() {
@@ -102,6 +103,10 @@ class PubViewController: UIViewController, GameViewControllerDelegate {
     
     func callMethod(inputProperty:String) {
         print("inputProperty is: ",inputProperty)
+    }
+    
+    deinit{
+        print("This function should be called!")
     }
     
 }
