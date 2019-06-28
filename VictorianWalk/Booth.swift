@@ -8,13 +8,14 @@
 
 import Foundation
 
-//This holds a Booths sidebar data
+//This holds a Booth's or Display's sidebar data
 struct Booth{
     
-    var id = 0
-    var desc = ""
-    var title = ""
-    var hasActivity = false
+    private var id = 0 //Booth's ID that should be the same as the button label
+    private var desc = ""
+    private var title = ""
+    private var hasActivity = false //determines if the booth has an activity
+    
     
     init(id: Int, desc: String, title: String){
         self.id = id
@@ -29,5 +30,37 @@ struct Booth{
         self.hasActivity = hasActivity
     }
     
+    //Getters
+    func getID()->Int{
+        return id
+    }
     
+    func getDesc()->String{
+        return desc
+    }
+    
+    func getTitle()->String{
+        return title
+    }
+    
+    func getActivity()->Bool{
+        return hasActivity
+    }
+    
+    //Setters
+    mutating func setID(id: Int){
+        self.id = id
+    }
+    
+    mutating func setDesc(desc: String){
+        self.desc = desc
+    }
+    
+    mutating func setTitle(title: String){
+        self.title = title
+    }
+    
+    mutating func setHasActivity(hasActivity: Bool){
+        self.hasActivity = hasActivity
+    }
 }

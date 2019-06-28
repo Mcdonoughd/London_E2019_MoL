@@ -13,16 +13,14 @@ import SpriteKit
 //this is the Pub Game model. This keeps track of the game states and data
 class pubGame{
    
-    var numberOfRounds:Int
-    var numberOfPlayers:Int
-    var numberOfPennies:Int
-    var currentRound:Int
-    var currentPlayersTurn:Int
-    var PlayersArray = [player]()
+    private var numberOfRounds:Int
+    private var numberOfPlayers:Int
+    private var numberOfPennies:Int
+    private var currentRound:Int
+    private var currentPlayersTurn:Int
+    private var PlayersArray = [player]()
     
-    var currPennyHasGone = false
-    
-    
+
     init(numberOfRounds:Int, numberOfPennies: Int, numberOfPlayers:Int){
         self.numberOfPlayers = numberOfPlayers
         self.numberOfRounds = numberOfRounds
@@ -46,7 +44,7 @@ class pubGame{
     
     func nextTurn(){
         
-        if(PlayersArray[currentPlayersTurn].currentPenny == numberOfPennies-1){
+        if(PlayersArray[currentPlayersTurn].getcurrPenny() == numberOfPennies-1){
             if(currentPlayersTurn+1 == numberOfPlayers){
                 currentPlayersTurn = 0
                 currentRound = currentRound + 1
@@ -59,7 +57,7 @@ class pubGame{
             }
             
         }else{
-            PlayersArray[currentPlayersTurn].currentPenny+=1
+            PlayersArray[currentPlayersTurn].runTurn()
         }
         
 
@@ -70,7 +68,21 @@ class pubGame{
         print("Deallocated pubGame Model")
     }
     
+    func getCurrPlayer()->Int{
+        return self.currentPlayersTurn
+    }
     
+    func getCurrentRound()->Int{
+        return self.currentRound
+    }
+    
+    func getcurrentRound()->String{
+        return String(self.currentRound)
+    }
+    
+    func getPlayerArray()->[player]{
+        return PlayersArray
+    }
 }
 
 

@@ -13,7 +13,6 @@ import GameplayKit
 
 class PubViewController: UIViewController, GameViewControllerDelegate {
     
-    
     //@IBOutlet var PubActivity: SKView!
     weak var MyView: SKView?
     

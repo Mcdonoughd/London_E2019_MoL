@@ -11,22 +11,22 @@ import Foundation
 //this is the model that handles the activity loading
 class ActivityModel {
     
- //this is the activity lookup table
+ //this is the activity lookup table from integer to Activity
     let ActivityLookUp:[Int:[Activity]] = [
         1:[
-            TextActivity(name:"Toy Shop",type:"Search",text: "Can you find the following objects? \n Skittles \n Two lobsters \n Balancing scale ")],
+            Activity(name:"Toy Shop",type:"Search",text: "Can you find the following objects? \n Skittles \n Two lobsters \n Balancing scale ")],
         3:[
-            TextActivity(name:"Barber Shop",type:"Act",text: "Play out a scene like you’re inside the barbershop. Act like you’re shaving a family member’s face."),
+            Activity(name:"Barber Shop",type:"Act",text: "Play out a scene like you’re inside the barbershop. Act like you’re shaving a family member’s face."),
             QuizActivity(name:"Barber Shop",type:"Quiz",question:"What do you think the shaving mugs in the cabinet were for?",answer:" CORRECT! The barber would pour shaving cream in the mug and mix it to build up a lather.",choices: ["To feed the dogs","Build up a lather","Store tea & coffee"],answerIndex:1)
         ],
         4:[ GameActivity(name:"Public House",type:"Game",segueRef:"PubGameSegue",desc:"Play the traditional Victorian era pub game, shove ha'penny!")],
         5:[
-            TextActivity(name:"Glass Showroom",type:"Search",text:"Can you spot 12 different coloured glasses?"),
-            TextActivity(name:"Glass Showroom",type:"Imagine",text:"Can you spot any types of glasses you might find at home?"),
+            Activity(name:"Glass Showroom",type:"Search",text:"Can you spot 12 different coloured glasses?"),
+            Activity(name:"Glass Showroom",type:"Imagine",text:"Can you spot any types of glasses you might find at home?"),
         ],
-        6:[TextActivity(name:"Barrel Organ",type:"Search",text:"Can you find the blue and red space invaders from 2016? (Hint: Turn around and look up!) You may find similar art across London today!")],
+        6:[Activity(name:"Barrel Organ",type:"Search",text:"Can you find the blue and red space invaders from 2016? (Hint: Turn around and look up!) You may find similar art across London today!")],
         7:[
-            TextActivity(name:"Tea & Coffee Warehouse",type:"Imagine",text:"Look at different shops. Where else might tea be sold around town?"),
+            Activity(name:"Tea & Coffee Warehouse",type:"Imagine",text:"Look at different shops. Where else might tea be sold around town?"),
             QuizActivity(name:"Tea & Coffee Warehouse",type:"Quiz",question:"How much tea did the average Londoner drink in Victorian times?",answer:"Correct! Londers would drink ~300-500 cups/year in Victorian times. In comparison, modern Londoners will drink about 550 cups of tea a year",choices:["~1000-1200 bags/year","~600-800 bags/year","~300-500 bags/year"],answerIndex:2),
         ],
         8:[
@@ -34,21 +34,23 @@ class ActivityModel {
             QuizActivity(name:"Engraver",type:"Quiz",question:"Based on the description, how might the Engraver help the Fancy Stationer nearby?",answer:"The engraver might make templates for business cards and holiday cards and sell the cards to the Stationer to put in their shop.",choices:["Make Pens","Make a wedding ring","Make templates for cards"],answerIndex:2),
         ],
         12:[
-            TextActivity(name:"Grocer",type:"Imagine",text:"How is the grocer similar to a shop you’d go to today? How is it different? Find and discuss the differences."),
+            Activity(name:"Grocer",type:"Imagine",text:"How is the grocer similar to a shop you’d go to today? How is it different? Find and discuss the differences."),
             QuizActivity(name:"Grocer",type:"Quiz",question:"When do you think the busiest day was for the Grocer?",answer:"Saturdays tended to be the busiest because that was when workers were paid their weekly wages.",choices:["Saturdays","Mondays","Fridays"],answerIndex:0)
         ],
         17:[
-            TextActivity(name:"Pawnbroker",type:"Imagine",text: "Pick an object and make up a story about it. Who did it belong to? Why did they sell it?"),
-            TextActivity(name:"Pawnbroker",type:"Search",text: "Can you spot the following items? \n Three pocket watches \n  Silver cutlery \n Drinking glasses"),
+            Activity(name:"Pawnbroker",type:"Imagine",text: "Pick an object and make up a story about it. Who did it belong to? Why did they sell it?"),
+            Activity(name:"Pawnbroker",type:"Search",text: "Can you spot the following items? \n Three pocket watches \n  Silver cutlery \n Drinking glasses"),
             QuizActivity(name:"Pawnbroker",type:"Quiz",question:"How much money do you think the pawnbroking industry made annually?", answer: "8 million pounds; which today would be equivalent to well over 900 million pounds. With that much business, the pawnbrokers played an important role in the working class economy", choices: ["£10 Thousand","£8 Million","£15 Trillion"],answerIndex:1)
         ],
         19:[
-            TextActivity(name:"Bank Manager's Office",type:"Imagine",text:"Say you received a loan from the bank, and you could start any business of your choice. Of the shops you’ve already seen which one would you want to run and why?"),
+            Activity(name:"Bank Manager's Office",type:"Imagine",text:"Say you received a loan from the bank, and you could start any business of your choice. Of the shops you’ve already seen which one would you want to run and why?"),
             QuizActivity(name:"Bank Manager's Office",type:"Quiz",question:"What fictional character was a money-lender? (Hint: They appear in a Christmas themed book by Charles Dickens)",answer:"Ebenezer Scrooge",choices:["Ebenezer Scrooge","Paddington Bear","Harry Potter"],answerIndex:0)]
         ]
     
-    let errorActivity = TextActivity(name:"ERROR",type:"ERROR",text:"Take a deep breath...")
+    //This is an error placement incase something goes wrong
+    let errorActivity = Activity(name:"ERROR",type:"ERROR",text:"Take a deep breath...")
     
+    //This is a set of activities that are storied between screens
     var cachedActivities = [Activity]()
    
     //get the list of activities from the given booth ID
@@ -57,9 +59,10 @@ class ActivityModel {
         return cachedActivities
     }
     
+    //search cache for a given activity based on type (Note: if a booth has two of the same type of activity the caching system will need to be redone)
     func searchCache(type:String) -> Activity{
         for activity in cachedActivities{
-            if activity.type == type{
+            if activity.getType() == type{
                 return activity
             }
         }

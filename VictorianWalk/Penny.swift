@@ -10,13 +10,11 @@ import Foundation
 import SpriteKit
 
 class Penny: SKSpriteNode{
-    var hasGone = false
-    var isPresent:Int
-    
+    private var hasGone = false
+ 
     
     init(){
         let texture = SKTexture(imageNamed: "hapenny")
-        self.isPresent = 0
         super.init(texture: texture,color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0),size: texture.size())
         self.name = "penny"
         self.physicsBody = SKPhysicsBody(texture: texture,size: texture.size())
@@ -41,4 +39,12 @@ class Penny: SKSpriteNode{
         print("Penny has been deallocated")
     }
     
+    
+    func getGone()->Bool{
+        return hasGone
+    }
+    
+    func setGone(gone:Bool){
+        self.hasGone = gone
+    }
 }

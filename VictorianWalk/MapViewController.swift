@@ -13,12 +13,12 @@ import AVFoundation
 class MapViewController: UIViewController, AVAudioRecorderDelegate {
    
     //The model that handles most large changes
-    var Map = MapModel()
+    private var Map = MapModel()
     
     //reference to the MainStoryBoards
-    let MyStoryBoard = UIStoryboard(name:"Main",bundle: nil)
+    private let MyStoryBoard = UIStoryboard(name:"Main",bundle: nil)
     
-    lazy var controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
+    private lazy var controller = MyStoryBoard.instantiateViewController(withIdentifier: "PubView")
     
     //Array of all buttons
     @IBOutlet var MapButtons: [UIButton]!
@@ -34,7 +34,7 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var PlayGameButton: UIButton!
     
     //current button pressed ID
-    var currbutton = "0"
+    private var currbutton = "0"
     
     //Function called on "Play" btn press
     // it launches the choose activity segue
@@ -61,7 +61,7 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
         if(segue.identifier == "ActivitySegue"){
             print("preparing...")
             let vc = segue.destination as! ActivityViewController
-            vc.passedBooth = Map.currentBooth.id
+            vc.passedBooth = Map.getbooth().getID()
             UIView.transition(with: self.view, duration: 0.325, options: .transitionFlipFromBottom, animations: {
                 
                 // animation
@@ -73,7 +73,7 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
     func UpdateViewfromModel(key: String){
         
         let button = Map.chooseBooth(at: key)
-        print(button.title)
+        print(button.getTitle())
    
         //Show the blue circle and start rotation
         for selectImage in selectors{
@@ -91,11 +91,11 @@ class MapViewController: UIViewController, AVAudioRecorderDelegate {
             }
         }
         currbutton = key
-        TitleLabel.text = button.title
+        TitleLabel.text = button.getTitle()
         TitleLabel.sizeToFit()
-        DesciptionLabel.text = button.desc
+        DesciptionLabel.text = button.getDesc()
         DesciptionLabel.sizeToFit()
-        let showbutton = button.hasActivity
+        let showbutton = button.getActivity()
         PlayGameButton.isHidden = showbutton ? false : true
         print("Play game button is hidden: \(PlayGameButton.isHidden)")
     }

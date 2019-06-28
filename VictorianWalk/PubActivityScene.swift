@@ -16,45 +16,45 @@ protocol GameViewControllerDelegate: class {
 
 class PubActivityScene: SKScene {
     weak var gameViewControllerDelegate:GameViewControllerDelegate?
-    var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
+    private var PubGame = pubGame(numberOfRounds: 1, numberOfPennies: 3, numberOfPlayers: 2)
     
-    var label:SKLabelNode!
-    var bars = [SKShapeNode]()
-    var playArea:SKSpriteNode!
+    private var label:SKLabelNode!
+    private var bars = [SKShapeNode]()
+    private var playArea:SKSpriteNode!
     
     //State variables
-    var placing = false
-    var firing = false
+    private var placing = false
+    private var firing = false
     
-    weak var movingPenny:Penny!
-    var placementPenny:Penny!
+    private weak var movingPenny:Penny!
+    private var placementPenny:Penny!
     
-    var fireFrom = 0
-    var currentFirePos = 0
+    private var fireFrom = 0
+    private var currentFirePos = 0
     
     
     //Placement buttons
-    var buttonBackground:SKSpriteNode!
-    var buttonLabel:SKLabelNode!
-    var buttonPushed = false
+    private var buttonBackground:SKSpriteNode!
+    private var buttonLabel:SKLabelNode!
+    private var buttonPushed = false
     
     //Power bars
-    var powerBar:SKSpriteNode!
-    var powerLabel:SKLabelNode!
+    private var powerBar:SKSpriteNode!
+    private var powerLabel:SKLabelNode!
     
     //Back button
-    var backButtonLabel:SKLabelNode!
-    var backButtonBackground:SKSpriteNode!
+    private var backButtonLabel:SKLabelNode!
+    private var backButtonBackground:SKSpriteNode!
     
-    //HUDisplay
-    var playerDisplay:SKLabelNode!
-    var pennyDisplay:SKLabelNode!
-    var roundDisplay:SKLabelNode!
+    //HUD
+    private var playerDisplay:SKLabelNode!
+    private var pennyDisplay:SKLabelNode!
+    private var roundDisplay:SKLabelNode!
     
     
     //State Variables
-    var pullingBack = false
-    var pennyInFlight = false
+    private var pullingBack = false
+    private var pennyInFlight = false
     
   
     override func didMove(to view: SKView) {
@@ -216,9 +216,9 @@ class PubActivityScene: SKScene {
             PubGame.nextTurn() // doesnt check that its still in the amount of pennies there
         }
         
-        playerDisplay.text = String(PubGame.currentPlayersTurn)
-        pennyDisplay.text = String(PubGame.PlayersArray[PubGame.currentPlayersTurn].currentPenny)
-        roundDisplay.text = String(PubGame.currentRound)
+        playerDisplay.text = String(PubGame.getCurrPlayer())
+        pennyDisplay.text = String(PubGame.getPlayerArray()[PubGame.getCurrPlayer()].getcurrPenny())
+        roundDisplay.text = PubGame.getcurrentRound()
     }
     
 

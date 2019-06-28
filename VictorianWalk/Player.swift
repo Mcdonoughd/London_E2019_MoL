@@ -10,10 +10,10 @@ import Foundation
 import SpriteKit
 
 class player{
-    var amountOfPennies:Int
-    var playerScoredInBars:[Int]
-    var playerPennies = [Penny]()
-    var currentPenny:Int
+    private var amountOfPennies:Int
+    private var playerScoredInBars:[Int]
+    private var playerPennies = [Penny]()
+    private var currentPenny:Int
     
     init(amountOfPennies: Int){
         playerScoredInBars = [Int]()
@@ -33,6 +33,7 @@ class player{
        return playerPennies[currentPenny]
     }
     
+    //increment the currentpenny count
     func runTurn(){
         currentPenny = currentPenny + 1
     }
@@ -43,4 +44,40 @@ class player{
         playerScoredInBars.removeAll()
         print("Player as been deallocated")
     }
+    
+    //Getters
+    func getAmountofPennies()->Int{
+        return self.amountOfPennies
+    }
+    
+    func getPlayerScored()->[Int]{
+        return self.playerScoredInBars
+    }
+    
+    func getPennies()->[Penny]{
+        return self.playerPennies
+    }
+    
+    func getcurrPenny()->Int{
+        return self.currentPenny
+    }
+    
+    //Setters
+    func setAmountofPennies(num:Int){
+        self.amountOfPennies = num
+    }
+    
+    func setPlayerScored(bars:[Int]){
+        self.playerScoredInBars = bars
+    }
+    
+    func setPennies(pennies:[Penny]){
+        self.playerPennies = pennies
+    }
+    
+    func setCurrPenny(newPenny: Int){
+        self.currentPenny = newPenny
+    }
+    
+
 }

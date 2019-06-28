@@ -8,14 +8,23 @@
 
 import Foundation
 
+//This holds data for game Activities (ie PubGame)
 class GameActivity: Activity {
-    var segueRef = ""
-    var desc = ""
+    private var segueRef = "" //segue reference to the game
+    
     
     init(name:String,type:String,segueRef:String,desc:String){
-        super.init(name:name,type:type)
+        super.init(name:name,type:type,text:desc)
         self.segueRef = segueRef
-        self.desc = desc
     }
     
+    //Getter
+    func getSegueRef()->String{
+        return segueRef
+    }
+    
+    //Setter
+    func setSegueRef(segref:String){
+        self.segueRef = segref
+    }
 }

@@ -24,6 +24,10 @@ class ActivityViewController: UIViewController {
     //model reference
     var myActivityModel = ActivityModel()
     
+    var tempAnswer = ""
+    var tempSegue = ""
+    
+    
     @IBOutlet weak var ActivityText: UILabel!
     @IBOutlet weak var ButtonStack: UIStackView!
     @IBOutlet weak var ActivityTitle: UILabel!
@@ -43,7 +47,7 @@ class ActivityViewController: UIViewController {
         let activityList = myActivityModel.getActivities(key:passedBooth)
         
         //Set the title to the name of the booth
-        ActivityTitle.text = activityList[0].name
+        ActivityTitle.text = activityList[0].getName()
         
         //Load Buttons based on equivalent activities
         LoadButtons(ActivityData:activityList)
@@ -66,6 +70,7 @@ class ActivityViewController: UIViewController {
             
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "MapSegue"){
             print("preparing...")
@@ -95,13 +100,13 @@ class ActivityViewController: UIViewController {
         
         for Activity in ActivityData {
             //error check
-            if (Activity.name == "ERROR") {
+            if (Activity.getName() == "ERROR") {
                 //Print error message
                 print("Error: Chosen Booth does not have any corresponding activities")
             }
             //Make a button
             
-            MakeButton(DisplayText: Activity.type)
+            MakeButton(DisplayText: Activity.getType())
         }
     }
     
@@ -129,15 +134,10 @@ class ActivityViewController: UIViewController {
         let Activity = myActivityModel.searchCache(type: sender.titleLabel!.text ?? "Imagine")
         
         switch(Activity){
-            case is TextActivity:
-                print("Loading Text Activity...")
-                let newActivity = Activity as! TextActivity; //cast Activity to TextActivity
-                ActivityText.text = newActivity.text
-                break;
             case is QuizActivity:
                 print("Loading Quiz...")
                 let newActivity = Activity as! QuizActivity
-                ActivityText.text = newActivity.question
+                ActivityText.text = newActivity.getText()
                 ClearButtonStack()
                 if(newActivity.hasChoices()){
                     //make Multiple choice button
@@ -145,7 +145,7 @@ class ActivityViewController: UIViewController {
                 }
                 else{
                     //make a simple show button
-                    MakeShowButton(answer: newActivity.answer)
+                    MakeShowButton(answer: newActivity.getAnswer())
                 }
                 
                 break;
@@ -153,20 +153,23 @@ class ActivityViewController: UIViewController {
             case is GameActivity:
                 print("Loading Game...")
                 let newActivity = Activity as! GameActivity
-                ActivityText.text = newActivity.desc
-                tempSegue = newActivity.segueRef
+                ActivityText.text = newActivity.getText()
+                tempSegue = newActivity.getSegueRef()
                 ClearButtonStack()
                 MakeToGameButton()
                 //Load the segue to the game
-                break
+                break;
+            
+            //If text activity
             default:
-                print("The Activity has no type!")
+                print("Loading Text Activity...")
+                let newActivity = Activity; //cast Activity to TextActivity
+                ActivityText.text = newActivity.getText()
                 break;
         }
     }
     
-    var tempSegue = ""
-    
+    //Makes a button that launches the next game
     func MakeToGameButton(){
         let button = MakeGenericButton(text: "Play")
         button.addTarget(self, action: #selector(LaunchPubGame(sender:)), for: .touchUpInside)
@@ -174,20 +177,24 @@ class ActivityViewController: UIViewController {
         ButtonStack.setCustomSpacing(20,after: button)
     }
     
+    //Launch the game activity
     @objc func LaunchPubGame(sender: UIButton){
         print("Launching Pub Game...")
         self.performSegue(withIdentifier: tempSegue, sender: self)
     }
     
+    //Load quiz choices
     func LoadChoices(quiz: QuizActivity){
         ClearButtonStack()
-        for choice in quiz.choices.indices{
-            let isAnswer = choice == quiz.answerIndex //check if this is the correct answer
-            MakeMultiChoiceButtons(choice: quiz.choices[choice],answer: isAnswer)
+        for choice in quiz.getChoices().indices{
+            let isAnswer = choice == quiz.getAnswerIndex() //check if this is the correct answer
+            MakeMultiChoiceButtons(choice: quiz.getChoices()[choice],answer: isAnswer)
         }
-        tempAnswer = quiz.answer
+        tempAnswer = quiz.getAnswer()
     }
     
+    
+    //Make multiple choice buttons
     func MakeMultiChoiceButtons(choice: String,answer: Bool){
       
         let button = MakeGenericButton(text: choice)
@@ -195,13 +202,10 @@ class ActivityViewController: UIViewController {
         if(answer){
           //if the answer is correct then...
           button.addTarget(self, action: #selector(ShowAnswer(sender:)), for: .touchUpInside)
-            
         }
         else{
             button.addTarget(self, action: #selector(WrongAnswer(sender:)), for: .touchUpInside)
-            
         }
-        
         ButtonStack.addArrangedSubview(button)
         ButtonStack.setCustomSpacing(20,after: button)
     }
@@ -211,8 +215,6 @@ class ActivityViewController: UIViewController {
         sender.backgroundColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         sender.setTitle("Try Again", for: .normal)
     }
-    
-    var tempAnswer = ""
     
     //This function removes all subviews from the button stack
     func ClearButtonStack(){
@@ -230,6 +232,7 @@ class ActivityViewController: UIViewController {
         ButtonStack.addArrangedSubview(button)
     }
     
+    //Show answer on Showbutton
     @objc func ShowAnswer(sender:UIButton){
         print("Good Answer!")
         ActivityText.text = tempAnswer
@@ -254,7 +257,7 @@ class ActivityViewController: UIViewController {
         return true
     }
     
-    
+    //Make generic buttons for Quiz Game
     func MakeGenericButton(text: String) -> UIButton{
         let button = UIButton(type:.custom)
         button.frame = CGRect(x:100, y:100,width:50,height:50)

@@ -10,8 +10,11 @@ import Foundation
 
 //This handles what text to be displayed when a display is clicked
 class MapModel{
-    var currentBooth = Booth(id:0,desc:"",title:"")
     
+    //This holds the data for teh currently selected booth
+    private var currentBooth = Booth(id:0,desc:"",title:"")
+    
+    //This is the dictionary to obtain a Booth from a button label text
     var TitleDesc:[String : Booth] = [
 
         "1":Booth(id:1, desc:"Victorian children saved their money to buy \"penny toys\" from street sellers and dazzling toy arcades such as Lowther’s on the Strand. \n\n Lowther’s was an \"Aladdin fairy palace\" of expensive train sets, dolls, and lead soldiers.", title:"Toy Shop",hasActivity: true),
@@ -23,8 +26,8 @@ class MapModel{
                   title:"Barber Shop",hasActivity:true),
         
         "4":Booth(id:4, desc:"Working men would relax in the pub, meet with friends, play darts, or attend political meetings. \n\n Children often sat outside, waiting for their parents, or were sent in to buy beer for drinking at home.",
-            title:"Public House", hasActivity: true),
-        
+            title:"Public House", hasActivity: false),
+        //TO ENABLE SHOVEHAPNEY MAKE THE FALSE VALUE HERE INTO TRUE
         "5":Booth(id:5, desc:"James Powell & Sons’ showroom was attached to their glasshouse off Fleet Street in Whitefriars. Their table and decorative glass were famous for their high quality, subtle colours, and delicate decoration. \n\n The \"Eve\" mosaic on the wall, is a copy of one Powell’s made for St. Paul’s Cathedral.",            title:"Glass Showroom",hasActivity: true),
 
         "6":Booth(id:6, desc:"Introduced by Italian immigrants, barrel organs could play up to 12 popular tunes. \n\n By 1900 there were nearly 500 in London’s noisy streets, competing with bagpipe players, singers, clowns, performing monkeys, and knife swallowers.",
@@ -44,7 +47,7 @@ class MapModel{
         "11":Booth(id:11, desc:"The cries of bakers and dairymen were a familiar sound on London’s streets. They pushed handcarts, sold bread and milk, and delivered their goods to private homes.",
             title:"Baker's Cart"),
         
-        "12":Booth(id:12, desc:"Grocers like in Bayswater sold the essentials of daily life. Tea, flour, sugar, and rice were drawn from larger containers, then weighed and wrapped for customers. Grocers often lived above their shops.",
+        "12":Booth(id:12, desc:"Grocers sold the essentials of daily life. Tea, flour, sugar, and rice were drawn from larger containers, then weighed and wrapped for customers. Grocers often lived above their shops.",
             title:"Grocer",hasActivity: true),
         
         "13":Booth(id:13, desc:"The pharmacist was where you could go to get medicines. Poisonous liquids were kept in dark green or blue glass bottles with fluted sides to distinguish them from harmless fluids.",
@@ -69,18 +72,22 @@ class MapModel{
         "20":Booth(id:20,desc:"Look outside the window and see the London Wall. The wall appears to have been built in the late 2nd or early 3rd century, and finished around the end of the 4th century. \n\n This makes it one of the last major building projects undertaken by the Romans before their departure from Britain in 410. ",title:"Victorian Lamppost"),
     ]
     
-  let errorBooth = Booth(id:0, desc:"Do not panic!!! The developers of this application have not accounted for this to happen. We have trained monkeys working on fixing it right now.",title:"404")
+    
+    //This holds an error booth that appears if something goes wrong when looking up a Booth. Ideally it should not appear.
+  let errorBooth = Booth(id:0, desc:"Do not panic!!! The developers of this application have not accounted for this to happen. We have trained monkeys working on fixing it right now.",title:"Sorry...")
     
     
-    func chooseBooth(at: String) -> Booth
-    {
-        print(at)
+    func chooseBooth(at: String) -> Booth {
         setbooth(booth: TitleDesc[at])
         return  TitleDesc[at] ?? errorBooth
     }
     
     func setbooth(booth: Booth?){
         currentBooth = booth ?? errorBooth
+    }
+    
+    func getbooth()->Booth{
+        return currentBooth
     }
  
 }
