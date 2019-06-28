@@ -6,7 +6,7 @@
 	objectVersion = 50;
 	objects = {
 
-/* Begin PBXBuildFile section */
+/* Begin PBXBuildFile section  */
 		0B2DB78022A16656004AFC2C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2DB77F22A16656004AFC2C /* Player.swift */; };
 		0B61DE102296BD39001DC9C6 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61DE0F2296BD39001DC9C6 /* ActivityViewController.swift */; };
 		0B9CBFFD22B5118600EC27FB /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0B9CBFFF22B5118600EC27FB /* Cabin-Regular.ttf */; };
