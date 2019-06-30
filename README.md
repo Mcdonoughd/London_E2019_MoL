@@ -9,3 +9,8 @@ receiving feedback from 63 families and ten museum staff, we recommended that th
 should 1) implement more digital resources for families in its galleries, 2) further explore digital
 activities to promote family learning, and 3) consider implementing resources for visitors’
 personal devices.
+
+### For the full report please visit:
+
+
+https://wp.wpi.edu/london/projects/2019-projects-summer/museum-of-london/
